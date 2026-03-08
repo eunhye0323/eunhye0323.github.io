@@ -1,0 +1,126 @@
+.academic-cv {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #222;
+  line-height: 1.75;
+}
+
+.academic-cv a {
+  color: #1967d2;
+  text-decoration: none;
+}
+
+.academic-cv a:hover {
+  text-decoration: underline;
+}
+
+.cv-hero {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.cv-photo-wrap {
+  width: 100%;
+}
+
+.cv-photo {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  display: block;
+}
+
+.cv-name {
+  margin-bottom: 0.4rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cv-role {
+  color: #666;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.cv-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.98rem;
+  color: #666;
+}
+
+.cv-section {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 1.6rem;
+  margin-top: 1.8rem;
+}
+
+.cv-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cv-section h3 {
+  font-size: 1.08rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.cv-section ul,
+.cv-section ol {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.cv-section li {
+  margin-bottom: 0.75rem;
+}
+
+.cv-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.cv-muted {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.pub-group + .pub-group {
+  margin-top: 1.25rem;
+}
+
+.pub-list li {
+  margin-bottom: 1rem;
+}
+
+.cv-updated {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  color: #777;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .cv-hero,
+  .cv-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-photo-wrap {
+    max-width: 220px;
+  }
+
+  .cv-name {
+    font-size: 1.8rem;
+  }
+}
