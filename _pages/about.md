@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 comments: false
+custom_class: about-page
 ---
 
 <div class="academic-cv">
