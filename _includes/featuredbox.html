@@ -5,22 +5,23 @@
             <div class="col-12 col-md-12 col-lg-5 pr-lg-0">
                 <div class="h-100">
                     <div class="wrapthumbnail portfolio-thumbnail-wrap">
-                        <a href="{{ site.baseurl }}{{ post.url }}">
+                        <a href="{{ site.baseurl }}{{ post.url }}"
+                        style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; min-height:320px; background:#f7f7f7;">
                             {% if post.thumbnail %}
                                 {% if site.lazyimages == "enabled" %}
                                 <img
-                                    class="featured-box-img-cover lazyimg portfolio-featured-image"
+                                    class="featured-box-img-cover lazyimg"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
                                     data-src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ site.baseurl }}/{{ post.thumbnail }}{% endif %}"
-                                    alt="{{ post.title }}">
+                                    alt="{{ post.title }}"
+                                    style="max-width:100%; max-height:320px; width:auto; height:auto; object-fit:{% if post.image_fit %}{{ post.image_fit }}{% else %}contain{% endif %}; object-position:center center; display:block; margin:auto;">
                                 {% else %}
                                 <img
-                                    class="featured-box-img-cover portfolio-featured-image"
+                                    class="featured-box-img-cover"
                                     src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ site.baseurl }}/{{ post.thumbnail }}{% endif %}"
-                                    alt="{{ post.title }}">
+                                    alt="{{ post.title }}"
+                                    style="max-width:100%; max-height:320px; width:auto; height:auto; object-fit:{% if post.image_fit %}{{ post.image_fit }}{% else %}contain{% endif %}; object-position:center center; display:block; margin:auto;">
                                 {% endif %}
-                            {% else %}
-                                <div class="portfolio-featured-image portfolio-featured-placeholder"></div>
                             {% endif %}
                         </a>
                     </div>
@@ -33,10 +34,12 @@
                         <div class="card-body">
 
                             {% if post.categories %}
-                            <div class="portfolio-card-tags mb-3">
-                                {% for category in post.categories limit:2 %}
-                                <span class="portfolio-tag">{{ category }}</span>
-                                {% endfor %}
+                            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+                            {% for category in post.categories %}
+                            <span style="display:inline-block; padding:4px 10px; border-radius:999px; background:#f2f2f2; color:#444; font-size:0.78rem; line-height:1.2;">
+                                {{ category }}
+                            </span>
+                            {% endfor %}
                             </div>
                             {% endif %}
 

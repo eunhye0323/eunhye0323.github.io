@@ -20,24 +20,6 @@ post_class: post-template
 
         <div class="col-md-9 flex-first flex-md-unordered">
             <div class="mainheading">
-
-                <!-- Author Box -->
-                {% if page.author %}
-                <div class="row post-top-meta">
-                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
-                        {% if author.avatar %}
-                        <img class="author-thumb" src="{{site.baseurl}}/{{ author.avatar }}" alt="{{ author.display_name }}">
-                        {% else %}
-                        <img class="author-thumb" src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
-                        {% endif %}
-                    </div>
-                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
-                        <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
-                        <span class="author-description">{{ author.description }}</span>
-                    </div>
-                </div>
-                {% endif %}
-
                 <!-- Post Title -->
                 <h1 class="posttitle">{{ page.title }}</h1>
 
@@ -50,12 +32,22 @@ post_class: post-template
             <!-- End Adsense -->
 
             <!-- Post Featured Image -->
-            {% if page.image %}
+            {% assign featured_media = page.thumbnail | default: page.image %}
+            {% if featured_media %}
 
             {% if site.lazyimages == "enabled" %}
-            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+            <img
+            class="featured-image img-fluid lazyimg"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            data-src="{% if featured_media contains '://' %}{{ featured_media }}{% else %}{{ site.baseurl }}/{{ featured_media }}{% endif %}"
+            alt="{{ page.title }}"
+            style="max-width:85%; height:auto; display:block; margin:0 auto 2rem auto; border-radius:12px;">
             {% else %}
-            <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
+            <img
+            class="featured-image img-fluid"
+            src="{% if featured_media contains '://' %}{{ featured_media }}{% else %}{{ site.baseurl }}/{{ featured_media }}{% endif %}"
+            alt="{{ page.title }}"
+            style="max-width:85%; height:auto; display:block; margin:0 auto 2rem auto; border-radius:12px;">
             {% endif %}
 
             {% endif %}
