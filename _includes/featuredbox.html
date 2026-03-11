@@ -6,17 +6,17 @@
                 <div class="h-100">
                     <div class="wrapthumbnail portfolio-thumbnail-wrap">
                         <a href="{{ site.baseurl }}{{ post.url }}">
-                            {% if post.image %}
+                            {% if post.thumbnail %}
                                 {% if site.lazyimages == "enabled" %}
                                 <img
                                     class="featured-box-img-cover lazyimg portfolio-featured-image"
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-                                    data-src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}"
+                                    data-src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ site.baseurl }}/{{ post.thumbnail }}{% endif %}"
                                     alt="{{ post.title }}">
                                 {% else %}
                                 <img
                                     class="featured-box-img-cover portfolio-featured-image"
-                                    src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}"
+                                    src="{% if post.thumbnail contains '://' %}{{ post.thumbnail }}{% else %}{{ site.baseurl }}/{{ post.thumbnail }}{% endif %}"
                                     alt="{{ post.title }}">
                                 {% endif %}
                             {% else %}
@@ -48,7 +48,7 @@
                             <p class="card-text portfolio-featured-summary">{{ post.summary }}</p>
                             {% else %}
                             <p class="card-text portfolio-featured-summary">
-                                {{ post.excerpt | strip_html | truncatewords: 28 }}
+                                {{ post.excerpt | strip_html }}
                             </p>
                             {% endif %}
 
@@ -76,9 +76,6 @@
                                     {% endif %}
                                 </span>
 
-                                <span class="post-read-more">
-                                    <a href="{{ site.baseurl }}{{ post.url }}" title="View Project">View Project</a>
-                                </span>
 
                                 <div class="clearfix"></div>
                             </div>
