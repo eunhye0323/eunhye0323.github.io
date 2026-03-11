@@ -25,10 +25,12 @@ comments: false
         저는 KAIST 전산학부 석사과정 학생으로 Computer Graphics and Visualization Lab에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교 디지털미디어학과 및 소프트웨어·컴퓨터공학을 전공하여 학사 학위를 받았으며, Generative AI, Computer Graphics, Extended Reality(XR) 분야에 관심을 가지고 있습니다. 특히 디지털 콘텐츠 생성을 위한 시스템 및 기술 개발을 중심으로 연구하고 있습니다.
       </p>
 
+      <!--
       <div class="cv-links">
         <a href="mailto:eunhye0323@kaist.ac.kr">Email</a>
         <a href="https://www.linkedin.com/in/eunhye8348/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
+      -->
     </div>
   </header>
 
@@ -188,11 +190,13 @@ comments: false
     </ul>
   </section>
 
+  <!--
   <section id="contact" class="cv-section">
     <h2>Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:eunhye0323@kaist.ac.kr">eunhye0323@kaist.ac.kr</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/eunhye8348/" target="_blank" rel="noopener noreferrer">linkedin.com/in/eunhye8348</a></p>
   </section>
+  -->
 
   <div class="cv-updated" style="text-align: right;">
     Updated : 2026.03.12
