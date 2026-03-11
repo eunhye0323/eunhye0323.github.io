@@ -185,4 +185,13 @@
   .cv-name {
     font-size: 1.9rem;
   }
+.site-content {
+  margin-top: 60px !important;
+}
+
+.posttitle,
+.page-title,
+.mainheading {
+  margin-bottom: 32px !important;
+}
 }

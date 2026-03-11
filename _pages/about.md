@@ -1,42 +1,28 @@
 ---
 layout: page
-title: About
+title: Resume
 permalink: /about/
 comments: false
 ---
 
 <div class="academic-cv">
-
-  <header class="cv-topbar">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#awards">Awards</a>
-    <a href="#contact">Contact</a>
-  </header>
-
-  <header class="cv-hero">
+  <header class="cv-hero" style="margin-top: 60px;">
     <div class="cv-photo-wrap">
       <img
         class="cv-photo"
-        src="{{ '/assets/images/profile.jpg' | relative_url }}"
+        src="{{ '/assets/images/eunhyechoi_profile.jpg' | relative_url }}"
         alt="Eunhye Choi profile photo"
+        style="margin-top: 70px;"
       >
     </div>
 
     <div class="cv-intro">
       <h1 class="cv-name">Eunhye Choi</h1>
-      <p class="cv-role">M.S. Student in KAIST</p>
-
-      <p>
-        I am an M.S. student in the School of Computing and Graduate School of Metaverse at KAIST,
-        advised by <strong>Prof. Jinah Park</strong> in the Computer Graphics and Visualization Lab.
+      <p style="text-align: justify; word-break: keep-all;">
+        I am a M.S. student in the School of Computing at KAIST, which is advised by Professor Jinah Park in the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University in Digital Media and Software & Computer Engineering. My interests include Generative AI, Computer Graphics, and Extended Reality (XR). In particular, I focus on developing systems and technologies for digital content creation.
       </p>
-      <p>
-        My interests broadly include <strong>Generative AI</strong>,
-        <strong>Computer Graphics</strong>,
-        <strong>Extended Reality (XR)</strong>.
+      <p style="text-align: justify; word-break: keep-all;">
+        저는 KAIST 전산학부 석사과정 학생으로 Computer Graphics and Visualization Lab에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교 디지털미디어학과 및 소프트웨어·컴퓨터공학을 전공하여 학사 학위를 받았으며, Generative AI, Computer Graphics, Extended Reality(XR) 분야에 관심을 가지고 있습니다. 특히 디지털 콘텐츠 생성을 위한 시스템 및 기술 개발을 중심으로 연구하고 있습니다.
       </p>
 
       <div class="cv-links">
@@ -46,17 +32,13 @@ comments: false
     </div>
   </header>
 
-  <section id="about" class="cv-section">
-    <h2>About Me</h2>
-    <p>
-      I received my B.S. from Ajou University in Digital Media and Software &amp; Computer Engineering,
-      and I am currently pursuing my M.S. at KAIST. My work spans generative AI, virtual environments,
-      human-computer interaction.
-    </p>
-    <p>
-      I aim to build research and systems that connect AI, graphics, and interaction in meaningful ways,
-      especially for digital content, XR, and intelligent visual computing.
-    </p>
+  <section id="research" class="cv-section">
+    <h2>Technical Interests</h2>
+    <ul>
+      <li>Generative AI</li>
+      <li>Computer Graphics</li>
+      <li>Extended Reality (XR)</li>
+    </ul>
   </section>
 
   <section class="cv-section cv-two-col">
@@ -85,15 +67,6 @@ comments: false
         <li><strong>Spoken Languages:</strong> Korean (Native), English (Fluent)</li>
       </ul>
     </div>
-  </section>
-
-  <section id="research" class="cv-section">
-    <h2>Research Interests</h2>
-    <ul>
-      <li>Generative AI</li>
-      <li>Computer Graphics</li>
-      <li>Extended Reality (XR)</li>
-    </ul>
   </section>
 
   <section id="experience" class="cv-section">
@@ -200,8 +173,8 @@ comments: false
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/eunhye8348/" target="_blank" rel="noopener noreferrer">linkedin.com/in/eunhye8348</a></p>
   </section>
 
-  <div class="cv-updated">
-    Updated: 2026.03.07
+  <div class="cv-updated" style="text-align: right;">
+    Updated : 2026.03.12
   </div>
 
 </div>
