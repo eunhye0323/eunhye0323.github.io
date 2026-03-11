@@ -4,7 +4,6 @@ title: "[Ongoing] Longitudinal T1 Brain MRI Generation from Structural Surface P
 author: eunhye
 categories: [Generative AI, Medical Image]
 thumbnail: assets/images/mri_gen.png
-featured: true
 summary: '<span style="display:block; text-align:justify; word-break:keep-all;">
 <strong>IITP (Institute of Information & Communications Technology Planning & Evaluation) - Longitudinal T1 MRI generation from cortical surface priors</strong><br>
 This project develops a diffusion-based model that predicts future T1 brain MRI images using structural priors derived from cortical surfaces. Using longitudinal data from the ADNI dataset, the model generates future MRI scans by conditioning structural information such as pial and white matter surfaces through a Volumetric Conditioning Module (VCM). The approach enables future brain MRI prediction using only current brain image and structural priors.

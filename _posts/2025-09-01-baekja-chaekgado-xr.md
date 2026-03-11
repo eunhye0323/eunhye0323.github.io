@@ -4,7 +4,6 @@ title: "A Generative AI–Based Baekja Painting Style Generation and Multi-User 
 author: eunhye
 categories: [Generative AI, XR, Media Wall, Cultural Heritage]
 thumbnail: assets/images/arproj_re.jpg
-featured: true
 summary: '<span style="display:block; text-align:justify; word-break:keep-all;"><strong>Generative AI–based collaborative XR exhibition system for Baekja and Chaekgado.</strong><br>This project developed a multi-user XR framework that converts users’ spoken memories into personalized Baekja surface textures using a pipeline combining Speech-to-Text (STT), Large Language Models (LLM), and generative visual synthesis. The generated textures are applied to virtual porcelain objects and accumulated within a shared Chaekgado-inspired exhibition space, forming a collective “library of memories” where participants collaboratively create and explore cultural artifacts.</span><br><span style="display:block; text-align:justify; word-break:keep-all;"><strong>백자와 책가도를 위한 생성형 AI 기반 협업형 XR 전시 시스템</strong><br>본 프로젝트는 Speech-to-Text(STT), 대형언어모델(LLM), 생성형 시각 합성 파이프라인을 활용하여 사용자의 음성 기억을 개인화된 백자 표면 텍스처로 변환하는 다중 사용자 XR 프레임워크를 개발하였습니다. 생성된 텍스처는 가상 백자 오브젝트에 적용되고, 책가도에서 영감을 받은 가상 전시 공간에 축적되어 참여자들이 함께 기억을 공유하고 문화적 아카이브를 공동 창작하는 협업형 전시 환경을 형성합니다.</span>'
 badge: "Research"
 accent: "research"

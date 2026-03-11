@@ -4,7 +4,6 @@ title: "Walking in Painted Landscapes: An Immersive Experience Through AI-Augmen
 author: eunhye
 categories: [Generative AI, AR, Media Wall, Gaussian Splatting]
 thumbnail: assets/images/metaverse_research.jpg
-featured: true
 summary: '<span style="display:block; text-align:justify; word-break:keep-all; line-height:1.7;"><strong>Metaverse Convergence Research Project - A 3D Spatial Generation Framework from 2D Paintings</strong><br>This project aimed to reconstruct artworks from the KAIST Art Museum and the Museum of Modern Art (MoMA) into immersive 3D environments using Generative AI, Gaussian Splatting, and Unity. Visitors could enter the painted space, interact with characters inside the artwork, and explore the narrative within the painting as an interactive spatial environment.</span><br><span style="display:block; text-align:justify; word-break:keep-all; line-height:1.7;"><strong>메타버스 자율융합과제 - 2D 미술 작품 기반 3D 공간 생성 프레임워크 연구</strong><br>본 프로젝트는 KAIST 미술관과 뉴욕 MoMA의 소장 회화를 Generative AI, Gaussian Splatting, Unity를 활용해 몰입형 3D 공간으로 재구성하는 것을 목표로 하였습니다. 이를 통해 관람자는 그림 속 공간 안으로 들어가 캐릭터와 상호작용하고 작품 속 서사를 따라가며 기존의 평면적 회화를 탐험 가능한 예술 공간으로 경험할 수 있습니다.</span>'
 badge: "Research"
 accent: "research"
