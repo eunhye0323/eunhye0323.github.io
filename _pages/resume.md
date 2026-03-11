@@ -10,7 +10,7 @@ comments: false
     <div class="cv-photo-wrap">
       <img
         class="cv-photo"
-        src="{{ '/assets/images/eunhyechoi_profile.jpg' | relative_url }}"
+        src="{{ '/assets/images/prof.jpg' | relative_url }}"
         alt="Eunhye Choi profile photo"
         style="margin-top: 70px;"
       >
@@ -19,7 +19,7 @@ comments: false
     <div class="cv-intro">
       <h1 class="cv-name">Eunhye Choi</h1>
       <p style="text-align: justify; word-break: keep-all;">
-        I am a M.S. student in the School of Computing at KAIST, which is advised by Professor Jinah Park in the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University in Digital Media and Software & Computer Engineering. My interests include Generative AI, Computer Graphics, and Extended Reality (XR). In particular, I focus on developing systems and technologies for digital content creation.
+        I am a M.S. student in the School of Computing at KAIST, advised by Professor Jinah Park in the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University in Digital Media and Software & Computer Engineering. My interests include Generative AI, Computer Graphics, and Extended Reality (XR). In particular, I focus on developing systems and technologies for digital content creation.
       </p>
       <p style="text-align: justify; word-break: keep-all;">
         저는 KAIST 전산학부 석사과정 학생으로 Computer Graphics and Visualization Lab에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교 디지털미디어학과 및 소프트웨어·컴퓨터공학을 전공하여 학사 학위를 받았으며, Generative AI, Computer Graphics, Extended Reality(XR) 분야에 관심을 가지고 있습니다. 특히 디지털 콘텐츠 생성을 위한 시스템 및 기술 개발을 중심으로 연구하고 있습니다.
@@ -167,6 +167,27 @@ comments: false
     </ul>
   </section>
 
+  <section id="scholarships" class="cv-section">
+    <h2>Scholarships</h2>
+    <ul style="list-style: none; padding-left: 0; margin-left: 0;">
+      <li style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:18px;">
+        <div>
+          <strong>National Excellent Scholarship for STEM</strong><br>
+          Awarded by the Korea Student Aid Foundation (KOSAF)
+        </div>
+        <span class="cv-muted" style="white-space:nowrap;">October 2025</span>
+      </li>
+
+      <li style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px;">
+        <div>
+          <strong>KB Dream Wave 2030 Talent Development (A-Track)</strong><br>
+          Awarded by KB Financial Group (Sapiens 4.0)
+        </div>
+        <span class="cv-muted" style="white-space:nowrap;">July 2022 – December 2022</span>
+      </li>
+    </ul>
+  </section>
+
   <section id="contact" class="cv-section">
     <h2>Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:eunhye0323@kaist.ac.kr">eunhye0323@kaist.ac.kr</a></p>
@@ -176,5 +197,4 @@ comments: false
   <div class="cv-updated" style="text-align: right;">
     Updated : 2026.03.12
   </div>
-
 </div>

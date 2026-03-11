@@ -3,7 +3,6 @@ layout: post
 title: "Conversational AI Service for Game Accessibility"
 author: eunhye
 categories: [HCI, Accessibility]
-image: assets/images/gaia1.jpg
 summary: "A conversational AI service that supports gamers with disabilities and novice players by providing accessibility-aware gameplay guidance using a RAG-based LLM chatbot."
 thumbnail: assets/images/chi2025.jpg
 date: 2025-02-01
@@ -26,6 +25,18 @@ The system targets **novice players and players with accessibility needs**, help
 The project investigates whether **LLM-based conversational systems can serve as personalized support tools for improving game accessibility.**
 
 이를 통해 **LLM 기반 대화형 시스템이 게임 접근성을 향상시키는 개인화된 지원 도구로 활용될 수 있는지**를 탐구합니다.
+
+This work was presented as a **CHI 2025 and HCIK 2025**.
+
+<div style="display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;">
+  <img src="{{ site.baseurl }}/assets/images/chi2025.jpg"
+       alt="TouchArt main image"
+       style="width:48%; height:auto; border-radius:12px;">
+
+  <img src="{{ site.baseurl }}/assets/images/hcik.jpg"
+       alt="TouchArt poster"
+       style="width:48%; height:auto; border-radius:12px;">
+</div>
 
 ---
 
