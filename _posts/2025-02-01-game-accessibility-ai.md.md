@@ -40,6 +40,21 @@ This work was presented as a **CHI 2025 and HCIK 2025**.
 
 ---
 
+### Research Presentation Video
+
+<p>
+<div style="position:relative;padding-bottom:56.25%;height:0;">
+<iframe
+src="https://www.youtube.com/embed/pxwgWZB7xy4"
+style="position:absolute;top:0;left:0;width:100%;height:100%;"
+frameborder="0"
+allowfullscreen>
+</iframe>
+</div>
+</p>
+
+---
+
 ## Research Background
 
 Many players encounter difficulties when learning new games, particularly when games require complex controls, system knowledge, or fast reactions.

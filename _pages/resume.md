@@ -22,7 +22,7 @@ comments: false
         I am a M.S. student in the School of Computing at KAIST, advised by Professor Jinah Park in the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University in Digital Media and Software & Computer Engineering. My interests include Generative AI, Computer Graphics, and Extended Reality (XR). In particular, I focus on developing systems and technologies for digital content creation.
       </p>
       <p style="text-align: justify; word-break: keep-all;">
-        저는 KAIST 전산학부 석사과정 학생으로 Computer Graphics and Visualization Lab에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교 디지털미디어학과 및 소프트웨어·컴퓨터공학을 전공하여 학사 학위를 받았으며, Generative AI, Computer Graphics, Extended Reality(XR) 분야에 관심을 가지고 있습니다. 특히 디지털 콘텐츠 생성을 위한 시스템 및 기술 개발을 중심으로 연구하고 있습니다.
+        저는 KAIST 전산학부 석사과정 학생으로 Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교 디지털미디어학과, 소프트웨어 및 컴퓨터공학을 전공하여 학사 학위를 받았으며, Generative AI, Computer Graphics, Extended Reality(XR) 분야에 관심을 가지고 있습니다. 특히 디지털 콘텐츠 생성을 위한 시스템 및 기술 개발을 중심으로 연구하고 있습니다.
       </p>
 
       <!--
@@ -75,7 +75,8 @@ comments: false
     <h2>Work &amp; Research Experience</h2>
     <ul>
       <li>
-        <strong>Researcher</strong>, Computer Graphics and Visualization Lab, KAIST
+        <strong>Researcher</strong>, School of Computing, 
+        Computer Graphics and Visualization Lab, KAIST
         <span class="cv-muted">March 2025 – Present</span>
       </li>
       <li>
@@ -83,7 +84,7 @@ comments: false
         <span class="cv-muted">September 2024 – February 2025</span>
       </li>
       <li>
-        <strong>Researcher</strong>, Interactive Entertainment Lab, Ajou University
+        <strong>Researcher</strong>, Department of Digital Media, Interactive Entertainment Lab, Ajou University
         <span class="cv-muted">December 2022 – August 2024</span>
       </li>
     </ul>
