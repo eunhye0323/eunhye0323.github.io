@@ -3,7 +3,7 @@
 }
 
 .academic-cv {
-  max-width: 1280px;
+  max-width: 900px;
   margin: 0 auto;
   color: #222;
   line-height: 1.75;
@@ -185,13 +185,4 @@
   .cv-name {
     font-size: 1.9rem;
   }
-.site-content {
-  margin-top: 60px !important;
-}
-
-.posttitle,
-.page-title,
-.mainheading {
-  margin-bottom: 32px !important;
-}
 }

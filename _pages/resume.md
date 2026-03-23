@@ -6,13 +6,13 @@ comments: false
 ---
 
 <div class="academic-cv">
-  <header class="cv-hero" style="margin-top: 60px;">
+  <header class="cv-hero" style="margin-top: 50px;">
     <div class="cv-photo-wrap">
       <img
         class="cv-photo"
         src="{{ '/assets/images/prof.jpg' | relative_url }}"
         alt="Eunhye Choi profile photo"
-        style="margin-top: 70px;"
+        style="margin-top: 50px;"
       >
     </div>
 
@@ -35,11 +35,11 @@ comments: false
   </header>
 
   <section id="research" class="cv-section">
-    <h2>Technical Interests</h2>
+    <h2>Research Interests</h2>
     <ul>
       <li>Generative AI</li>
       <li>Computer Graphics</li>
-      <li>Extended Reality (XR)</li>
+      <li>VR/AR</li>
     </ul>
   </section>
 
@@ -115,12 +115,12 @@ comments: false
         <li>
           <strong>Press Start to Continue: A Thematic Analysis of the Iterative Process of Hardcore Players with Disabilities Adapting to Gameplay Difficulties</strong><br>
           Eunbyul Park*, Jihun Chae*, Karam Eum, <strong>Eunhye Choi</strong>, Hyunyoung Oh, Youngyim Doh<br>
-          2025 CHI Conference on Human Factors in Computing Systems, Late Breaking Work
+          2025 ACM CHI Conference on Human Factors in Computing Systems, Late Breaking Work
         </li>
         <li>
           <strong>RAG-Enhanced LLM Chatbot for Game Accessibility: Development and Evaluation of GAIA</strong><br>
           Hyunyoung Oh, Karam Eum*, Eunbyul Park*, Jihun Chae*, Junsuk Seo*, <strong>Eunhye Choi</strong>*, Youngyim Doh<br>
-          2025 HCI Korea
+          2025 Human Computer Interface Korea
         </li>
         <li>
           <strong>Prompting-Based LLM Framework for Ethical Decision-Making in the Trolley Dilemma: Embedding Hofstede’s Cultural Dimension Theory (PLETH)</strong><br>
@@ -200,6 +200,6 @@ comments: false
   -->
 
   <div class="cv-updated" style="text-align: right;">
-    Updated : 2026.03.12
+    Updated : 2026.03.23
   </div>
 </div>
