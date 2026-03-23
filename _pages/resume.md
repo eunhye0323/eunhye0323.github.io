@@ -49,22 +49,25 @@ comments: false
       <ul>
         <li>
           <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong><br>
-          M.S. in School of Computing / Graduate School of Metaverse<br>
+          M.S. in School of Computing <span class="cv-muted">(First)</span>
+          <br>Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span>
+          <br>
           <span class="cv-muted">September 2024 – Present</span>
         </li>
         <li>
           <strong>Ajou University</strong><br>
-          B.S. in Digital Media / Software and Computer Engineering<br>
+          B.S. in Digital Media <span class="cv-muted">(First, Intensive)</span>
+          <br>Software and Computer Engineering <span class="cv-muted">(Double)</span>
+          <br>
           <span class="cv-muted">March 2020 – August 2024</span>
         </li>
       </ul>
     </div>
-
     <div>
       <h2>Skills</h2>
       <ul>
-        <li><strong>Languages:</strong> Python, C#, C, C++, GLSL</li>
-        <li><strong>Tools:</strong> Git, GitHub, OpenGL, OpenCV, PyTorch, TensorFlow</li>
+        <li><strong>Languages:</strong> Python, C++, C, C#, GLSL</li>
+        <li><strong>Tools:</strong> Git, PyTorch, TensorFlow, OpenGL, OpenCV, Docker, AWS</li>
         <li><strong>Engines:</strong> Unity, Unreal</li>
         <li><strong>Spoken Languages:</strong> Korean (Native), English (Fluent)</li>
       </ul>
