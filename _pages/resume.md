@@ -187,6 +187,15 @@ comments: false
       margin-bottom: 8px;
     }
 
+    .cv-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
     .cv-entry {
       margin-bottom: 18px;
     }
@@ -207,7 +216,55 @@ comments: false
       margin-top: 4px;
       color: #444;
     }
+    /* ── Shared entry layout (Education / Experience) ───────────────── */
+    #education .cv-entry,
+    #experience .cv-entry {
+      margin-bottom: 30px;
+    }
 
+    #education .cv-entry:last-child,
+    #experience .cv-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    #education .cv-entry-header,
+    #experience .cv-entry-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    #education .cv-entry-title,
+    #experience .cv-entry-title {
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    #education .cv-entry-meta,
+    #experience .cv-entry-meta {
+      color: #777;
+      font-size: 0.94rem;
+      white-space: nowrap;
+    }
+
+    #education .cv-sublist,
+    #experience .cv-sublist {
+      margin: 6px 0 0 0;
+      padding-left: 1.35rem;
+    }
+
+    #education .cv-sublist li,
+    #experience .cv-sublist li {
+      margin-bottom: 12px;
+      line-height: 1.75;
+    }
+
+    #education .cv-sublist li:last-child,
+    #experience .cv-sublist li:last-child {
+      margin-bottom: 0;
+    }
     .pub-list li {
       margin-bottom: 16px;
     }
@@ -354,45 +411,58 @@ comments: false
 
 
     <!-- ── EDUCATION ────────────────────────────────────── -->
-    <section class="cv-section">
+    <section id="education" class="cv-section">
       <h2>
         <span class="lang-en">Education</span>
         <span class="lang-ko">학력</span>
       </h2>
+
       <div class="cv-entry">
-        <div class="cv-entry-title">
-          <span class="lang-en">Korea Advanced Institute of Science and Technology (KAIST)</span>
-          <span class="lang-ko">한국과학기술원 (KAIST)</span>
+        <div class="cv-entry-header">
+          <div class="cv-entry-title">
+            <span class="lang-en">Korea Advanced Institute of Science and Technology (KAIST)</span>
+            <span class="lang-ko">한국과학기술원 (KAIST)</span>
+          </div>
+          <div class="cv-entry-meta">
+            <span class="lang-en">September 2024 – Present</span>
+            <span class="lang-ko">2024년 9월 – 현재</span>
+          </div>
         </div>
-        <div class="cv-entry-desc">
-          <span class="lang-en">M.S. in School of Computing <span class="cv-muted">(First)</span></span>
-          <span class="lang-ko">전산학부 석사과정 <span class="cv-muted">(제1전공)</span></span>
-          <br>
-          <span class="lang-en">Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
-          <span class="lang-ko">메타버스대학원 <span class="cv-muted">(학제전공)</span></span>
-        </div>
-        <div class="cv-entry-meta">
-          <span class="lang-en">September 2024 – Present</span>
-          <span class="lang-ko">2024년 9월 – 현재</span>
-        </div>
+
+        <ul class="cv-sublist">
+          <li>
+            <span class="lang-en">M.S. in School of Computing <span class="cv-muted">(First)</span></span>
+            <span class="lang-ko">전산학부 석사과정 <span class="cv-muted">(제1전공)</span></span>
+          </li>
+          <li>
+            <span class="lang-en">Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
+            <span class="lang-ko">메타버스대학원 <span class="cv-muted">(학제전공)</span></span>
+          </li>
+        </ul>
       </div>
 
       <div class="cv-entry">
-        <div class="cv-entry-title">
-          <span class="lang-en">Ajou University</span>
-          <span class="lang-ko">아주대학교</span>
+        <div class="cv-entry-header">
+          <div class="cv-entry-title">
+            <span class="lang-en">Ajou University</span>
+            <span class="lang-ko">아주대학교</span>
+          </div>
+          <div class="cv-entry-meta">
+            <span class="lang-en">March 2020 – August 2024</span>
+            <span class="lang-ko">2020년 3월 – 2024년 8월</span>
+          </div>
         </div>
-        <div class="cv-entry-desc">
-          <span class="lang-en">B.S. in Digital Media <span class="cv-muted">(First, Intensive)</span></span>
-          <span class="lang-ko">디지털미디어학과 학사 <span class="cv-muted">(제1전공, 심화전공)</span></span>
-          <br>
-          <span class="lang-en">B.S. in Software and Computer Engineering <span class="cv-muted">(Double Major)</span></span>
-          <span class="lang-ko">소프트웨어 및 컴퓨터공학과 학사 <span class="cv-muted">(복수전공)</span></span>
-        </div>
-        <div class="cv-entry-meta">
-          <span class="lang-en">March 2020 – August 2024</span>
-          <span class="lang-ko">2020년 3월 – 2024년 8월</span>
-        </div>
+
+        <ul class="cv-sublist">
+          <li>
+            <span class="lang-en">B.S. in Digital Media <span class="cv-muted">(First, Intensive)</span></span>
+            <span class="lang-ko">디지털미디어학과 학사 <span class="cv-muted">(제1전공, 심화전공)</span></span>
+          </li>
+          <li>
+            <span class="lang-en">B.S. in Software and Computer Engineering <span class="cv-muted">(Double Major)</span></span>
+            <span class="lang-ko">소프트웨어 및 컴퓨터공학과 학사 <span class="cv-muted">(복수전공)</span></span>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -402,37 +472,81 @@ comments: false
         <span class="lang-en">Experience</span>
         <span class="lang-ko">경험</span>
       </h2>
+
       <div class="cv-entry">
-        <div class="cv-entry-title">
-          <span class="lang-en">Researcher, Computer Graphics and Visualization Lab, KAIST</span>
-          <span class="lang-ko">연구원, KAIST Computer Graphics and Visualization 연구실</span>
+        <div class="cv-entry-header">
+          <div class="cv-entry-title">
+            <span class="lang-en">Researcher, Computer Graphics and Visualization Lab, KAIST</span>
+            <span class="lang-ko">연구원, KAIST Computer Graphics and Visualization 연구실</span>
+          </div>
+          <div class="cv-entry-meta">
+            <span class="lang-en">March 2025 – Present</span>
+            <span class="lang-ko">2025년 3월 – 현재</span>
+          </div>
         </div>
-        <div class="cv-entry-meta">
-          <span class="lang-en">March 2025 – Present</span>
-          <span class="lang-ko">2025년 3월 – 현재</span>
-        </div>
+
+        <ul class="cv-sublist">
+          <li>
+            <span class="lang-en">Task-oriented synthetic data generation and evaluation (June 2025 – Present)</span>
+            <span class="lang-ko">목적 맞춤형 합성데이터 생성 및 평가기술 개발 (2025.06 – 현재)</span>
+          </li>
+          <li>
+            <span class="lang-en">Haptic rendering for 3D interaction with fur surfaces (March 2025 – Present)</span>
+            <span class="lang-ko">Fur 표면 물체와의 3차원 상호작용을 위한 햅틱 렌더링 기법 연구 (2025.03 – 현재)</span>
+          </li>
+        </ul>
       </div>
 
       <div class="cv-entry">
-        <div class="cv-entry-title">
-          <span class="lang-en">Researcher, Games and Life Lab, Graduate School of Metaverse, KAIST</span>
-          <span class="lang-ko">연구원, KAIST 메타버스대학원 Games and Life 연구실</span>
+        <div class="cv-entry-header">
+          <div class="cv-entry-title">
+            <span class="lang-en">Researcher, Games and Life Lab, Graduate School of Metaverse, KAIST</span>
+            <span class="lang-ko">연구원, KAIST 메타버스대학원 Games and Life 연구실</span>
+          </div>
+          <div class="cv-entry-meta">
+            <span class="lang-en">September 2024 – February 2025</span>
+            <span class="lang-ko">2024년 9월 – 2025년 2월</span>
+          </div>
         </div>
-        <div class="cv-entry-meta">
-          <span class="lang-en">September 2024 – February 2025</span>
-          <span class="lang-ko">2024년 9월 – 2025년 2월</span>
-        </div>
+
+        <ul class="cv-sublist">
+          <li>
+            <span class="lang-en">Development and evaluation of an inclusive conversational AI service for improving game accessibility (September 2024 – February 2025)</span>
+            <span class="lang-ko">게임 접근성 향상을 위한 포용적 대화형 AI 서비스 개발 및 평가 (2024.09 – 2025.02)</span>
+          </li>
+        </ul>
       </div>
 
       <div class="cv-entry">
-        <div class="cv-entry-title">
-          <span class="lang-en">Researcher, Interactive Entertainment Lab, Ajou University</span>
-          <span class="lang-ko">연구원, 아주대학교 Interactive Entertainment 연구실</span>
+        <div class="cv-entry-header">
+          <div class="cv-entry-title">
+            <span class="lang-en">Researcher, Interactive Entertainment Lab, Ajou University</span>
+            <span class="lang-ko">연구원, 아주대학교 Interactive Entertainment 연구실</span>
+          </div>
+          <div class="cv-entry-meta">
+            <span class="lang-en">December 2021 – August 2024</span>
+            <span class="lang-ko">2021년 12월 – 2024년 8월</span>
+          </div>
         </div>
-        <div class="cv-entry-meta">
-          <span class="lang-en">December 2022 – August 2024</span>
-          <span class="lang-ko">2022년 12월 – 2024년 8월</span>
-        </div>
+
+        <ul class="cv-sublist">
+          <li>
+            <span class="lang-en">Research on a generative AI-based digital assets production pipeline (February 2024 – August 2024)</span>
+            <span class="lang-ko">생성형 AI 기반 Digital Assets 제작 파이프라인 연구 (2024.02 – 2024.08)</span>
+          </li>
+          <li>
+            <span class="lang-en">Research on user interaction methods and game interfaces combining artificial intelligence and biosignals (EEG) (March 2023 – February 2024)</span>
+            <span class="lang-ko">인공지능과 생체신호(EEG)를 결합한 사용자 상호작용 방식 및 게임 인터페이스 연구 (2023.03 – 2024.02)</span>
+          </li>
+          <li>
+            <span class="lang-en">Design of an AI-based conversational social agent for senior care (April 2022 – October 2022)</span>
+            <span class="lang-ko">시니어케어를 위한 인공지능 기반 대화형 소셜 에이전트 설계 연구 (2022.04 – 2022.10)</span>
+          </li>
+          <li>
+            <span class="lang-en">Research on an AI education model using maker activities and game-based learning (December 2021 – February 2022)</span>
+            <span class="lang-ko">메이커 활동과 게임 기반 학습을 활용한 인공지능 교육 모델 연구 (2021.12 – 2022.02)</span>
+          </li>
+        </ul>
       </div>
     </section>
 
