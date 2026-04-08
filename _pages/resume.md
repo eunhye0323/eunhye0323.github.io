@@ -250,15 +250,13 @@ comments: false
       <div class="cv-photo-wrap">
         <img
           class="cv-photo"
-          src="{{ '/assets/images/prof.jpg' | relative_url }}"
+          src="{{ '/assets/images/eunhyechoi_profile.jpg' | relative_url }}"
           alt="Profile photo"
         >
 
         <div class="cv-links">
-          <a class="cv-link-chip" href="mailto:YOUR_EMAIL@EMAIL.COM">Email</a>
-          <a class="cv-link-chip" href="https://github.com/YOUR_ID" target="_blank" rel="noopener">GitHub</a>
-          <a class="cv-link-chip" href="https://scholar.google.com/" target="_blank" rel="noopener">Scholar</a>
-          <a class="cv-link-chip" href="/assets/files/CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a class="cv-link-chip" href="mailto:eunhye0323@ac.kr">Email</a>
+          <a class="cv-link-chip" href="https://www.linkedin.com/in/eunhye8348/r">Linkedin</a>
         </div>
       </div>
 
@@ -275,12 +273,12 @@ comments: false
 
         <!-- EN bio -->
         <p class="lang-en" style="text-align: justify; word-break: keep-all;">
-          I am an M.S. student at the School of Computing in KAIST, advised by Professor Jinah Park at the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University, majoring in Digital Media and Software &amp; Computer Engineering. My research focuses on generative AI, particularly diffusion models and vision language models (VLMs). I am interested in improving both the quantitative and qualitative performance of these models, applying them to real-world problems and examining their potential from a user perspective.
+          I am an M.S. student at the School of Computing in KAIST, advised by Professor Jinah Park at the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University, majoring in Digital Media and Software &amp; Computer Engineering. My research focuses on generative AI, particularly diffusion model and vision language models (VLM). I am interested in improving both the quantitative and qualitative performance of these models, applying them to real-world problems and examining their potential from a user perspective.
         </p>
 
         <!-- KO bio -->
         <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
-          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 생성형 AI, 특히 Diffusion Model과 Vision Language Model(VLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
+          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 생성형 AI, 특히 Diffusion Model과 Vision Language Model (VLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
         </p>
       </div>
     </header>
@@ -557,7 +555,7 @@ comments: false
         <li>
           <strong>TA</strong>,
           <span class="lang-en">Metaverse and Human Psychology, KAIST</span>
-          <span class="lang-ko">메타버스와 인간심리, KAIST</span>
+          <span class="lang-ko">메타버스와 인간 심리의 이해, KAIST</span>
           <span class="cv-muted">
             <span class="lang-en">(Fall 2024)</span>
             <span class="lang-ko">(2024년 가을)</span>
@@ -591,7 +589,7 @@ comments: false
         <li class="cv-entry">
           <div class="cv-entry-title">
             <span class="lang-en">National Excellent Scholarship for STEM</span>
-            <span class="lang-ko">이공계 국가우수장학금</span>
+            <span class="lang-ko">이공계 석사우수장학</span>
           </div>
           <div class="cv-entry-desc">
             <span class="lang-en">Awarded by the Korea Student Aid Foundation (KOSAF)</span>
@@ -606,7 +604,7 @@ comments: false
         <li class="cv-entry">
           <div class="cv-entry-title">
             <span class="lang-en">KB Dream Wave 2030 Talent Development (A-Track)</span>
-            <span class="lang-ko">KB 드림웨이브 2030 인재육성 (A-트랙)</span>
+            <span class="lang-ko">KB Dream Wave 2030 인재육성장학 (A-트랙)</span>
           </div>
           <div class="cv-entry-desc">
             <span class="lang-en">Awarded by KB Financial Group (Sapiens 4.0)</span>
@@ -621,8 +619,8 @@ comments: false
     </section>
 
     <div class="cv-updated">
-      <span class="lang-en">Updated: 2026.03.23</span>
-      <span class="lang-ko">업데이트: 2026.03.23</span>
+      <span class="lang-en">Updated: 2026.04.08</span>
+      <span class="lang-ko">업데이트: 2026.04.08</span>
     </div>
   </div>
 </div>
