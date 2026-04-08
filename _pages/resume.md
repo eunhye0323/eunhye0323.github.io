@@ -268,10 +268,10 @@ comments: false
           <span class="lang-ko">최은혜</span>
         </h1>
 
-        <p class="cv-one-line">
-          <span class="lang-en">M.S. student at KAIST working on generative AI and end-to-end machine learning systems.</span>
-          <span class="lang-ko">생성형 AI와 End-to-End 머신러닝 시스템을 연구하는 KAIST 전산학부 석사과정 학생입니다.</span>
-        </p>
+      <p class="cv-one-line">
+        <span class="lang-en">M.S. student at KAIST developing generative AI models and end-to-end machine learning systems for real-world applications.</span>
+        <span class="lang-ko">생성형 AI 모델과 실제 문제 해결을 위한 End-to-End 머신러닝 시스템을 개발하는 KAIST 전산학부 석사과정 최은혜입니다.</span>
+      </p>
 
         <!-- EN bio -->
         <p class="lang-en" style="text-align: justify; word-break: keep-all;">
@@ -280,7 +280,7 @@ comments: false
 
         <!-- KO bio -->
         <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
-          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 현재는 생성형 AI, 특히 Diffusion Model과 Vision Language Model(VLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심이 있습니다.
+          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 생성형 AI, 특히 Diffusion Model과 Vision Language Model(VLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
         </p>
       </div>
     </header>
