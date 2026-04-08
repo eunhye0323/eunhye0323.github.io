@@ -14,20 +14,20 @@ comments: false
   </div>
 
   <style>
-    /* ── Toggle button ───────────────────────────────────── */
+    /* ── Language toggle ───────────────────────────────── */
     .lang-toggle-wrap {
       display: flex;
       align-items: center;
       gap: 6px;
       justify-content: flex-end;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .lang-btn {
       background: none;
       border: 1.5px solid #aaa;
       border-radius: 4px;
-      padding: 3px 12px;
+      padding: 4px 12px;
       font-size: 0.85rem;
       cursor: pointer;
       color: #888;
@@ -41,41 +41,225 @@ comments: false
       font-weight: 600;
     }
 
-    .lang-divider {
-      color: #ccc;
-    }
+    .lang-divider { color: #ccc; }
 
-    /* ── Language visibility (scoped only to resume page) ─ */
+    /* ── Language visibility ───────────────────────────── */
     #resume-page .lang-en,
     #resume-page .lang-ko {
       display: none;
     }
 
-    #resume-page.lang-en .lang-en {
-      display: revert;
-    }
+    #resume-page.lang-en .lang-en { display: revert; }
+    #resume-page.lang-ko .lang-ko { display: revert; }
 
-    #resume-page.lang-ko .lang-ko {
-      display: revert;
-    }
-
-    /* Prevent flicker before JS initializes */
     #resume-page.lang-pending .lang-en,
     #resume-page.lang-pending .lang-ko {
       display: none !important;
     }
+
+    /* ── Layout ────────────────────────────────────────── */
+    .academic-cv {
+      margin-top: 8px;
+    }
+
+    .cv-section {
+      border-top: 1px solid #e6e6e6;
+      padding-top: 24px;
+      margin-top: 30px;
+    }
+
+    .cv-section h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.9rem;
+      line-height: 1.25;
+    }
+
+    .cv-muted {
+      color: #777;
+    }
+
+    .cv-hero {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    .cv-photo-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cv-photo {
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid #e8e8e8;
+      display: block;
+    }
+
+    .cv-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cv-link-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .cv-link-chip:hover {
+      border-color: #999;
+      text-decoration: none;
+    }
+
+    .cv-intro {
+      min-width: 0;
+    }
+
+    .cv-name {
+      margin: 0 0 12px 0;
+      font-size: 3rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .cv-one-line {
+      margin: 0 0 14px 0;
+      font-size: 1.08rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .cv-intro p {
+      margin: 0;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .cv-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .cv-card {
+      border: 1px solid #ececec;
+      border-radius: 14px;
+      padding: 20px 22px;
+      background: #fff;
+    }
+
+    .cv-card h2 {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .cv-card ul,
+    .cv-section ul,
+    .cv-section ol {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 1.2rem;
+    }
+
+    .cv-card li,
+    .cv-section li {
+      margin-bottom: 10px;
+      line-height: 1.75;
+    }
+
+    .cv-compact-list li {
+      margin-bottom: 8px;
+    }
+
+    .cv-entry {
+      margin-bottom: 18px;
+    }
+
+    .cv-entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-entry-title {
+      font-weight: 700;
+    }
+
+    .cv-entry-meta {
+      color: #666;
+    }
+
+    .cv-entry-desc {
+      margin-top: 4px;
+      color: #444;
+    }
+
+    .pub-list li {
+      margin-bottom: 16px;
+    }
+
+    .pub-group + .pub-group {
+      margin-top: 24px;
+    }
+
+    .cv-updated {
+      margin-top: 28px;
+      text-align: right;
+      color: #777;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .cv-hero {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .cv-photo-wrap {
+        max-width: 180px;
+      }
+
+      .cv-two-col {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .cv-name {
+        font-size: 2.3rem;
+      }
+    }
   </style>
 
   <div class="academic-cv">
-    <!-- ── HERO ───────────────────────────────────────────── -->
-    <header class="cv-hero" style="margin-top: 50px;">
+    <!-- ── HERO ─────────────────────────────────────────── -->
+    <header class="cv-hero">
       <div class="cv-photo-wrap">
         <img
           class="cv-photo"
           src="{{ '/assets/images/prof.jpg' | relative_url }}"
-          alt="Eunhye Choi profile photo"
-          style="margin-top: 50px;"
+          alt="Profile photo"
         >
+
+        <div class="cv-links">
+          <a class="cv-link-chip" href="mailto:YOUR_EMAIL@EMAIL.COM">Email</a>
+          <a class="cv-link-chip" href="https://github.com/YOUR_ID" target="_blank" rel="noopener">GitHub</a>
+          <a class="cv-link-chip" href="https://scholar.google.com/" target="_blank" rel="noopener">Scholar</a>
+          <a class="cv-link-chip" href="/assets/files/CV.pdf" target="_blank" rel="noopener">CV</a>
+        </div>
       </div>
 
       <div class="cv-intro">
@@ -84,75 +268,34 @@ comments: false
           <span class="lang-ko">최은혜</span>
         </h1>
 
+        <p class="cv-one-line">
+          <span class="lang-en">M.S. student at KAIST working on generative AI and end-to-end machine learning systems.</span>
+          <span class="lang-ko">생성형 AI와 End-to-End 머신러닝 시스템을 연구하는 KAIST 전산학부 석사과정 학생입니다.</span>
+        </p>
+
         <!-- EN bio -->
         <p class="lang-en" style="text-align: justify; word-break: keep-all;">
-          I am a M.S. student in the School of Computing at KAIST, advised by Professor Jinah Park in the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University, majoring in Digital Media and Software &amp; Computer Engineering. My research interests include machine learning and deep learning, particularly generative AI models such as diffusion models and large language models (LLMs). I am especially interested in building end-to-end machine learning systems that span data processing, model development, evaluation, and deployment for real-world applications.
+          I am an M.S. student at the School of Computing in KAIST, advised by Professor Jinah Park at the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University, majoring in Digital Media and Software &amp; Computer Engineering. My research focuses on generative AI, particularly diffusion models and vision language models (VLMs). I am interested in improving both the quantitative and qualitative performance of these models, applying them to real-world problems and examining their potential from a user perspective.
         </p>
 
         <!-- KO bio -->
         <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
-          저는 KAIST 전산학부 석사과정 학생으로 Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하여 학사 학위를 받았습니다. 저는 머신러닝과 딥러닝에 관심이 있으며, 특히 Diffusion Model과 LLM을 포함한 생성형 AI 모델을 중심으로 연구하고 있습니다. 또한 데이터 처리, 모델 개발, 성능 평가, 배포까지 이어지는 End-to-End 머신러닝 시스템을 구축하여 실제 문제 해결에 적용하는 데 관심이 있습니다.
+          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 현재는 생성형 AI, 특히 Diffusion Model과 Vision Language Model(VLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심이 있습니다.
         </p>
       </div>
     </header>
 
-    <!-- ── EDUCATION ─────────────────────────────── -->
-    <section class="cv-section">
-      <h2>
-        <span class="lang-en">Education</span>
-        <span class="lang-ko">학력</span>
-      </h2>
-      <ul>
-        <li>
-          <strong>
-            <span class="lang-en">Korea Advanced Institute of Science and Technology (KAIST)</span>
-            <span class="lang-ko">한국과학기술원 (KAIST)</span>
-          </strong><br>
-          <span class="lang-en">M.S. in School of Computing <span class="cv-muted">(First)</span></span>
-          <span class="lang-ko">전산학부 석사과정 <span class="cv-muted">(제1전공)</span></span>
-          <br>
-          <span class="lang-en">Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
-          <span class="lang-ko">메타버스대학원 <span class="cv-muted">(학제전공)</span></span>
-          <br>
-          <span class="cv-muted">
-            <span class="lang-en">September 2024 – Present</span>
-            <span class="lang-ko">2024년 9월 – 현재</span>
-          </span>
-        </li>
-        <li>
-          <strong>
-            <span class="lang-en">Ajou University</span>
-            <span class="lang-ko">아주대학교</span>
-          </strong><br>
-          <span class="lang-en">B.S. in Digital Media <span class="cv-muted">(First, Intensive)</span></span>
-          <span class="lang-ko">디지털미디어학과 학사 <span class="cv-muted">(제1전공, 심화전공)</span></span>
-          <br>
-          <span class="lang-en">Software and Computer Engineering <span class="cv-muted">(Double)</span></span>
-          <span class="lang-ko">소프트웨어 및 컴퓨터공학과 학사 <span class="cv-muted">(복수전공)</span></span>
-          <br>
-          <span class="cv-muted">
-            <span class="lang-en">March 2020 – August 2024</span>
-            <span class="lang-ko">2020년 3월 – 2024년 8월</span>
-          </span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ── INTERESTS + SKILLS ─────────────────────────────── -->
+    <!-- ── INTERESTS + SKILLS ───────────────────────────── -->
     <section class="cv-section cv-two-col">
-      <div>
+      <div class="cv-card">
         <h2>
           <span class="lang-en">Interests</span>
           <span class="lang-ko">관심 분야</span>
         </h2>
-        <ul>
+        <ul class="cv-compact-list">
           <li>
-            <span class="lang-en">Machine Learning and Deep Learning</span>
-            <span class="lang-ko">머신러닝 및 딥러닝</span>
-          </li>
-          <li>
-            <span class="lang-en">Generative AI, including Diffusion Models and LLMs (Large Language Models)</span>
-            <span class="lang-ko">Diffusion Model 및 LLM (Large Language Models)을 포함한 생성형 AI</span>
+            <span class="lang-en">Generative AI (Diffusion Models & VLMs)</span>
+            <span class="lang-ko">생성형 AI (Diffusion Models & VLMs)</span>
           </li>
           <li>
             <span class="lang-en">End-to-End Machine Learning Systems</span>
@@ -165,25 +308,25 @@ comments: false
         </ul>
       </div>
 
-      <div>
+      <div class="cv-card">
         <h2>
           <span class="lang-en">Skills</span>
           <span class="lang-ko">기술 스택</span>
         </h2>
-        <ul>
-          <li>
-            <strong>
-              <span class="lang-en">Programming:</span>
-              <span class="lang-ko">프로그래밍:</span>
-            </strong>
-            Python, C++, C, C#, GLSL
-          </li>
+        <ul class="cv-compact-list">
           <li>
             <strong>
               <span class="lang-en">Machine Learning / Deep Learning:</span>
               <span class="lang-ko">머신러닝 / 딥러닝:</span>
             </strong>
             PyTorch, TensorFlow, OpenCV
+          </li>
+          <li>
+            <strong>
+              <span class="lang-en">Programming:</span>
+              <span class="lang-ko">프로그래밍:</span>
+            </strong>
+            Python, C++, C, C#, GLSL
           </li>
           <li>
             <strong>
@@ -211,88 +354,91 @@ comments: false
       </div>
     </section>
 
-    <!-- ── EXPERIENCE ─────────────────────────────────────── -->
+
+    <!-- ── EDUCATION ────────────────────────────────────── -->
+    <section class="cv-section">
+      <h2>
+        <span class="lang-en">Education</span>
+        <span class="lang-ko">학력</span>
+      </h2>
+      <div class="cv-entry">
+        <div class="cv-entry-title">
+          <span class="lang-en">Korea Advanced Institute of Science and Technology (KAIST)</span>
+          <span class="lang-ko">한국과학기술원 (KAIST)</span>
+        </div>
+        <div class="cv-entry-desc">
+          <span class="lang-en">M.S. in School of Computing <span class="cv-muted">(First)</span></span>
+          <span class="lang-ko">전산학부 석사과정 <span class="cv-muted">(제1전공)</span></span>
+          <br>
+          <span class="lang-en">Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
+          <span class="lang-ko">메타버스대학원 <span class="cv-muted">(학제전공)</span></span>
+        </div>
+        <div class="cv-entry-meta">
+          <span class="lang-en">September 2024 – Present</span>
+          <span class="lang-ko">2024년 9월 – 현재</span>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">
+          <span class="lang-en">Ajou University</span>
+          <span class="lang-ko">아주대학교</span>
+        </div>
+        <div class="cv-entry-desc">
+          <span class="lang-en">B.S. in Digital Media <span class="cv-muted">(First, Intensive)</span></span>
+          <span class="lang-ko">디지털미디어학과 학사 <span class="cv-muted">(제1전공, 심화전공)</span></span>
+          <br>
+          <span class="lang-en">B.S. in Software and Computer Engineering <span class="cv-muted">(Double Major)</span></span>
+          <span class="lang-ko">소프트웨어 및 컴퓨터공학과 학사 <span class="cv-muted">(복수전공)</span></span>
+        </div>
+        <div class="cv-entry-meta">
+          <span class="lang-en">March 2020 – August 2024</span>
+          <span class="lang-ko">2020년 3월 – 2024년 8월</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ───────────────────────────────────── -->
     <section id="experience" class="cv-section">
       <h2>
-        <span class="lang-en">Work &amp; Research Experience</span>
-        <span class="lang-ko">연구 경험</span>
+        <span class="lang-en">Experience</span>
+        <span class="lang-ko">경험</span>
       </h2>
-      <ul>
-        <li>
-          <strong>
-            <span class="lang-en">Researcher</span>
-            <span class="lang-ko">연구원</span>
-          </strong>,
-          <span class="lang-en">School of Computing, Computer Graphics and Visualization Lab, KAIST</span>
-          <span class="lang-ko">KAIST 전산학부, Computer Graphics and Visualization 연구실</span>
-          <span class="cv-muted">
-            <span class="lang-en">March 2025 – Present</span>
-            <span class="lang-ko">2025년 3월 – 현재</span>
-          </span>
-        </li>
-        <li>
-          <strong>
-            <span class="lang-en">Researcher</span>
-            <span class="lang-ko">연구원</span>
-          </strong>,
-          <span class="lang-en">Graduate School of Metaverse, Games and Life Lab, KAIST</span>
-          <span class="lang-ko">KAIST 메타버스대학원, Games and Life 연구실</span>
-          <span class="cv-muted">
-            <span class="lang-en">September 2024 – February 2025</span>
-            <span class="lang-ko">2024년 9월 – 2025년 2월</span>
-          </span>
-        </li>
-        <li>
-          <strong>
-            <span class="lang-en">Researcher</span>
-            <span class="lang-ko">연구원</span>
-          </strong>,
-          <span class="lang-en">Department of Digital Media, Interactive Entertainment Lab, Ajou University</span>
-          <span class="lang-ko">아주대학교 디지털미디어학과, Interactive Entertainment 연구실</span>
-          <span class="cv-muted">
-            <span class="lang-en">December 2022 – August 2024</span>
-            <span class="lang-ko">2022년 12월 – 2024년 8월</span>
-          </span>
-        </li>
-      </ul>
+      <div class="cv-entry">
+        <div class="cv-entry-title">
+          <span class="lang-en">Researcher, Computer Graphics and Visualization Lab, KAIST</span>
+          <span class="lang-ko">연구원, KAIST Computer Graphics and Visualization 연구실</span>
+        </div>
+        <div class="cv-entry-meta">
+          <span class="lang-en">March 2025 – Present</span>
+          <span class="lang-ko">2025년 3월 – 현재</span>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">
+          <span class="lang-en">Researcher, Games and Life Lab, Graduate School of Metaverse, KAIST</span>
+          <span class="lang-ko">연구원, KAIST 메타버스대학원 Games and Life 연구실</span>
+        </div>
+        <div class="cv-entry-meta">
+          <span class="lang-en">September 2024 – February 2025</span>
+          <span class="lang-ko">2024년 9월 – 2025년 2월</span>
+        </div>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-title">
+          <span class="lang-en">Researcher, Interactive Entertainment Lab, Ajou University</span>
+          <span class="lang-ko">연구원, 아주대학교 Interactive Entertainment 연구실</span>
+        </div>
+        <div class="cv-entry-meta">
+          <span class="lang-en">December 2022 – August 2024</span>
+          <span class="lang-ko">2022년 12월 – 2024년 8월</span>
+        </div>
+      </div>
     </section>
 
-    <!-- ── AWARDS ─────────────────────────────────────────── -->
-    <section id="awards" class="cv-section">
-      <h2>
-        <span class="lang-en">Awards</span>
-        <span class="lang-ko">수상</span>
-      </h2>
-      <ul>
-        <li>
-          <strong>2024</strong> —
-          <span class="lang-en">Virtual Convergence Service Developer Competition, Woongjin ThinkBig Award, 3rd Place</span>
-          <span class="lang-ko">가상융합 서비스 개발자 경진대회, 웅진씽크빅 특별상, 3위</span>
-        </li>
-        <li>
-          <strong>2023</strong> —
-          <span class="lang-en">XR Device Content Makeathon, NIPA President's Award, 2nd Place</span>
-          <span class="lang-ko">XR 디바이스 콘텐츠 메이커톤, 정보통신산업진흥원장상, 2위</span>
-        </li>
-        <li>
-          <strong>2023</strong> —
-          <span class="lang-en">Korea Game Society Spring Conference, Excellent Paper Award</span>
-          <span class="lang-ko">한국게임학회 춘계학술대회, 우수논문상</span>
-        </li>
-        <li>
-          <strong>2022</strong> —
-          <span class="lang-en">Gyeonggi Culture Technology Academy, Grand Award, 1st Place</span>
-          <span class="lang-ko">경기문화기술아카데미, 대상, 1위</span>
-        </li>
-        <li>
-          <strong>2022</strong> —
-          <span class="lang-en">Gyeonggi Metaverse Academy, Excellence Award, 2nd Place</span>
-          <span class="lang-ko">경기 메타버스 아카데미, 우수상, 2위</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ── PUBLICATIONS ───────────────────────────────────── -->
+    <!-- ── PUBLICATIONS ─────────────────────────────────── -->
     <section id="publications" class="cv-section">
       <h2>
         <span class="lang-en">Publications</span>
@@ -366,7 +512,42 @@ comments: false
       </div>
     </section>
 
-    <!-- ── TEACHING ────────────────────────────────────────── -->
+    <!-- ── AWARDS ───────────────────────────────────────── -->
+    <section id="awards" class="cv-section">
+      <h2>
+        <span class="lang-en">Awards</span>
+        <span class="lang-ko">수상</span>
+      </h2>
+      <ul>
+        <li>
+          <strong>2024</strong> —
+          <span class="lang-en">Virtual Convergence Service Developer Competition, Woongjin ThinkBig Award, 3rd Place</span>
+          <span class="lang-ko">가상융합 서비스 개발자 경진대회, 웅진씽크빅 특별상, 3위</span>
+        </li>
+        <li>
+          <strong>2023</strong> —
+          <span class="lang-en">XR Device Content Makeathon, NIPA President's Award, 2nd Place</span>
+          <span class="lang-ko">XR 디바이스 콘텐츠 메이커톤, 정보통신산업진흥원장상, 2위</span>
+        </li>
+        <li>
+          <strong>2023</strong> —
+          <span class="lang-en">Korea Game Society Spring Conference, Excellent Paper Award</span>
+          <span class="lang-ko">한국게임학회 춘계학술대회, 우수논문상</span>
+        </li>
+        <li>
+          <strong>2022</strong> —
+          <span class="lang-en">Gyeonggi Culture Technology Academy, Grand Award, 1st Place</span>
+          <span class="lang-ko">경기문화기술아카데미, 대상, 1위</span>
+        </li>
+        <li>
+          <strong>2022</strong> —
+          <span class="lang-en">Gyeonggi Metaverse Academy, Excellence Award, 2nd Place</span>
+          <span class="lang-ko">경기 메타버스 아카데미, 우수상, 2위</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── TEACHING ─────────────────────────────────────── -->
     <section id="teaching" class="cv-section">
       <h2>
         <span class="lang-en">Teaching Experience</span>
@@ -376,7 +557,7 @@ comments: false
         <li>
           <strong>TA</strong>,
           <span class="lang-en">Metaverse and Human Psychology, KAIST</span>
-          <span class="lang-ko">메타버스와 인간 심리의 이해, KAIST</span>
+          <span class="lang-ko">메타버스와 인간심리, KAIST</span>
           <span class="cv-muted">
             <span class="lang-en">(Fall 2024)</span>
             <span class="lang-ko">(2024년 가을)</span>
@@ -397,82 +578,55 @@ comments: false
           <span class="lang-ko">중등정보, 아주대학교 과학영재교육원</span>
           <span class="cv-muted">(2023)</span>
         </li>
-        <li>
-          <strong>TA</strong>,
-          <span class="lang-en">Understanding Games, Ajou University</span>
-          <span class="lang-ko">게임의 이해, 아주대학교</span>
-          <span class="cv-muted">
-            <span class="lang-en">(Fall 2022)</span>
-            <span class="lang-ko">(2022년 가을)</span>
-          </span>
-        </li>
-        <li>
-          <strong>TA</strong>,
-          <span class="lang-en">Creative Media, Ajou University</span>
-          <span class="lang-ko">창의미디어, 아주대학교</span>
-          <span class="cv-muted">
-            <span class="lang-en">(Spring 2022)</span>
-            <span class="lang-ko">(2022년 봄)</span>
-          </span>
-        </li>
-        <li>
-          <strong>TA</strong>,
-          <span class="lang-en">Graphic Design, Ajou University</span>
-          <span class="lang-ko">그래픽디자인, 아주대학교</span>
-          <span class="cv-muted">
-            <span class="lang-en">(Fall 2021)</span>
-            <span class="lang-ko">(2021년 가을)</span>
-          </span>
-        </li>
       </ul>
     </section>
 
-    <!-- ── SCHOLARSHIPS ───────────────────────────────────── -->
+    <!-- ── SCHOLARSHIPS ─────────────────────────────────── -->
     <section id="scholarships" class="cv-section">
       <h2>
         <span class="lang-en">Scholarships</span>
         <span class="lang-ko">장학금</span>
       </h2>
       <ul style="list-style: none; padding-left: 0; margin-left: 0;">
-        <li style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin-bottom:18px;">
-          <div>
-            <strong>
-              <span class="lang-en">National Excellent Scholarship for STEM</span>
-              <span class="lang-ko">이공계 석사우수장학</span>
-            </strong><br>
+        <li class="cv-entry">
+          <div class="cv-entry-title">
+            <span class="lang-en">National Excellent Scholarship for STEM</span>
+            <span class="lang-ko">이공계 국가우수장학금</span>
+          </div>
+          <div class="cv-entry-desc">
             <span class="lang-en">Awarded by the Korea Student Aid Foundation (KOSAF)</span>
             <span class="lang-ko">한국장학재단 (KOSAF) 지원</span>
           </div>
-          <span class="cv-muted" style="white-space:nowrap;">
+          <div class="cv-entry-meta">
             <span class="lang-en">October 2025</span>
             <span class="lang-ko">2025년 10월</span>
-          </span>
+          </div>
         </li>
-        <li style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px;">
-          <div>
-            <strong>
-              <span class="lang-en">KB Dream Wave 2030 Talent Development (A-Track)</span>
-              <span class="lang-ko">KB Dream Wav 2030 인재육성장학 (A-트랙)</span>
-            </strong><br>
+
+        <li class="cv-entry">
+          <div class="cv-entry-title">
+            <span class="lang-en">KB Dream Wave 2030 Talent Development (A-Track)</span>
+            <span class="lang-ko">KB 드림웨이브 2030 인재육성 (A-트랙)</span>
+          </div>
+          <div class="cv-entry-desc">
             <span class="lang-en">Awarded by KB Financial Group (Sapiens 4.0)</span>
             <span class="lang-ko">KB금융그룹 (사피엔스 4.0) 지원</span>
           </div>
-          <span class="cv-muted" style="white-space:nowrap;">
+          <div class="cv-entry-meta">
             <span class="lang-en">July 2022 – December 2022</span>
             <span class="lang-ko">2022년 7월 – 2022년 12월</span>
-          </span>
+          </div>
         </li>
       </ul>
     </section>
 
-    <div class="cv-updated" style="text-align: right;">
-      <span class="lang-en">Updated : 2026.04.07</span>
-      <span class="lang-ko">업데이트 : 2026.04.07</span>
+    <div class="cv-updated">
+      <span class="lang-en">Updated: 2026.03.23</span>
+      <span class="lang-ko">업데이트: 2026.03.23</span>
     </div>
   </div>
 </div>
 
-<!-- ── Language toggle script ──────────────────────────── -->
 <script>
   function setResumeLang(lang) {
     const root = document.getElementById('resume-page');
