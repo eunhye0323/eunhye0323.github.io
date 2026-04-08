@@ -300,8 +300,8 @@ comments: false
             <span class="lang-ko">End-to-End 머신러닝 시스템</span>
           </li>
           <li>
-            <span class="lang-en">Model Optimization and Real-World Deployment</span>
-            <span class="lang-ko">모델 최적화 및 실제 환경 적용</span>
+            <span class="lang-en">Model Optimization and Deployment</span>
+            <span class="lang-ko">모델 최적화 및 배포</span>
           </li>
         </ul>
       </div>
@@ -317,7 +317,7 @@ comments: false
               <span class="lang-en">Machine Learning / Deep Learning:</span>
               <span class="lang-ko">머신러닝 / 딥러닝:</span>
             </strong>
-            PyTorch, TensorFlow, OpenCV
+            PyTorch, TensorFlow
           </li>
           <li>
             <strong>
@@ -596,8 +596,8 @@ comments: false
             <span class="lang-ko">한국장학재단 (KOSAF) 지원</span>
           </div>
           <div class="cv-entry-meta">
-            <span class="lang-en">October 2025</span>
-            <span class="lang-ko">2025년 10월</span>
+            <span class="lang-en">October 2025 – Present</span>
+            <span class="lang-ko">2025년 10월 - 현재</span>
           </div>
         </li>
 
@@ -619,8 +619,8 @@ comments: false
     </section>
 
     <div class="cv-updated">
-      <span class="lang-en">Updated: 2026.04.08</span>
-      <span class="lang-ko">업데이트: 2026.04.08</span>
+      <span class="lang-en">Updated: 2026.04.09</span>
+      <span class="lang-ko">업데이트: 2026.04.09</span>
     </div>
   </div>
 </div>
