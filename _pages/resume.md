@@ -349,8 +349,8 @@ comments: false
         </h2>
         <ul class="cv-compact-list">
           <li>
-            <span class="lang-en">Generative AI (Diffusion Models & VLMs)</span>
-            <span class="lang-ko">생성형 AI (Diffusion Models & VLMs)</span>
+            <span class="lang-en">Generative AI (Diffusion Models & Multi-Modal LLMs)</span>
+            <span class="lang-ko">생성형 AI (Diffusion Models & Multi-Modal LLMs)</span>
           </li>
           <li>
             <span class="lang-en">End-to-End Machine Learning Systems</span>
@@ -476,8 +476,8 @@ comments: false
       <div class="cv-entry">
         <div class="cv-entry-header">
           <div class="cv-entry-title">
-            <span class="lang-en">Researcher, Computer Graphics and Visualization Lab, KAIST</span>
-            <span class="lang-ko">연구원, KAIST Computer Graphics and Visualization 연구실</span>
+            <span class="lang-en">Researcher, Computer Graphics and Visualization Lab, School of Computing, KAIST</span>
+            <span class="lang-ko">연구원, KAIST 전산학부 Computer Graphics and Visualization 연구실</span>
           </div>
           <div class="cv-entry-meta">
             <span class="lang-en">March 2025 – Present</span>
@@ -520,8 +520,8 @@ comments: false
       <div class="cv-entry">
         <div class="cv-entry-header">
           <div class="cv-entry-title">
-            <span class="lang-en">Researcher, Interactive Entertainment Lab, Ajou University</span>
-            <span class="lang-ko">연구원, 아주대학교 Interactive Entertainment 연구실</span>
+            <span class="lang-en">Researcher, Interactive Entertainment Lab, Department of Digital Media, Ajou University</span>
+            <span class="lang-ko">연구원, 아주대학교 디지털미디어학과 Interactive Entertainment 연구실</span>
           </div>
           <div class="cv-entry-meta">
             <span class="lang-en">December 2021 – August 2024</span>
@@ -574,9 +574,14 @@ comments: false
             2025 ACM CHI Conference on Human Factors in Computing Systems, Late Breaking Work
           </li>
           <li>
-            <strong>RAG-Enhanced LLM Chatbot for Game Accessibility: Development and Evaluation of GAIA</strong><br>
-            Hyunyoung Oh, Karam Eum*, Eunbyul Park*, Jihun Chae*, Junsuk Seo*, <strong>Eunhye Choi</strong>*, Youngyim Doh<br>
-            2025 Human Computer Interface Korea
+            <strong>
+              <span class="lang-en">RAG-Enhanced LLM Chatbot for Game Accessibility: Development and Evaluation of GAIA</span>
+              <span class="lang-ko">게임 접근성 향상을 위한 RAG 적용 LLM 챗봇 GAIA 개발 및 평가</span>
+            </strong><br>
+              <span class="lang-en">Hyunyoung Oh, Karam Eum*, Eunbyul Park*, Jihun Chae*, Junsuk Seo*, <strong>Eunhye Choi</strong>*, Youngyim Doh</span>
+              <span class="lang-ko">오현영, 엄가람*, 박은별*, 채지훈*, 서준석*, <strong>최은혜</strong>*, 도영임</span><br>
+            <span class="lang-en">2025 Human Computer Interaction Korea</span>
+            <span class="lang-ko">2025 한국HCI학회</span>
           </li>
           <li>
             <strong>Prompting-Based LLM Framework for Ethical Decision-Making in the Trolley Dilemma: Embedding Hofstede's Cultural Dimension Theory (PLETH)</strong><br>
@@ -594,10 +599,14 @@ comments: false
         </h3>
         <ol class="pub-list">
           <li>
-            <strong>Future Education and Art Education: Future, World, Digital, AI, Virtual Reality, Metaverse, NFT, Art, Education</strong><br>
-            <strong>Eunhye Choi</strong>, Jiyeon Ahn et al.<br>
-            <span class="lang-en">Education Science Publishing, January 2024, pp. 175–213.</span>
-            <span class="lang-ko">교육과학사, 2024년 1월, pp. 175–213.</span>
+            <strong>
+              <span class="lang-en">Future Education and Art Education: Future, World, Digital, AI, Virtual Reality, Metaverse, NFT, Art, Education</span>
+              <span class="lang-ko">미래교육 미술교육: 미래, 세계, 디지털, 인공지능, 가상현실, 메타버스, NFT, 예술, 교육</span>
+            </strong><br>
+            <span class="lang-en"><strong>Eunhye Choi</strong>, Jiyeon Ahn et al.</span>
+            <span class="lang-ko"><strong>최은혜</strong>, 안지연 외</span><br>
+            <span class="lang-en">Education Science Publishing, January 2024, pp. 175-213.</span>
+            <span class="lang-ko">교육과학사, 2024년 1월, pp. 175-213.</span>
           </li>
         </ol>
       </div>
@@ -628,7 +637,7 @@ comments: false
         <li>
           <strong>2022</strong> —
           <span class="lang-en">Gyeonggi Culture Technology Academy, Grand Award, 1st Place</span>
-          <span class="lang-ko">경기문화기술아카데미, 대상, 1위</span>
+          <span class="lang-ko">경기 문화기술 아카데미, 대상, 1위</span>
         </li>
         <li>
           <strong>2022</strong> —
