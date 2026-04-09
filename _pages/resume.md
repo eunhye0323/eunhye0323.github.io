@@ -431,11 +431,11 @@ comments: false
 
         <ul class="cv-sublist">
           <li>
-            <span class="lang-en">M.S. in School of Computing <span class="cv-muted">(First)</span></span>
+            <span class="lang-en">M.S. in Computer Science <span class="cv-muted">(First)</span></span>
             <span class="lang-ko">전산학부 석사과정 <span class="cv-muted">(제1전공)</span></span>
           </li>
           <li>
-            <span class="lang-en">M.S. in Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
+            <span class="lang-en">M.S. in Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
             <span class="lang-ko">메타버스대학원 석사과정 <span class="cv-muted">(학제전공)</span></span>
           </li>
         </ul>
