@@ -313,7 +313,7 @@ comments: false
 
         <div class="cv-links">
           <a class="cv-link-chip" href="mailto:eunhye0323@ac.kr">Email</a>
-          <a class="cv-link-chip" href="https://www.linkedin.com/in/eunhye8348/r">Linkedin</a>
+          <a class="cv-link-chip" href="https://www.linkedin.com/in/eunhye8348/">Linkedin</a>
         </div>
       </div>
 
@@ -330,12 +330,12 @@ comments: false
 
         <!-- EN bio -->
         <p class="lang-en" style="text-align: justify; word-break: keep-all;">
-          I am an M.S. student at the School of Computing in KAIST, advised by Professor Jinah Park at the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University, majoring in Digital Media and Software &amp; Computer Engineering. My research focuses on generative AI, particularly diffusion model and vision language models (VLM). I am interested in improving both the quantitative and qualitative performance of these models, applying them to real-world problems and examining their potential from a user perspective.
+          I am an M.S. student at the School of Computing in KAIST, advised by Professor Jinah Park at the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University, majoring in Digital Media and Software &amp; Computer Engineering. My research focuses on generative AI, particularly diffusion model and multi-modal large language model (LLM). I am interested in improving both the quantitative and qualitative performance of these models, applying them to real-world problems and examining their potential from a user perspective.
         </p>
 
         <!-- KO bio -->
         <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
-          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 생성형 AI, 특히 Diffusion Model과 Vision Language Model (VLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
+          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 생성형 AI, 특히 diffusion model과 multi-modal large language model (LLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
         </p>
       </div>
     </header>
@@ -435,8 +435,8 @@ comments: false
             <span class="lang-ko">전산학부 석사과정 <span class="cv-muted">(제1전공)</span></span>
           </li>
           <li>
-            <span class="lang-en">Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
-            <span class="lang-ko">메타버스대학원 <span class="cv-muted">(학제전공)</span></span>
+            <span class="lang-en">M.S. in Graduate School of Metaverse <span class="cv-muted">(Interdisciplinary)</span></span>
+            <span class="lang-ko">메타버스대학원 석사과정 <span class="cv-muted">(학제전공)</span></span>
           </li>
         </ul>
       </div>
@@ -583,27 +583,6 @@ comments: false
             <strong>Eunhye Choi</strong>*, Jihun Chae*, Youngyim Doh<br>
             <span class="lang-en">2024 Fall Conference on Korean Artificial Intelligence Association</span>
             <span class="lang-ko">2024 한국인공지능학회 추계학술대회</span>
-          </li>
-          <li>
-            <strong>BCI Neurofeedback Game based on Attention and Meditation Training</strong><br>
-            <strong>Eunhye Choi</strong>, Gyuhwan Oh<br>
-            <span class="lang-en">2023 Spring Conference on Korea Game Society</span>
-            <span class="lang-ko">2023 한국게임학회 춘계학술대회</span>
-          </li>
-        </ol>
-      </div>
-
-      <div class="pub-group">
-        <h3>
-          <span class="lang-en">Journal</span>
-          <span class="lang-ko">저널</span>
-        </h3>
-        <ol class="pub-list">
-          <li>
-            <strong>Analysis of the Aesthetic Elements of Art Game through the Player's Experience</strong><br>
-            <strong>Eunhye Choi</strong>, Jiyeon Ahn<br>
-            <span class="lang-en">Journal of Art Education, vol.72, February 2023, pp. 297–330.</span>
-            <span class="lang-ko">미술교육논총, 72권, 2023년 2월, pp. 297–330.</span>
           </li>
         </ol>
       </div>
