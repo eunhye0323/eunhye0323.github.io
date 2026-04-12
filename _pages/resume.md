@@ -328,15 +328,15 @@ comments: false
         <span class="lang-ko">생성형 AI 모델과 실제 문제 해결을 위한 End-to-End 머신러닝 시스템을 개발하는 KAIST 전산학부 석사과정 최은혜입니다.</span>
       </p>
 
-        <!-- EN bio -->
-        <p class="lang-en" style="text-align: justify; word-break: keep-all;">
-          I am an M.S. student at the School of Computing in KAIST, advised by Professor Jinah Park at the Computer Graphics and Visualization Lab. I received my B.S. from Ajou University, majoring in Digital Media and Software &amp; Computer Engineering. My research focuses on generative AI, particularly diffusion model and multi-modal large language model (LLM). I am interested in improving both the quantitative and qualitative performance of these models, applying them to real-world problems and examining their potential from a user perspective.
-        </p>
+      <!-- EN bio -->
+      <p class="lang-en" style="text-align: justify; word-break: keep-all;">
+        I am an M.S. student at the School of Computing in KAIST, conducting research on generative AI at the Computer Graphics and Visualization Lab. My work focuses on diffusion models and multimodal large language models (LLMs), with a particular interest in improving their quantitative and qualitative performance and applying them to real-world problem solving from a user perspective.
+      </p>
 
-        <!-- KO bio -->
-        <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
-          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 박진아 교수님의 지도를 받고 있습니다. 아주대학교에서 디지털미디어와 소프트웨어 및 컴퓨터공학을 전공하였으며, 생성형 AI, 특히 diffusion model과 multi-modal large language model (LLM)을 중심으로 연구하고 있습니다. 또한 이러한 모델의 정량적·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
-        </p>
+      <!-- KO bio -->
+      <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
+        저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 생성형 AI (diffusion models 및 multi-modal large language models (LLMS))를 중심으로 연구하고 있습니다. 특히 모델의 정량·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
+      </p>
       </div>
     </header>
 
@@ -539,7 +539,7 @@ comments: false
             <span class="lang-ko">인공지능과 생체신호(EEG)를 결합한 사용자 상호작용 방식 및 게임 인터페이스 연구 (2023.03 – 2024.02)</span>
           </li>
           <li>
-            <span class="lang-en">Design of an AI-based conversational social agent for senior care (April 2022 – October 2022)</span>
+            <span class="lang-en">Research on an AI-based conversational social agent for senior care (April 2022 – October 2022)</span>
             <span class="lang-ko">시니어케어를 위한 인공지능 기반 대화형 소셜 에이전트 설계 연구 (2022.04 – 2022.10)</span>
           </li>
           <li>
