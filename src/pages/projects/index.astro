@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/Layout.astro';
+import LangToggle from '~/components/LangToggle.astro';
+
+const entries = await getCollection('projects');
+const projects = entries
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .map((e) => ({ slug: e.slug, ...e.data }));
+---
+
+<Layout title="Projects">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    <LangToggle />
+
+    <header class="mt-6 mb-10">
+      <h1 class="text-4xl font-bold tracking-tight text-slate-900 mb-2">
+        <span class="lang-en">Projects</span>
+        <span class="lang-ko">프로젝트</span>
+      </h1>
+      <p class="text-sm text-slate-500">
+        <span class="lang-en">Research and projects in generative AI, HCI, and XR.</span>
+        <span class="lang-ko">생성형 AI, HCI, XR 분야의 연구 및 프로젝트.</span>
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      {projects.map((p) => (
+        <a href={`/projects/${p.slug}/`} class="group rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden hover:shadow-md hover:border-blue-300 transition-all flex flex-col">
+          <div class="aspect-video overflow-hidden bg-gray-50">
+            <img src={p.thumbnail} alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-4 flex flex-col gap-2 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="inline-block px-2 py-0.5 rounded-full bg-blue-100 text-blue-600 text-[10px] font-bold uppercase tracking-wide">{p.badge}</span>
+              <span class="text-[11px] text-slate-400">
+                {new Date(p.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
+              </span>
+            </div>
+            <h2 class="text-sm font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
+              {p.title}
+            </h2>
+            {p.summary && (
+              <p class="text-xs text-slate-500 leading-relaxed line-clamp-3 [&_br]:hidden" set:html={p.summary} />
+            )}
+            <div class="flex flex-wrap gap-1.5 mt-auto pt-2">
+              {p.categories.map((c) => (
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-slate-500">{c}</span>
+              ))}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,50 @@
+---
+import '~/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'Eunhye Choi', description = 'M.S. student at KAIST — Generative AI & End-to-End ML Systems' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth lang-pending">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/images/logo.png" />
+    <title>{title === 'Eunhye Choi' ? title : `${title} | Eunhye Choi`}</title>
+  </head>
+  <body class="bg-white text-slate-700">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-14">
+        <a href="/" class="text-sm font-bold text-slate-900 tracking-tight hover:text-blue-600 transition-colors">
+          Eunhye Choi
+        </a>
+        <div class="flex items-center gap-6">
+          <a href="/" class="text-sm text-slate-600 hover:text-blue-600 transition-colors">Resume</a>
+          <a href="/projects/" class="text-sm text-slate-600 hover:text-blue-600 transition-colors">Projects</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-14">
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-100 mt-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-slate-400">© 2026 Eunhye Choi. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="mailto:eunhye0323@ac.kr" class="text-xs text-slate-400 hover:text-blue-600 transition-colors">Email</a>
+          <a href="https://www.linkedin.com/in/eunhye8348/" target="_blank" class="text-xs text-slate-400 hover:text-blue-600 transition-colors">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

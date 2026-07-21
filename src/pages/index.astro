@@ -1,0 +1,551 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/Layout.astro';
+import LangToggle from '~/components/LangToggle.astro';
+
+const entries = await getCollection('projects');
+const recentProjects = entries
+  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 3)
+  .map((e) => ({ slug: e.slug, ...e.data }));
+---
+
+<Layout title="Eunhye Choi">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+
+    <LangToggle />
+
+    <!-- ── HERO ─────────────────────────────────────────── -->
+    <header class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start mt-6 mb-4">
+      <div class="flex flex-col gap-3 max-w-[200px]">
+        <img
+          src="/images/eunhyechoi_profile.jpg"
+          alt="Eunhye Choi"
+          class="w-full aspect-[3/4] object-cover rounded-2xl border border-gray-200 shadow-sm"
+        />
+        <div class="flex justify-center gap-2">
+          <a href="mailto:eunhye0323@ac.kr" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 rounded-full border border-gray-300 text-xs text-slate-600 hover:border-blue-500 hover:text-blue-600 transition-colors">Email</a>
+          <a href="https://www.linkedin.com/in/eunhye8348/" target="_blank" class="flex-1 inline-flex items-center justify-center px-3 py-1.5 rounded-full border border-gray-300 text-xs text-slate-600 hover:border-blue-500 hover:text-blue-600 transition-colors">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="min-w-0">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-3">
+          <span class="lang-en">Eunhye Choi</span>
+          <span class="lang-ko">최은혜</span>
+        </h1>
+
+        <p class="text-base font-medium text-blue-600 mb-4">
+          <span class="lang-en">M.S. student at KAIST developing generative AI models and end-to-end machine learning systems for real-world applications.</span>
+          <span class="lang-ko">생성형 AI 모델과 실제 문제 해결을 위한 End-to-End 머신러닝 시스템을 개발하는 KAIST 전산학부 석사과정 최은혜입니다.</span>
+        </p>
+
+        <p class="lang-en text-sm leading-relaxed text-slate-600 text-justify [word-break:keep-all]">
+          I am an M.S. student at the School of Computing in KAIST, conducting research on generative AI at the Computer Graphics and Visualization Lab. My work focuses on diffusion models and multimodal large language models (LLMs), with a particular interest in improving their quantitative and qualitative performance and applying them to real-world problem solving from a user perspective.
+        </p>
+        <p class="lang-ko text-sm leading-relaxed text-slate-600 text-justify [word-break:keep-all]">
+          저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 생성형 AI (diffusion models 및 multi-modal large language models (LLMs))를 중심으로 연구하고 있습니다. 특히 모델의 정량·정성적 성능을 향상시키고, 이를 실제 문제 해결에 적용하여 사용자 관점에서 그 활용 가능성을 살펴보는 데 관심을 두고 있습니다.
+        </p>
+      </div>
+    </header>
+
+    <!-- ── INTERESTS + SKILLS ───────────────────────────── -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+      <div class="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+        <div class="bg-blue-600 px-5 py-2.5">
+          <h2 class="text-xs font-bold tracking-widest uppercase text-white">
+            <span class="lang-en">Interests</span>
+            <span class="lang-ko">관심 분야</span>
+          </h2>
+        </div>
+        <ul class="p-5 space-y-2.5 text-sm text-slate-600">
+          <li class="flex gap-2">
+            <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+            <span>
+              <span class="lang-en">Generative AI (Diffusion Models &amp; Vision Langauge Models)</span>
+              <span class="lang-ko">생성형 AI (Diffusion Models &amp; Vision Langauge Models)</span>
+            </span>
+          </li>
+          <li class="flex gap-2">
+            <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+            <span>
+              <span class="lang-en">End-to-End Machine Learning Systems</span>
+              <span class="lang-ko">End-to-End 머신러닝 시스템</span>
+            </span>
+          </li>
+          <li class="flex gap-2">
+            <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+            <span>
+              <span class="lang-en">Gaussian Splatting</span>
+              <span class="lang-ko">가우시안 스플래팅</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+        <div class="bg-blue-500 px-5 py-2.5">
+          <h2 class="text-xs font-bold tracking-widest uppercase text-white">
+            <span class="lang-en">Skills</span>
+            <span class="lang-ko">기술 스택</span>
+          </h2>
+        </div>
+        <ul class="p-5 space-y-2 text-sm text-slate-600">
+          <li>
+            <strong class="text-slate-800">
+              <span class="lang-en">ML / DL:</span>
+              <span class="lang-ko">머신러닝 / 딥러닝:</span>
+            </strong>
+            PyTorch
+          </li>
+          <li>
+            <strong class="text-slate-800">
+              <span class="lang-en">Programming:</span>
+              <span class="lang-ko">프로그래밍:</span>
+            </strong>
+            Python, C++, C, C#, GLSL
+          </li>
+          <li>
+            <strong class="text-slate-800">
+              <span class="lang-en">Systems:</span>
+              <span class="lang-ko">시스템 / 개발:</span>
+            </strong>
+            Git, Docker, AWS
+          </li>
+          <li>
+            <strong class="text-slate-800">
+              <span class="lang-en">Graphics / Engines:</span>
+              <span class="lang-ko">그래픽스 / 엔진:</span>
+            </strong>
+            OpenGL, Unity
+          </li>
+          <li>
+            <strong class="text-slate-800">
+              <span class="lang-en">Languages:</span>
+              <span class="lang-ko">사용 언어:</span>
+            </strong>
+            <span class="lang-en">Korean (Native), English (Fluent)</span>
+            <span class="lang-ko">한국어 (모국어), 영어 (비즈니스 가능)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ────────────────────────────────────── -->
+    <section id="education" class="mt-12">
+      <h2 class="text-2xl font-bold text-slate-900 mb-5 pb-2 border-b border-gray-200">
+        <span class="lang-en">Education</span>
+        <span class="lang-ko">학력</span>
+      </h2>
+      <div class="flex flex-col gap-4">
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+            <h3 class="font-bold text-slate-900">
+              <span class="lang-en">Korea Advanced Institute of Science and Technology (KAIST)</span>
+              <span class="lang-ko">한국과학기술원 (KAIST)</span>
+            </h3>
+            <span class="text-xs text-slate-400 whitespace-nowrap">
+              <span class="lang-en">Sep 2024 – Present</span>
+              <span class="lang-ko">2024.09 – 현재</span>
+            </span>
+          </div>
+          <ul class="space-y-1.5 text-sm text-slate-600">
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">M.S. in Computer Science <span class="text-slate-400">(First)</span></span>
+                <span class="lang-ko">전산학부 석사과정 <span class="text-slate-400">(제1전공)</span></span>
+              </span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">M.S. in Metaverse <span class="text-slate-400">(Interdisciplinary)</span></span>
+                <span class="lang-ko">메타버스대학원 석사과정 <span class="text-slate-400">(학제전공)</span></span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+            <h3 class="font-bold text-slate-900">
+              <span class="lang-en">Ajou University</span>
+              <span class="lang-ko">아주대학교</span>
+            </h3>
+            <span class="text-xs text-slate-400 whitespace-nowrap">
+              <span class="lang-en">Mar 2020 – Aug 2024</span>
+              <span class="lang-ko">2020.03 – 2024.08</span>
+            </span>
+          </div>
+          <ul class="space-y-1.5 text-sm text-slate-600">
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">B.S. in Digital Media <span class="text-slate-400">(First, Intensive)</span></span>
+                <span class="lang-ko">디지털미디어학과 학사 <span class="text-slate-400">(제1전공, 심화전공)</span></span>
+              </span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">B.S. in Software and Computer Engineering <span class="text-slate-400">(Double Major)</span></span>
+                <span class="lang-ko">소프트웨어 및 컴퓨터공학과 학사 <span class="text-slate-400">(복수전공)</span></span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ───────────────────────────────────── -->
+    <section id="experience" class="mt-12">
+      <h2 class="text-2xl font-bold text-slate-900 mb-5 pb-2 border-b border-gray-200">
+        <span class="lang-en">Experience</span>
+        <span class="lang-ko">경험</span>
+      </h2>
+      <div class="flex flex-col gap-4">
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+            <h3 class="font-bold text-slate-900">
+              <span class="lang-en">Researcher, Computer Graphics and Visualization Lab, School of Computing, KAIST</span>
+              <span class="lang-ko">연구원, KAIST 전산학부 Computer Graphics and Visualization 연구실</span>
+            </h3>
+            <span class="text-xs text-slate-400 whitespace-nowrap">
+              <span class="lang-en">Mar 2025 – Present</span>
+              <span class="lang-ko">2025.03 – 현재</span>
+            </span>
+          </div>
+          <ul class="space-y-1.5 text-sm text-slate-600">
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">Task-oriented synthetic data generation and evaluation (Jun 2025 – Present)</span>
+                <span class="lang-ko">목적 맞춤형 합성데이터 생성 및 평가기술 개발 (2025.06 – 현재)</span>
+              </span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">Haptic rendering for 3D interaction with fur surfaces (Mar 2025 – July 2025)</span>
+                <span class="lang-ko">Fur 표면 물체와의 3차원 상호작용을 위한 햅틱 렌더링 기법 연구 (2025.03 – 2025.07)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+            <h3 class="font-bold text-slate-900">
+              <span class="lang-en">Researcher, Games and Life Lab, Graduate School of Metaverse, KAIST</span>
+              <span class="lang-ko">연구원, KAIST 메타버스대학원 Games and Life 연구실</span>
+            </h3>
+            <span class="text-xs text-slate-400 whitespace-nowrap">
+              <span class="lang-en">Sep 2024 – Feb 2025</span>
+              <span class="lang-ko">2024.09 – 2025.02</span>
+            </span>
+          </div>
+          <ul class="space-y-1.5 text-sm text-slate-600">
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">Development and evaluation of an inclusive conversational AI service for improving game accessibility (Sep 2024 – Feb 2025)</span>
+                <span class="lang-ko">게임 접근성 향상을 위한 포용적 대화형 AI 서비스 개발 및 평가 (2024.09 – 2025.02)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+            <h3 class="font-bold text-slate-900">
+              <span class="lang-en">Researcher, Interactive Entertainment Lab, Department of Digital Media, Ajou University</span>
+              <span class="lang-ko">연구원, 아주대학교 디지털미디어학과 Interactive Entertainment 연구실</span>
+            </h3>
+            <span class="text-xs text-slate-400 whitespace-nowrap">
+              <span class="lang-en">Dec 2021 – Aug 2024</span>
+              <span class="lang-ko">2021.12 – 2024.08</span>
+            </span>
+          </div>
+          <ul class="space-y-1.5 text-sm text-slate-600">
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">Research on a generative AI-based digital assets production pipeline (Feb 2024 – Aug 2024)</span>
+                <span class="lang-ko">생성형 AI 기반 Digital Assets 제작 파이프라인 연구 (2024.02 – 2024.08)</span>
+              </span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">Research on user interaction methods and game interfaces combining AI and biosignals (EEG) (Mar 2023 – Feb 2024)</span>
+                <span class="lang-ko">인공지능과 생체신호(EEG)를 결합한 사용자 상호작용 방식 및 게임 인터페이스 연구 (2023.03 – 2024.02)</span>
+              </span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">Research on an AI-based conversational social agent for senior care (Apr 2022 – Oct 2022)</span>
+                <span class="lang-ko">시니어케어를 위한 인공지능 기반 대화형 소셜 에이전트 설계 연구 (2022.04 – 2022.10)</span>
+              </span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+              <span>
+                <span class="lang-en">Research on an AI education model using maker activities and game-based learning (Dec 2021 – Feb 2022)</span>
+                <span class="lang-ko">메이커 활동과 게임 기반 학습을 활용한 인공지능 교육 모델 연구 (2021.12 – 2022.02)</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PUBLICATIONS ─────────────────────────────────── -->
+    <section id="publications" class="mt-12">
+      <h2 class="text-2xl font-bold text-slate-900 mb-5 pb-2 border-b border-gray-200">
+        <span class="lang-en">Publications</span>
+        <span class="lang-ko">논문</span>
+      </h2>
+
+      <p class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-3">
+        <span class="lang-en">Conferences</span>
+        <span class="lang-ko">학회</span>
+      </p>
+      <div class="flex flex-col gap-3 mb-6">
+        {[
+          {
+            num: 1,
+            title: 'TouchArt: Vibrotactile Interaction for Color Perception in Virtual Painting',
+            authors: 'Gyuna Lim, Anney Vo, <strong>Eunhye Choi</strong>, Jinah Park',
+            venue: '2025 IEEE World Haptics Conference, Hands-On Demonstrations',
+          },
+          {
+            num: 2,
+            title: 'Press Start to Continue: A Thematic Analysis of the Iterative Process of Hardcore Players with Disabilities Adapting to Gameplay Difficulties',
+            authors: 'Eunbyul Park*, Jihun Chae*, Karam Eum, <strong>Eunhye Choi</strong>, Hyunyoung Oh, Youngyim Doh',
+            venue: '2025 ACM CHI Conference on Human Factors in Computing Systems, Late Breaking Work',
+          },
+        ].map(({ num, title, authors, venue }) => (
+          <div class="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm">
+            <div class="flex-shrink-0 pt-0.5">
+              <div class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">{num}</div>
+            </div>
+            <div class="text-sm">
+              <p class="font-bold text-slate-900 mb-1">{title}</p>
+              <p class="text-slate-600 mb-0.5" set:html={authors} />
+              <p class="text-xs text-slate-400">{venue}</p>
+            </div>
+          </div>
+        ))}
+
+        <div class="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm">
+          <div class="flex-shrink-0 pt-0.5">
+            <div class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">3</div>
+          </div>
+          <div class="text-sm">
+            <p class="font-bold text-slate-900 mb-1">
+              <span class="lang-en">RAG-Enhanced LLM Chatbot for Game Accessibility: Development and Evaluation of GAIA</span>
+              <span class="lang-ko">게임 접근성 향상을 위한 RAG 적용 LLM 챗봇 GAIA 개발 및 평가</span>
+            </p>
+            <p class="text-slate-600 mb-0.5">
+              <span class="lang-en">Hyunyoung Oh, Karam Eum*, Eunbyul Park*, Jihun Chae*, Junsuk Seo*, <strong>Eunhye Choi</strong>*, Youngyim Doh</span>
+              <span class="lang-ko">오현영, 엄가람*, 박은별*, 채지훈*, 서준석*, <strong>최은혜</strong>*, 도영임</span>
+            </p>
+            <p class="text-xs text-slate-400">
+              <span class="lang-en">2025 Human Computer Interaction Korea</span>
+              <span class="lang-ko">2025 한국HCI학회</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm">
+          <div class="flex-shrink-0 pt-0.5">
+            <div class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">4</div>
+          </div>
+          <div class="text-sm">
+            <p class="font-bold text-slate-900 mb-1">Prompting-Based LLM Framework for Ethical Decision-Making in the Trolley Dilemma: Embedding Hofstede's Cultural Dimension Theory (PLETH)</p>
+            <p class="text-slate-600 mb-0.5"><strong>Eunhye Choi</strong>*, Jihun Chae*, Youngyim Doh</p>
+            <p class="text-xs text-slate-400">
+              <span class="lang-en">2024 Fall Conference on Korean Artificial Intelligence Association</span>
+              <span class="lang-ko">2024 한국인공지능학회 추계학술대회</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-3">
+        <span class="lang-en">Book Chapter</span>
+        <span class="lang-ko">단행본</span>
+      </p>
+      <div class="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div class="flex-shrink-0 pt-0.5">
+          <div class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xs">1</div>
+        </div>
+        <div class="text-sm">
+          <p class="font-bold text-slate-900 mb-1">
+            <span class="lang-en">Future Education and Art Education: Future, World, Digital, AI, Virtual Reality, Metaverse, NFT, Art, Education</span>
+            <span class="lang-ko">미래교육 미술교육: 미래, 세계, 디지털, 인공지능, 가상현실, 메타버스, NFT, 예술, 교육</span>
+          </p>
+          <p class="text-slate-600 mb-0.5">
+            <span class="lang-en"><strong>Eunhye Choi</strong>, Jiyeon Ahn et al.</span>
+            <span class="lang-ko"><strong>최은혜</strong>, 안지연 외</span>
+          </p>
+          <p class="text-xs text-slate-400">
+            <span class="lang-en">Education Science Publishing, January 2024, pp. 175-213.</span>
+            <span class="lang-ko">교육과학사, 2024년 1월, pp. 175-213.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── AWARDS ───────────────────────────────────────── -->
+    <section id="awards" class="mt-12">
+      <h2 class="text-2xl font-bold text-slate-900 mb-5 pb-2 border-b border-gray-200">
+        <span class="lang-en">Awards</span>
+        <span class="lang-ko">수상</span>
+      </h2>
+      <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+        <ul class="space-y-2.5 text-sm text-slate-600">
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 font-bold text-slate-900 w-12">2024</span>
+            <span>
+              <span class="lang-en">Virtual Convergence Service Developer Competition, Woongjin ThinkBig Award, 3rd Place</span>
+              <span class="lang-ko">가상융합 서비스 개발자 경진대회, 웅진씽크빅 특별상, 3위</span>
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 font-bold text-slate-900 w-12">2023</span>
+            <span>
+              <span class="lang-en">XR Device Content Makeathon, NIPA President's Award, 2nd Place</span>
+              <span class="lang-ko">XR 디바이스 콘텐츠 메이커톤, 정보통신산업진흥원장상, 2위</span>
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 font-bold text-slate-900 w-12">2023</span>
+            <span>
+              <span class="lang-en">Korea Game Society Spring Conference, Excellent Paper Award</span>
+              <span class="lang-ko">한국게임학회 춘계학술대회, 우수논문상</span>
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 font-bold text-slate-900 w-12">2022</span>
+            <span>
+              <span class="lang-en">Gyeonggi Culture Technology Academy, Grand Award, 1st Place</span>
+              <span class="lang-ko">경기 문화기술 아카데미, 대상, 1위</span>
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 font-bold text-slate-900 w-12">2022</span>
+            <span>
+              <span class="lang-en">Gyeonggi Metaverse Academy, Excellence Award, 2nd Place</span>
+              <span class="lang-ko">경기 메타버스 아카데미, 우수상, 2위</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── TEACHING + SCHOLARSHIPS ──────────────────────── -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-5 pb-2 border-b border-gray-200">
+          <span class="lang-en">Teaching</span>
+          <span class="lang-ko">조교 경험</span>
+        </h2>
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+          <ul class="space-y-2.5 text-sm text-slate-600">
+            <li>
+              <strong class="text-slate-900">TA</strong> —
+              <span class="lang-en">Metaverse and Human Psychology, KAIST <span class="text-slate-400">(Fall 2024)</span></span>
+              <span class="lang-ko">메타버스와 인간 심리의 이해, KAIST <span class="text-slate-400">(2024년 가을)</span></span>
+            </li>
+            <li>
+              <strong class="text-slate-900">TA</strong> —
+              <span class="lang-en">Game Engine Programming, Ajou University <span class="text-slate-400">(Spring 2023)</span></span>
+              <span class="lang-ko">게임엔진프로그래밍, 아주대학교 <span class="text-slate-400">(2023년 봄)</span></span>
+            </li>
+            <li>
+              <strong class="text-slate-900">TA</strong> —
+              <span class="lang-en">Secondary Information, Ajou University Science Education Institute for the Gifted <span class="text-slate-400">(2023)</span></span>
+              <span class="lang-ko">중등정보, 아주대학교 과학영재교육원 <span class="text-slate-400">(2023)</span></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 mb-5 pb-2 border-b border-gray-200">
+          <span class="lang-en">Scholarships</span>
+          <span class="lang-ko">장학금</span>
+        </h2>
+        <div class="rounded-xl border border-gray-200 bg-white shadow-sm p-5">
+          <ul class="space-y-4 text-sm text-slate-600">
+            <li>
+              <p class="font-bold text-slate-900">
+                <span class="lang-en">National Excellent Scholarship for STEM</span>
+                <span class="lang-ko">이공계 석사우수장학</span>
+              </p>
+              <p>
+                <span class="lang-en">Korea Student Aid Foundation (KOSAF)</span>
+                <span class="lang-ko">한국장학재단 (KOSAF) 지원</span>
+              </p>
+              <p class="text-xs text-slate-400">
+                <span class="lang-en">Oct 2025 – Present</span>
+                <span class="lang-ko">2025.10 – 현재</span>
+              </p>
+            </li>
+            <li>
+              <p class="font-bold text-slate-900">
+                <span class="lang-en">KB Dream Wave 2030 Talent Development (A-Track)</span>
+                <span class="lang-ko">KB Dream Wave 2030 인재육성장학 (A-트랙)</span>
+              </p>
+              <p>
+                <span class="lang-en">KB Financial Group (Sapiens 4.0)</span>
+                <span class="lang-ko">KB금융그룹 (사피엔스 4.0) 지원</span>
+              </p>
+              <p class="text-xs text-slate-400">
+                <span class="lang-en">Jul 2022 – Dec 2022</span>
+                <span class="lang-ko">2022.07 – 2022.12</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RECENT PROJECTS ──────────────────────────────── -->
+    <section class="mt-12">
+      <div class="flex items-baseline justify-between mb-5 pb-2 border-b border-gray-200">
+        <h2 class="text-2xl font-bold text-slate-900">
+          <span class="lang-en">Recent Projects</span>
+          <span class="lang-ko">최근 프로젝트</span>
+        </h2>
+        <a href="/projects/" class="text-sm text-blue-600 hover:underline">
+          <span class="lang-en">View all →</span>
+          <span class="lang-ko">전체 보기 →</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {recentProjects.map((p) => (
+          <a href={`/projects/${p.slug}/`} class="group rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden hover:shadow-md hover:border-blue-300 transition-all">
+            <div class="aspect-video overflow-hidden bg-gray-50">
+              <img src={p.thumbnail} alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div class="p-4">
+              <span class="inline-block px-2 py-0.5 rounded-full bg-blue-100 text-blue-600 text-[10px] font-bold uppercase tracking-wide mb-2">{p.badge}</span>
+              <h3 class="text-sm font-bold text-slate-900 leading-snug mb-1 group-hover:text-blue-600 transition-colors">
+                {p.title}
+              </h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="text-right text-xs text-slate-400 mt-10">
+      <span class="lang-en">Updated: 2026.07.20</span>
+      <span class="lang-ko">업데이트: 2026.07.20</span>
+    </p>
+  </div>
+</Layout>

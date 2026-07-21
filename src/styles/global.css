@@ -1,0 +1,25 @@
+@import '@fontsource-variable/inter';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 37 99 235;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-slate-700 antialiased;
+  }
+
+  /* Bilingual toggle */
+  .lang-en, .lang-ko { display: none; }
+  .show-en .lang-en { display: revert; }
+  .show-ko .lang-ko { display: revert; }
+  .lang-pending .lang-en,
+  .lang-pending .lang-ko { display: none !important; }
+}

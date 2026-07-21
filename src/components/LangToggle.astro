@@ -1,0 +1,38 @@
+<div class="flex items-center gap-1.5 justify-end" aria-label="Language toggle">
+  <button
+    type="button"
+    id="btn-ko"
+    class="lang-btn px-3 py-1 text-xs rounded-md border border-gray-300 text-gray-500 transition-all hover:border-gray-400"
+    onclick="setLang('ko')">한국어</button>
+  <button
+    type="button"
+    id="btn-en"
+    class="lang-btn px-3 py-1 text-xs rounded-md border border-gray-300 text-gray-500 transition-all hover:border-gray-400"
+    onclick="setLang('en')">English</button>
+</div>
+
+<script is:inline>
+  function setLang(lang) {
+    const root = document.documentElement;
+    root.classList.remove('show-ko', 'show-en', 'lang-pending');
+    root.classList.add('show-' + lang);
+
+    ['ko', 'en'].forEach((l) => {
+      const btn = document.getElementById('btn-' + l);
+      if (!btn) return;
+      const active = l === lang;
+      btn.classList.toggle('bg-slate-900', active);
+      btn.classList.toggle('text-white', active);
+      btn.classList.toggle('border-slate-900', active);
+      btn.classList.toggle('font-semibold', active);
+      btn.classList.toggle('text-gray-500', !active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+
+    localStorage.setItem('site-lang', lang);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    setLang(localStorage.getItem('site-lang') || 'ko');
+  });
+</script>

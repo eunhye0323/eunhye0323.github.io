@@ -1,0 +1,50 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/Layout.astro';
+
+export const getStaticPaths = (async () => {
+  const entries = await getCollection('projects');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { title, date, categories, thumbnail, badge } = entry.data;
+
+const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+---
+
+<Layout title={title}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
+
+    <a href="/projects/" class="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-blue-600 transition-colors mb-6">
+      ← Back to Projects
+    </a>
+
+    <header class="mb-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-block px-2.5 py-1 rounded-full bg-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wide">{badge}</span>
+        <span class="text-xs text-slate-400">{formattedDate}</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight mb-3">{title}</h1>
+      <div class="flex flex-wrap gap-1.5">
+        {categories.map((c) => (
+          <span class="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-slate-500">{c}</span>
+        ))}
+      </div>
+    </header>
+
+    <div class="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden mb-8">
+      <img src={thumbnail} alt={title} class="w-full object-cover" />
+    </div>
+
+    <article class="prose prose-slate max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-3 prose-h3:text-lg prose-h3:mt-6 prose-h3:mb-2 prose-p:leading-relaxed prose-p:text-slate-600 prose-strong:text-slate-800 prose-img:rounded-xl prose-hr:my-8 prose-a:text-blue-600">
+      <Content />
+    </article>
+
+  </div>
+</Layout>
