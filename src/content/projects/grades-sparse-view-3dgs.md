@@ -93,7 +93,7 @@ Interactive slider comparisons, including baseline comparisons and a Kitchen-sce
 
 This is individual, ongoing M.S. thesis research at the Computer Graphics and Visualization Lab, KAIST. I designed and implemented the full pipeline myself, from geometry initialization to diffusion-guided optimization and evaluation.
 
-본 연구는 KAIST Computer Graphics and Visualization 연구실에서 수행 중인 단독 석사논문 연구입니다. 기하 초기화부터 디퓨전 가이드 최적화와 평가까지 전체 파이프라인을 제가 직접 설계하고 구현했습니다.
+본 연구는 KAIST Computer Graphics and Visualization 연구실에서 수행 중인 단독 석사논문 연구입니다. 기하 초기화부터 디퓨전 가이드 최적화와 평가까지 전체 파이프라인을 직접 설계하고 구현했습니다.
 
 - **3D Reconstruction / Rendering:** 3D Gaussian Splatting, dense-stereo initialization (MASt3R/DUSt3R → COLMAP), depth estimation (Depth-Anything-V2)
 - **Generative Model:** Video diffusion-based novel view generation (ViewCrafter) with stage-wise latent blending
