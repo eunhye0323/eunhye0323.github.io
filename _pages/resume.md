@@ -324,7 +324,7 @@ comments: false
         </h1>
 
       <p class="cv-one-line">
-        <span class="lang-en">M.S. student at KAIST researching 2D/3D generative AI — diffusion models and 3D Gaussian Splatting — to create 3D scenes and content from images.</span>
+        <span class="lang-en">M.S. student at KAIST researching 2D/3D generative AI (diffusion models) and 3D Gaussian Splatting to create 3D scenes and content from 2D images.</span>
         <span class="lang-ko">2D 이미지로부터 3D 공간과 콘텐츠를 생성하는 기술(Diffusion Models, Gaussian Splatting)을 연구하는 KAIST 전산학부 석사과정 최은혜입니다.</span>
       </p>
 
@@ -335,7 +335,7 @@ comments: false
 
       <!-- KO bio -->
       <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
-        저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 2D/3D 생성형 AI를 연구하고 있습니다. 특히 실제 환경에서 촬영된 제한된 수의 2D 이미지로부터 Diffusion Model과 Gaussian Splatting을 활용해 3D 공간과 콘텐츠를 생성하는 연구를 수행하고 있으며, 이를 VR/AR과 접목해 실제 문제 해결에 적용하는 데 관심을 두고 있습니다.
+        저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 2D/3D 생성형 AI를 연구하고 있습니다. 특히 실제 환경에서 촬영된 제한된 수의 2D 이미지로부터 Diffusion Model과 Gaussian Splatting을 활용해 3D 공간과 콘텐츠를 생성하는 연구를 수행하고 있으며, 이를 접목한 VR/AR 애플리케이션 개발에도 관심을 두고 있습니다.
       </p>
       </div>
     </header>
@@ -721,8 +721,8 @@ comments: false
     </section>
 
     <div class="cv-updated">
-      <span class="lang-en">Updated: 2026.04.09</span>
-      <span class="lang-ko">업데이트: 2026.04.09</span>
+      <span class="lang-en">Updated: 2026.08.03</span>
+      <span class="lang-ko">업데이트: 2026.08.03</span>
     </div>
   </div>
 </div>
