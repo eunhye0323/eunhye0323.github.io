@@ -9,11 +9,9 @@ date: 2024-08-01
 
 ### Project Overview
 
-This project develops a **BCI-based neurofeedback game designed for attention and relaxation training**. Based on an analysis of **eight prior BCI neurofeedback studies**, the project explores how neurofeedback training can be integrated with engaging game mechanics commonly found in commercial games.
-The system measures the player's **attention and relaxation levels using EEG signals** and translates these signals into gameplay dynamics. By combining neurofeedback with gamification, the project aims to provide a training experience that is both **scientifically meaningful and enjoyable for players**.
+A Unity game that turns attention and relaxation training into play. I started by analyzing eight prior BCI neurofeedback studies, then built the neurofeedback system around the kind of engaging mechanics found in commercial games. During play, EEG signals measure the player's attention and relaxation levels and feed directly into the gameplay, the training happens while playing, not as a separate exercise.
 
-본 프로젝트는 **집중 및 이완 훈련을 위한 BCI 기반 뉴로피드백 게임 콘텐츠**를 개발하는 것을 목표로 수행하였습니다. 특히 **8건의 BCI 뉴로피드백 선행 연구 분석 결과**를 기반으로, 기존 상용 게임에서 제공하는 **재미와 몰입 요소를 반영한 뉴로피드백 게임 시스템**을 개발하였습니다.
-시스템은 **EEG 신호를 이용해 플레이어의 집중도와 이완 상태를 측정**하고 이를 게임 플레이 요소로 변환합니다. 이를 통해 사용자는 게임을 플레이하면서 자연스럽게 **집중 및 이완 훈련을 수행할 수 있도록** 설계되었습니다.
+집중·이완 훈련을 게임 플레이로 풀어낸 Unity 기반 BCI 뉴로피드백 게임입니다. 8건의 BCI 뉴로피드백 선행 연구를 분석한 결과를 바탕으로, 상용 게임이 가진 재미와 몰입 요소를 뉴로피드백 시스템에 반영했습니다. 플레이 중 EEG 신호로 측정한 집중도와 이완 상태가 게임 플레이에 그대로 반영되기 때문에, 별도의 훈련 과정 없이 게임을 즐기는 것만으로 자연스럽게 훈련이 이루어집니다.
 
 ---
 
@@ -76,27 +74,9 @@ allowfullscreen>
 
 ### System Design
 
-The neurofeedback game was implemented using **Unity (C###)** and integrates brain-computer interface signals into gameplay mechanics.
+The game is built in Unity (C#). Attention and relaxation levels are read from EEG in real time and mapped to game mechanics and player interactions, with gamified feedback that nudges players toward maintaining or raising the target cognitive state. Doing well at the game and doing well at the training end up being the same thing.
 
-Key elements of the system include:
-
-- Real-time monitoring of **attention and relaxation levels using EEG signals**
-- Mapping cognitive states to **game mechanics and player interactions**
-- Gamified feedback that encourages players to **maintain or increase target cognitive states**
-
-This design allows players to experience the **effects of neurofeedback training while maintaining engagement and enjoyment during gameplay**.
-
-
-
-본 콘텐츠는 **Unity(C#)** 기반으로 개발된 **BCI 뉴로피드백 게임 시스템**입니다.
-
-시스템은 다음과 같은 요소로 구성됩니다.
-
-- EEG 기반 **집중도 및 이완 상태 실시간 측정**
-- 인지 상태를 **게임 플레이 요소와 연동**
-- 목표 인지 상태를 **유지하거나 향상하도록 유도하는 게임화 피드백**
-
-이를 통해 플레이어는 게임을 즐기면서 **의도적으로 집중 또는 이완 상태를 조절하는 뉴로피드백 훈련 효과**를 경험할 수 있습니다.
+게임은 Unity(C#)로 구현했습니다. EEG로 측정한 집중도와 이완 상태를 실시간으로 게임 메커니즘과 플레이어 인터랙션에 연결하고, 목표 인지 상태를 유지하거나 끌어올리도록 유도하는 게임화 피드백을 설계했습니다. 결과적으로 게임을 잘 플레이하는 것이 곧 집중과 이완을 조절하는 훈련이 되는 구조입니다.
 
 ---
 
@@ -105,19 +85,18 @@ This design allows players to experience the **effects of neurofeedback training
 - EEG-based brain-computer interface integration
 - Neurofeedback-driven gameplay mechanics
 - Gamified training for attention and relaxation regulation
-- Real-time cognitive state visualization during gameplay
+- Real-time visualization of the player's cognitive state during gameplay
 
-- EEG 기반 **BCI(Brain-Computer Interface) 신호 활용**
+- EEG 기반 BCI(Brain-Computer Interface) 신호 활용
 - 뉴로피드백 기반 게임 플레이 메커니즘
-- 집중 및 이완 조절을 위한 **게임화 기반 훈련 시스템**
-- 게임 플레이 중 **실시간 인지 상태 피드백 제공**
+- 집중·이완 조절을 위한 게임화 훈련 시스템
+- 플레이 중 실시간 인지 상태 피드백
 
 
 ---
 
 ### Research Contribution
 
-This project demonstrates how **neurofeedback training can be integrated into engaging game environments**. By combining BCI technology with gamification, the system proposes a new approach for **interactive cognitive training that balances scientific effectiveness and entertainment value**.
+This project brings neurofeedback training and game design into a single loop. The EEG feedback that drives the training is delivered entirely through gameplay, offering an interactive form of cognitive training that doesn't force a choice between effectiveness and fun.
 
-
-본 프로젝트는 **뉴로피드백 훈련을 게임 콘텐츠와 결합한 인터랙티브 인지 훈련 시스템**을 제안합니다. BCI 기술과 게임화를 결합함으로써 **과학적 훈련 효과와 게임의 재미를 동시에 제공하는 새로운 형태의 뉴로피드백 콘텐츠 가능성**을 제시합니다.
+뉴로피드백 훈련과 게임 디자인을 하나로 합친 인터랙티브 인지 훈련 방식을 제안했습니다. 훈련을 이끄는 EEG 피드백 루프가 게임 플레이 자체에 녹아 있어, 훈련 효과와 게임의 재미 중 어느 한쪽을 포기하지 않아도 됩니다.

@@ -10,17 +10,17 @@ date: 2023-12-01
 
 ## Project Overview
 
-Hi! Medi is an AR meditation content project designed to support emotional recognition and emotional regulation for children. This project combines an application and a physical guidebook to create an accessible and engaging meditation experience for elementary school students. By visualizing otherwise invisible breathing processes through AR, the system helps children better understand and participate in mindfulness activities. This project was developed using Unity (C#) and received the Excellence Award at the 2023 XR Device Content Makeathon. 
+Hi! Medi is AR meditation content that helps elementary school children recognize and regulate their emotions. It pairs an application with a physical guidebook, and uses AR to make the normally invisible breath something a child can actually see, helping them understand the practice and stay engaged. The project was built in Unity (C#) and won the **Excellence Award** at the 2023 XR Device Content Makeathon.
 
-Hi! Medi는 **초등학생의 정서 인식 및 정서 조절 능력 향상**을 목표로 한 **AR 명상 콘텐츠 프로젝트**입니다. 이 프로젝트는 **애플리케이션과 가이드북을 결합한 형태**로 구성되어 있으며, 초등학생이 보다 쉽고 흥미롭게 명상 활동에 참여할 수 있도록 설계되었습니다. 특히 AR을 통해 **눈에 보이지 않는 호흡 과정을 시각화**함으로써, 사용자가 명상 과정에 더 몰입하고 직관적으로 이해할 수 있도록 했습니다. 본 프로젝트는 **Unity(C#)**로 개발되었으며, **2023 XR 디바이스 콘텐츠 메이커톤 우수상**을 수상했습니다. 
+Hi! Medi는 초등학생이 자신의 감정을 알아차리고 조절하는 힘을 기를 수 있도록 만든 AR 명상 콘텐츠입니다. 애플리케이션과 실물 가이드북을 함께 사용하는 구성으로, 눈에 보이지 않는 호흡을 AR로 시각화해 아이들이 명상 과정을 직관적으로 따라가며 몰입할 수 있게 했습니다. Unity(C#)로 개발했으며, 2023 XR 디바이스 콘텐츠 메이커톤에서 **우수상**을 수상했습니다.
 
 ---
 
 ### Achievements
 
-- Excellence Award, 2023 XR Device Content Makeathon
+- **Excellence Award**, 2023 XR Device Content Makeathon
 
-- 2023 XR 디바이스 콘텐츠 메이커톤 **우수상 수상**
+- 2023 XR 디바이스 콘텐츠 메이커톤 **우수상**
 
 ---
 
@@ -42,22 +42,22 @@ allowfullscreen>
 
 ### Key Features
 
-- AR-based meditation experience for children
-- Visualization of breathing process through AR glasses
-- App- and book-based interactive learning structure
-- Child-friendly content designed for engagement and accessibility
+- AR meditation experience for children
+- Breathing process visualized through AR glasses
+- App and guidebook used together as one interactive learning flow
+- Content kept simple and playful so kids can join in easily
 
 
-- 초등학생을 위한 AR 기반 명상 콘텐츠
-- AR 기기를 활용한 호흡 과정 시각화
-- 애플리케이션과 책을 결합한 상호작용형 학습 구조
-- 아이들이 쉽고 재미있게 참여할 수 있는 콘텐츠 설계
+- 초등학생을 위한 AR 명상 콘텐츠
+- AR 글래스를 통한 호흡 과정 시각화
+- 애플리케이션과 책을 하나로 엮은 상호작용형 학습 구조
+- 아이들이 쉽고 재미있게 참여할 수 있는 콘텐츠 구성
 
 ---
 
 ### Development Details
 
-The project used **Unity (C#)** as the core development tool. It was designed for use with **Panacea AR Glasses GTM-200**, enabling users to see breathing-related visual feedback during meditation. By adding visual and interactive elements to a traditionally quiet and static meditation experience, Hi! Medi aimed to make meditation more engaging and approachable for children.
+The content was developed in Unity (C#) for the Panacea AR Glasses GTM-200, which show breathing-related visual feedback while the child meditates. Meditation is usually a quiet, static activity, so a visual and interactive layer was added to make it more approachable and fun for children.
 
-프로젝트는 **Unity(C#)**를 기반으로 개발되었으며, **Panacea AR Glasses GTM-200**을 활용하여 명상 중 호흡 과정을 시각적으로 표현할 수 있도록 구성되었습니다. 기존 명상이 정적이고 조용한 경험에 머무르는 경우가 많았다면, Hi! Medi는 **시각적 요소와 인터랙션을 추가**하여 아이들이 명상을 더 친숙하고 흥미롭게 느낄 수 있도록 설계되었습니다.
+콘텐츠는 Unity(C#)로 제작했고, Panacea AR Glasses GTM-200을 통해 명상 중 호흡에 맞춘 시각 피드백을 보여줍니다. 명상은 대개 조용하고 정적인 활동에 머무르기 쉬운데, 여기에 시각적 요소와 인터랙션을 더해 아이들이 명상을 한층 친숙하고 흥미롭게 느낄 수 있도록 했습니다.
 

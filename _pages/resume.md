@@ -330,7 +330,7 @@ comments: false
 
       <!-- EN bio -->
       <p class="lang-en" style="text-align: justify; word-break: keep-all;">
-        I am an M.S. student at the School of Computing in KAIST, conducting research on 2D/3D generative AI at the Computer Graphics and Visualization Lab. My work focuses on generating 3D scenes and content from a limited number of 2D images captured in real environments, using diffusion models and Gaussian Splatting, and I am particularly interested in bringing these techniques into VR/AR to solve real-world problems.
+        I am an M.S. student at the School of Computing in KAIST, conducting research on 2D/3D generative AI at the Computer Graphics and Visualization Lab. My work focuses on generating 3D scenes and content from a limited number of 2D images captured in real environments, using diffusion models and Gaussian Splatting, and I am also interested in developing VR/AR applications that build on these techniques.
       </p>
 
       <!-- KO bio -->
@@ -374,7 +374,7 @@ comments: false
               <span class="lang-en">Machine Learning / Deep Learning:</span>
               <span class="lang-ko">머신러닝 / 딥러닝:</span>
             </strong>
-            PyTorch, TensorFlow
+            PyTorch
           </li>
           <li>
             <strong>
@@ -491,8 +491,8 @@ comments: false
             <span class="lang-ko">목적 맞춤형 합성데이터 생성 및 평가기술 개발 (2025.06 – 현재)</span>
           </li>
           <li>
-            <span class="lang-en">Haptic rendering for 3D interaction with fur surfaces (March 2025 – Present)</span>
-            <span class="lang-ko">Fur 표면 물체와의 3차원 상호작용을 위한 햅틱 렌더링 기법 연구 (2025.03 – 현재)</span>
+            <span class="lang-en">Haptic rendering for 3D interaction with fur surfaces (March 2025 – July 2025)</span>
+            <span class="lang-ko">Fur 표면 물체와의 3차원 상호작용을 위한 햅틱 렌더링 기법 연구 (2025.03 – 2025.07)</span>
           </li>
         </ul>
       </div>
@@ -620,27 +620,27 @@ comments: false
       </h2>
       <ul>
         <li>
-          <strong>2024</strong> —
+          <strong>2024</strong>,
           <span class="lang-en">Virtual Convergence Service Developer Competition, Woongjin ThinkBig Award, 3rd Place</span>
           <span class="lang-ko">가상융합 서비스 개발자 경진대회, 웅진씽크빅 특별상, 3위</span>
         </li>
         <li>
-          <strong>2023</strong> —
+          <strong>2023</strong>,
           <span class="lang-en">XR Device Content Makeathon, NIPA President's Award, 2nd Place</span>
           <span class="lang-ko">XR 디바이스 콘텐츠 메이커톤, 정보통신산업진흥원장상, 2위</span>
         </li>
         <li>
-          <strong>2023</strong> —
+          <strong>2023</strong>,
           <span class="lang-en">Korea Game Society Spring Conference, Excellent Paper Award</span>
           <span class="lang-ko">한국게임학회 춘계학술대회, 우수논문상</span>
         </li>
         <li>
-          <strong>2022</strong> —
+          <strong>2022</strong>,
           <span class="lang-en">Gyeonggi Culture Technology Academy, Grand Award, 1st Place</span>
           <span class="lang-ko">경기 문화기술 아카데미, 대상, 1위</span>
         </li>
         <li>
-          <strong>2022</strong> —
+          <strong>2022</strong>,
           <span class="lang-en">Gyeonggi Metaverse Academy, Excellence Award, 2nd Place</span>
           <span class="lang-ko">경기 메타버스 아카데미, 우수상, 2위</span>
         </li>
