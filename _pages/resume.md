@@ -324,8 +324,8 @@ comments: false
         </h1>
 
       <p class="cv-one-line">
-        <span class="lang-en">M.S. student at KAIST developing generative AI models and end-to-end machine learning systems for real-world applications.</span>
-        <span class="lang-ko">생성형 AI 모델과 실제 문제 해결을 위한 End-to-End 머신러닝 시스템을 개발하는 KAIST 전산학부 석사과정 최은혜입니다.</span>
+        <span class="lang-en">M.S. student at KAIST researching 2D/3D generative AI — diffusion models and 3D Gaussian Splatting — to create 3D scenes and content from images.</span>
+        <span class="lang-ko">2D 이미지로부터 3D 공간과 콘텐츠를 생성하는 기술(Diffusion Models, 3D Gaussian Splatting)을 연구하는 KAIST 전산학부 석사과정 최은혜입니다.</span>
       </p>
 
       <!-- EN bio -->
@@ -349,16 +349,16 @@ comments: false
         </h2>
         <ul class="cv-compact-list">
           <li>
-            <span class="lang-en">Generative AI (Diffusion Models & Multi-Modal LLMs)</span>
-            <span class="lang-ko">생성형 AI (Diffusion Models & Multi-Modal LLMs)</span>
+            <span class="lang-en">2D/3D Generative AI (Diffusion Models)</span>
+            <span class="lang-ko">2D/3D 생성형 AI (Diffusion Models)</span>
           </li>
           <li>
-            <span class="lang-en">End-to-End Machine Learning Systems</span>
-            <span class="lang-ko">End-to-End 머신러닝 시스템</span>
+            <span class="lang-en">Neural Rendering & 3D Reconstruction (3D Gaussian Splatting)</span>
+            <span class="lang-ko">뉴럴 렌더링 & 3D 재구성 (3D Gaussian Splatting)</span>
           </li>
           <li>
-            <span class="lang-en">Model Optimization and Deployment</span>
-            <span class="lang-ko">모델 최적화 및 배포</span>
+            <span class="lang-en">VR/AR Content with Generative AI</span>
+            <span class="lang-ko">생성형 AI 기반 VR/AR 콘텐츠</span>
           </li>
         </ul>
       </div>
@@ -381,21 +381,21 @@ comments: false
               <span class="lang-en">Programming:</span>
               <span class="lang-ko">프로그래밍:</span>
             </strong>
-            Python, C++, C, C#, GLSL
+            Python, C++, C, C#
           </li>
           <li>
             <strong>
               <span class="lang-en">Systems / Development:</span>
               <span class="lang-ko">시스템 / 개발:</span>
             </strong>
-            Git, Docker, AWS
+            Linux, Git, Docker, AWS
           </li>
           <li>
             <strong>
               <span class="lang-en">Graphics / Engine Tools:</span>
               <span class="lang-ko">그래픽스 / 엔진 도구:</span>
             </strong>
-            OpenGL, Unity, Unreal
+            GLSL, OpenGL, Unity, Unreal
           </li>
           <li>
             <strong>
