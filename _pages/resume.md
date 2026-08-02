@@ -678,6 +678,24 @@ comments: false
           <span class="lang-ko">중등정보, 아주대학교 과학영재교육원</span>
           <span class="cv-muted">(2023)</span>
         </li>
+        <li>
+          <strong>TA</strong>,
+          <span class="lang-en">Creative Media, Ajou University</span>
+          <span class="lang-ko">창의미디어, 아주대학교</span>
+          <span class="cv-muted">
+            <span class="lang-en">(Spring 2022, Prof. Gyuhwan Oh)</span>
+            <span class="lang-ko">(2022년 봄, Prof. Gyuhwan Oh)</span>
+          </span>
+        </li>
+        <li>
+          <strong>TA</strong>,
+          <span class="lang-en">Graphic Design, Ajou University</span>
+          <span class="lang-ko">그래픽디자인, 아주대학교</span>
+          <span class="cv-muted">
+            <span class="lang-en">(Fall 2021, Prof. Jooyoup Lee)</span>
+            <span class="lang-ko">(2021년 가을, Prof. Jooyoup Lee)</span>
+          </span>
+        </li>
       </ul>
     </section>
 
