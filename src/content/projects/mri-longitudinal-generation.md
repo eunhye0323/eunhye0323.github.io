@@ -92,3 +92,16 @@ The work opens a direction for structure-conditioned medical image generation:
 - graph-based shape embedding for medical imaging
 
 Together they suggest a framework for modeling disease progression in longitudinal neuroimaging studies.
+
+<!--
+---
+
+## Role & Tech Stack
+
+This project is ongoing IITP-funded research at the KAIST CGV Lab. My work focuses on building the diffusion-based generation pipeline conditioned on cortical surface priors, including the mask-based and surface graph-based conditioning methods that feed into the Volumetric Conditioning Module (VCM).
+본 프로젝트는 KAIST CGV Lab에서 진행 중인 IITP 지원 연구입니다. 저는 피질 표면 구조 정보를 조건으로 하는 디퓨전 기반 생성 파이프라인을 구축하고 있으며, Volumetric Conditioning Module(VCM)에 결합되는 마스크 기반 및 표면 그래프 기반 조건화 방식을 설계했습니다.
+
+- **Generative Model:** Diffusion-based T1 MRI generation, Volumetric Conditioning Module (VCM)
+- **Structural Conditioning:** Mask-based structural priors, surface graph encoder, FiLM conditioning, feature concatenation
+- **Dataset:** ADNI longitudinal T1 MRI (pial / white matter cortical surfaces)
+-->

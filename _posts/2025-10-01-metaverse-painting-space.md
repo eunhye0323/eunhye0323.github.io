@@ -81,3 +81,16 @@ The project's contributions fall into three areas: metaverse-based exhibition sy
 ## 연구 의의
 
 이 연구의 기여는 세 가지로 정리됩니다. 메타버스 기반 전시 시스템, AI를 활용한 예술 작품의 해석과 서사 확장, 그리고 Gaussian Splatting을 이용한 회화의 공간화 연구입니다.
+
+<!--
+---
+
+## Role & Tech Stack
+
+For this project, conducted as part of the Metaverse Convergence Research Program at KAIST, I worked on the pipeline that reconstructs paintings into walkable 3D spaces, combining 3D Gaussian Splatting-based spatial reconstruction, Unity-based XR interaction, and generative AI-driven characters and narrative.
+본 프로젝트는 KAIST 메타버스 자율융합 연구 과제의 일환으로 진행되었으며, 저는 3D Gaussian Splatting 기반 공간 재구성과 Unity 기반 XR 인터랙션, Generative AI 기반 캐릭터·서사 생성을 결합해 회화를 3D 공간으로 재구성하는 파이프라인 작업에 참여했습니다.
+
+- **3D Reconstruction:** 3D Gaussian Splatting
+- **Generative AI:** Character and narrative generation
+- **Platform / Exhibition:** Unity-based XR, Media Wall installation
+-->

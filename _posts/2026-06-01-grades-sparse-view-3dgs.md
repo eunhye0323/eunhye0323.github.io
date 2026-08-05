@@ -89,6 +89,7 @@ All methods are evaluated on Mip-NeRF 360 (Garden, Bicycle, Stump, Flowers) and 
 
 Interactive slider comparisons, including baseline comparisons and a Kitchen-scene ablation, are available on the [project page](https://eunhye0323.github.io/GradeS/). · 베이스라인 비교와 Kitchen 장면 ablation을 포함한 인터랙티브 슬라이더 비교는 [프로젝트 페이지](https://eunhye0323.github.io/GradeS/)에서 볼 수 있습니다.
 
+<!--
 ---
 
 ## My Role & Tech Stack
@@ -100,6 +101,7 @@ This is individual, ongoing M.S. thesis research at the Computer Graphics and Vi
 - **3D Reconstruction / Rendering:** 3D Gaussian Splatting, dense-stereo initialization (MASt3R/DUSt3R → COLMAP), depth estimation (Depth-Anything-V2)
 - **Generative Model:** Video diffusion-based novel view generation (ViewCrafter) with stage-wise latent blending
 - **Framework:** PyTorch, CUDA
+-->
 
 ---
 

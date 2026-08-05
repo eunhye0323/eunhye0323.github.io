@@ -1,5 +1,5 @@
 ---
-title: "GradeS: Geometry-Aware Reliability-Guided Diffusion Supervision for Sparse-View 3D Gaussian Splatting"
+title: "[Ongoing] GradeS: Geometry-Aware Reliability-Guided Diffusion Supervision for Sparse-View 3D Gaussian Splatting"
 categories: [Generative AI, 3D Gaussian Splatting, Novel View Synthesis]
 thumbnail: /images/grades_pipeline.png
 summary: '<span style="display:block; text-align:justify; word-break:keep-all;">
@@ -87,17 +87,18 @@ All methods are evaluated on Mip-NeRF 360 (Garden, Bicycle, Stump, Flowers) and 
 
 Interactive slider comparisons, including baseline comparisons and a Kitchen-scene ablation, are available on the [project page](https://eunhye0323.github.io/GradeS/). · 베이스라인 비교와 Kitchen 장면 ablation을 포함한 인터랙티브 슬라이더 비교는 [프로젝트 페이지](https://eunhye0323.github.io/GradeS/)에서 볼 수 있습니다.
 
+<!--
 ---
 
-## My Role & Tech Stack
+## Role & Tech Stack
 
-This is individual, ongoing M.S. thesis research at the Computer Graphics and Visualization Lab, KAIST. I designed and implemented the full pipeline myself, from geometry initialization to diffusion-guided optimization and evaluation.
+This is individual, ongoing M.S. thesis research at the Computer Graphics and Visualization Lab, KAIST.
+본 연구는 KAIST Computer Graphics and Visualization 연구실에서 수행 중인 단독 석사논문 연구입니다. 
 
-본 연구는 KAIST Computer Graphics and Visualization 연구실에서 수행 중인 단독 석사논문 연구입니다. 기하 초기화부터 디퓨전 가이드 최적화와 평가까지 전체 파이프라인을 직접 설계하고 구현했습니다.
-
-- **3D Reconstruction / Rendering:** 3D Gaussian Splatting, dense-stereo initialization (MASt3R/DUSt3R → COLMAP), depth estimation (Depth-Anything-V2)
+- **3D Reconstruction / Rendering:** 3D Gaussian Splatting, dense-stereo initialization (DUSt3R), depth estimation (Depth-Anything-V2)
 - **Generative Model:** Video diffusion-based novel view generation (ViewCrafter) with stage-wise latent blending
 - **Framework:** PyTorch, CUDA
+-->
 
 ---
 

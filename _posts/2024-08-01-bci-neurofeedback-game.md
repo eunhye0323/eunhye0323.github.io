@@ -102,3 +102,15 @@ The game is built in Unity (C#). Attention and relaxation levels are read from E
 This project brings neurofeedback training and game design into a single loop. The EEG feedback that drives the training is delivered entirely through gameplay, offering an interactive form of cognitive training that doesn't force a choice between effectiveness and fun.
 
 뉴로피드백 훈련과 게임 디자인을 하나로 합친 인터랙티브 인지 훈련 방식을 제안했습니다. 훈련을 이끄는 EEG 피드백 루프가 게임 플레이 자체에 녹아 있어, 훈련 효과와 게임의 재미 중 어느 한쪽을 포기하지 않아도 됩니다.
+
+<!--
+---
+
+### Role & Tech Stack
+
+My work on this project included analyzing prior BCI neurofeedback research and implementing the Unity-based neurofeedback game, including the EEG-driven gameplay mechanics described above.
+이 프로젝트에서 BCI 뉴로피드백 선행 연구를 분석하고, 위에서 설명한 EEG 기반 게임 플레이 메커니즘을 포함한 Unity 뉴로피드백 게임을 구현하는 작업을 맡았습니다.
+
+- **Game Development:** Unity, C#
+- **BCI / Neurofeedback:** EEG-based attention and relaxation measurement, real-time neurofeedback integration into gameplay
+-->

@@ -115,3 +115,16 @@ This work sits at the intersection of generative AI, XR-based cultural heritage 
 ## 연구 의의
 
 이 연구는 생성형 AI, XR 기반 문화유산 경험, 협업형 디지털 스토리텔링, 기억 기반 개인화 전시 설계가 만나는 지점에 있습니다. 핵심 제안은 문화유산을 감상의 대상에 머물게 하지 않고, 관람자 각자의 자전적 기억을 통해 함께 재해석하고 공동 창작하는 경험으로 확장하는 것입니다.
+
+<!--
+---
+
+## Role & Tech Stack
+
+For this project, I worked on the generative AI pipeline that converts visitors' spoken memories into personalized Baekja textures, spanning speech-to-text transcription, LLM-based semantic transformation, and generative visual synthesis integrated into the multi-user XR exhibition.
+이 프로젝트에서는 방문자의 음성 기억을 개인화된 백자 텍스처로 변환하는 생성형 AI 파이프라인을 다루었으며, 음성 인식(STT), LLM 기반 의미 변환, 생성형 시각 합성을 다중 사용자 XR 전시 시스템에 통합하는 작업을 진행했습니다.
+
+- **Voice & Language Pipeline:** Speech-to-Text (STT), LLM-based semantic/prompt transformation
+- **Generative Visual Synthesis:** AI-generated PBR textures (albedo, bump, normal, roughness), custom shader-based surface mapping
+- **XR Exhibition System:** Multi-user XR framework, shared Chaekgado-inspired virtual exhibition space
+-->

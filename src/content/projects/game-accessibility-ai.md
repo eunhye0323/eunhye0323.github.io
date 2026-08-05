@@ -118,3 +118,16 @@ This work sits at the intersection of game accessibility support systems, conver
 - 게임 접근성 향상을 위한 대화형 AI 지원 시스템 제안
 - RAG 기반 LLM을 활용한 게임 플레이 상황 맞춤형 정보 제공
 - 상업용 게임 환경에서 AI 기반 접근성 지원 기술의 가능성 탐색
+
+<!--
+---
+
+## Role & Tech Stack
+
+This was a team research project; my role centered on the RAG-based chatbot system, combining GPT-4 Turbo with a LangChain retrieval pipeline and FAISS vector database within the Discord bot architecture.
+본 연구는 팀 프로젝트로 진행되었으며, 저는 GPT-4 Turbo에 LangChain 검색 파이프라인과 FAISS 벡터 데이터베이스를 결합한 RAG 기반 챗봇 시스템을 Discord 봇 아키텍처로 구현하는 역할을 맡았습니다.
+
+- **AI / LLM Pipeline:** GPT-4 Turbo, RAG (Retrieval-Augmented Generation), LangChain, FAISS vector database
+- **Platform / Interaction:** Discord bot, STT (Speech-to-Text), TTS (Text-to-Speech)
+- **Evaluation:** ROUGE-1, RDASS
+-->
