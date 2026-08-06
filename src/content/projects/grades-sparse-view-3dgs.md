@@ -21,21 +21,20 @@ date: 2026-06-01
 
 ## Project Overview
 
-Novel view synthesis from only a few input images is a core problem in virtual/augmented reality, digital twins, robotics, and autonomous driving simulation. Under sparse-view conditions, 3D Gaussian Splatting (3DGS) methods struggle to reconstruct stable scene geometry, and unbounded outdoor scenes make this especially hard: limited view overlap and large unobserved regions cause inaccurate depth estimation and floating artifacts.
+Novel View Synthesis (NVS), which synthesizes images from unseen viewpoints using only a few input images, is a fundamental technology for virtual and augmented reality, digital twins, robotics, and autonomous driving simulation. However, under sparse-view conditions, 3D Gaussian Splatting (3DGS) struggles to reconstruct stable scene geometry. This challenge becomes even more severe in unbounded outdoor scenes, where limited view overlap and large unobserved regions lead to unreliable depth estimation and floating artifacts.
 
-Recent work tackles the problem by stabilizing geometry or by using diffusion-generated pseudo-views as extra supervision. Neither is sufficient on its own. Geometry stabilization cannot constrain unobserved regions, and pseudo-views may contain hallucinated or temporally inconsistent content, so using them uniformly as supervision accumulates errors during optimization.
+Recent approaches have attempted to address these challenges either by stabilizing scene geometry or by using diffusion-generated pseudo-views as additional supervision. However, geometry stabilization alone cannot provide supervision in unobserved regions, while diffusion-generated pseudo-views may contain hallucinations or temporal inconsistencies. Using all generated pseudo-views as equally reliable supervision can therefore accumulate errors and degrade the optimization of 3DGS.
 
-**GradeS** addresses this with reliability-guided diffusion supervision, a scheme that controls the uncertainty of generated pseudo-views. In observed regions, depth-consistency regularization stabilizes the depth structure toward a pre-trained baseline 3DGS model; generated views are selected and weighted by their estimated reliability before they supervise the scene.
-
+GradeS proposes a Reliability-Guided Diffusion Supervision framework to address these limitations. First, Depth-Consistency Regularization stabilizes the geometry of observed regions by enforcing consistency with a pretrained Baseline 3DGS model. The reliability of each diffusion-generated Pseudo-view is then estimated, and only reliable regions are selectively weighted during 3DGS optimization. By combining stable geometry with reliability-aware pseudo-view supervision, GradeS effectively complements unobserved regions while improving Novel View Synthesis performance under sparse-view conditions.
 ---
 
 ## 프로젝트 개요
 
-소수의 입력 이미지만으로 새로운 시점의 영상을 합성하는 novel view synthesis는 VR/AR, 디지털 트윈, 로보틱스, 자율주행 시뮬레이션에서 꼭 필요한 기술입니다. 하지만 입력 뷰가 희소한(sparse) 조건에서 3D Gaussian Splatting(3DGS) 기반 방법은 장면 기하를 안정적으로 복원하기 어렵고, 특히 경계가 없는(unbounded) 야외 장면에서는 뷰 간 중첩이 부족하고 미관측 영역이 넓어 깊이 추정이 부정확해지며 floating artifact가 생깁니다.
+소수의 입력 이미지만으로 새로운 시점의 영상을 생성하는 Novel View Synthesis (NVS) 는 VR/AR, 디지털 트윈, 로보틱스, 자율주행 시뮬레이션 등 다양한 분야의 핵심 기술입니다. 그러나 입력 뷰가 제한적인 Sparse-view 환경에서는 3D Gaussian Splatting (3DGS) 이 안정적인 장면 기하(Scene Geometry)를 복원하기 어렵습니다. 특히 Unbounded Outdoor Scene 에서는 뷰 간 중첩(View Overlap)이 부족하고 미관측 영역(Unobserved Region)이 넓어 깊이 추정이 불안정해지며, 그 결과 Floating Artifact 와 같은 기하 왜곡이 발생합니다.
 
-이를 해결하기 위해 최근 연구들은 기하 구조를 안정화하거나 디퓨전 모델이 생성한 pseudo-view를 추가 슈퍼비전으로 활용해 왔습니다. 그러나 어느 쪽도 단독으로는 충분하지 않습니다. 기하 안정화만으로는 미관측 영역을 제약할 수 없고, 생성된 뷰에는 hallucination이나 시간적 비일관성이 섞여 있을 수 있어 이를 균일하게 슈퍼비전으로 쓰면 최적화 과정에서 오류가 누적됩니다.
+최근에는 이러한 문제를 해결하기 위해 Scene Geometry를 안정화하거나, 디퓨전 모델이 생성한 Pseudo-view 를 추가적인 Supervision으로 활용하는 연구들이 제안되었습니다. 그러나 Geometry Stabilization만으로는 미관측 영역의 정보를 보완하기 어렵고, 생성된 Pseudo-view에는 Hallucination 이나 시간적 비일관성(Temporal Inconsistency)이 포함될 수 있습니다. 이러한 생성 결과를 동일한 신뢰도로 Supervision에 활용하면 오류가 누적되어 3DGS 최적화 성능이 저하될 수 있습니다.
 
-**GradeS**는 생성된 pseudo-view의 불확실성을 제어하는 신뢰도 기반 디퓨전 슈퍼비전 기법입니다. 관측된 영역에서는 사전 학습된 baseline 3DGS 모델을 기준으로 깊이 일관성 정규화를 적용해 깊이 구조를 안정화하고, 생성된 뷰는 추정된 신뢰도에 따라 선별하고 가중하여 슈퍼비전으로 사용합니다.
+**GradeS**는 이러한 한계를 해결하기 위해 Reliability-Guided Diffusion Supervision 프레임워크를 제안합니다. 먼저, 사전 학습된 Baseline 3DGS 모델을 기준으로 Depth-Consistency Regularization 을 적용하여 관측 영역의 Geometry를 안정화합니다. 이후 디퓨전 모델이 생성한 Pseudo-view의 Reliability 를 추정하고, 신뢰할 수 있는 영역만 선택적으로 가중하여 3DGS 학습에 활용합니다. 이를 통해 안정적인 Geometry를 유지하면서도 미관측 영역을 효과적으로 보완하여 Sparse-view 환경에서의 Novel View Synthesis 성능을 향상시킵니다.
 
 ---
 
