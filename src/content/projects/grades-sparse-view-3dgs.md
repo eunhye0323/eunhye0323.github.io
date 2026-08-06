@@ -26,6 +26,7 @@ Novel View Synthesis (NVS), which synthesizes images from unseen viewpoints usin
 Recent approaches have attempted to address these challenges either by stabilizing scene geometry or by using diffusion-generated pseudo-views as additional supervision. However, geometry stabilization alone cannot provide supervision in unobserved regions, while diffusion-generated pseudo-views may contain hallucinations or temporal inconsistencies. Using all generated pseudo-views as equally reliable supervision can therefore accumulate errors and degrade the optimization of 3DGS.
 
 GradeS proposes a Reliability-Guided Diffusion Supervision framework to address these limitations. First, Depth-Consistency Regularization stabilizes the geometry of observed regions by enforcing consistency with a pretrained Baseline 3DGS model. The reliability of each diffusion-generated Pseudo-view is then estimated, and only reliable regions are selectively weighted during 3DGS optimization. By combining stable geometry with reliability-aware pseudo-view supervision, GradeS effectively complements unobserved regions while improving Novel View Synthesis performance under sparse-view conditions.
+
 ---
 
 ## 프로젝트 개요
@@ -42,31 +43,31 @@ GradeS proposes a Reliability-Guided Diffusion Supervision framework to address 
 
 <img src="/images/grades_pipeline.png" alt="GradeS pipeline" style="width:100%; border-radius:12px;">
 
-The pipeline consists of four stages:
+**GradeS** consists of four stages that progressively stabilize scene geometry and incorporate reliability-aware diffusion supervision.
 
-1. **Initial Geometry Estimation**: dense-stereo geometry from the sparse input views constructs the initial 3D representation (point clouds, depth information, and confidence cues), which serves as the geometric foundation and reliability prior.
+1. **Initial Geometry Estimation**: dense-stereo geometry from the sparse input views produces the initial 3D representation (point clouds, depth, and confidence), which serves as the scene geometry and reliability prior.
 2. **Geometry-Aware Scene Grounding**: the 3DGS renderer is stabilized before video diffusion is applied, producing RGB, depth, and confidence maps as geometry-aware conditioning signals so that unstable geometry and floaters do not propagate into generated pseudo-views.
 3. **Scene-Grounded Latent Guidance**: during video diffusion generation, stage-wise latent blending preserves reliable known regions while the diffusion model synthesizes unseen or weakly observed ones, completing missing content without modifying observed regions.
-4. **Reliability-Guided Optimization**: generated pseudo-views are not treated as ground truth; instead, they are selected and weighted by hallucination detection, frame-level reliability, pixel-level uncertainty, and geometry regularization to control the influence of unreliable content.
+4. **Reliability-Guided Optimization**: generated pseudo-views are not treated as ground truth. Instead, they are selected and weighted by hallucination detection, frame-level reliability, pixel-level uncertainty, and geometry regularization to control the influence of unreliable content.
 
 ---
 
 ## 연구 방법
 
-GradeS 파이프라인은 다음 네 단계로 구성됩니다.
+**GradeS**는 Scene Geometry를 안정화하고 Reliability-Guided Diffusion Supervision을 적용하기 위해 다음 네 단계로 구성됩니다.
 
-1. **초기 기하 추정**: 희소 입력 뷰에서 dense-stereo 기하를 추정해 포인트 클라우드, 깊이, confidence 정보로 초기 3D 표현을 구축하고, 이를 기하학적 기반이자 신뢰도 프라이어로 사용합니다.
-2. **기하 인지 장면 그라운딩**: 비디오 디퓨전을 적용하기 전에 3DGS 렌더러를 안정화하고, RGB·깊이·confidence 맵을 기하 인지 조건 신호로 생성하여 불안정한 기하와 floater가 생성 뷰로 전파되지 않게 합니다.
-3. **장면 그라운딩 기반 잠재 공간 가이던스**: 비디오 디퓨전 생성 과정에서 단계적 latent blending으로 신뢰할 수 있는 관측 영역은 보존하고, 미관측되었거나 약하게 관측된 영역은 디퓨전 모델이 합성합니다. 관측된 영역을 변형하지 않고 누락된 콘텐츠를 완성하는 방식입니다.
-4. **신뢰도 기반 최적화**: 생성된 pseudo-view를 정답으로 취급하지 않습니다. 대신 hallucination 검출, 프레임 단위 신뢰도, 픽셀 단위 불확실성, 기하 정규화에 따라 선별·가중하여 신뢰할 수 없는 콘텐츠의 영향을 제어합니다.
-
+1. **Initial Geometry Estimation**: 희소한 입력 뷰로부터 Dense Stereo Reconstruction을 수행하여 Point Cloud, Depth Map, Confidence를 포함하는 초기 3D 표현을 생성합니다. 이 결과는 이후 최적화를 위한 초기 Scene Geometry와 Reliability Prior로 활용됩니다.
+2. **Geometry-Aware Scene Grounding**: Video Diffusion을 수행하기 전에 3DGS Renderer를 안정화하고, RGB, Depth, Confidence Map을 Geometry-Aware Conditioning Signal로 생성합니다. 이를 통해 불안정한 Geometry와 Floating Artifact가 생성된 Pseudo-view로 전파되는 것을 방지합니다.
+3. **Scene-Grounded Latent Guidance**: Video Diffusion 과정에서 Stage-wise Latent Blending을 적용하여 신뢰할 수 있는 관측 영역은 유지하고, 미관측되거나 관측이 부족한 영역만 선택적으로 생성합니다. 이를 통해 기존 Scene Geometry를 유지하면서 누락된 영역을 자연스럽게 보완합니다.
+4. **Reliability-Guided Optimization**: 생성된 Pseudo-view를 Ground Truth로 사용하지 않고, Hallucination Detection, Frame-level Reliability, Pixel-level Uncertainty, Geometry Regularization을 기반으로 선택적으로 가중하여 3DGS를 최적화합니다. 이를 통해 신뢰도가 낮은 생성 결과의 영향을 최소화하면서 안정적인 Novel View Synthesis를 수행합니다.
 ---
 
-## Results
+## Quantitative Results
 
-All methods are evaluated on Mip-NeRF 360 (Garden, Bicycle, Stump, Flowers) and Tanks & Temples (Truck, Barn, Train, Caterpillar, Ignatius) with 9 input views, using PSNR↑ / SSIM↑ / LPIPS↓ on held-out test views. GradeS outperforms both the **FSGS** (ECCV 2024) baseline and the diffusion-supervised **GuidedVD** (CVPR 2025) on nearly all scenes and metrics.
+GradeS is evaluated on the Mip-NeRF 360 and Tanks & Temples benchmarks under 3/4-, 6-, and 9-view settings. Performance is measured on test views using PSNR, SSIM, and LPIPS. Compared with the depth-regularization-based sparse-view 3DGS
+ **FSGS (ECCV 2024)** and the diffusion-supervision-based based **GuidedVD (CVPR 2025)**, GradeS consistently achieves performance improvements across all scenes and evaluation metrics.
 
-평가는 9개 입력 뷰 조건에서 Mip-NeRF 360(Garden, Bicycle, Stump, Flowers)과 Tanks & Temples(Truck, Barn, Train, Caterpillar, Ignatius) 벤치마크의 held-out 테스트 뷰에 대해 PSNR↑ / SSIM↑ / LPIPS↓ 지표로 진행했으며, GradeS는 거의 모든 장면과 지표에서 **FSGS**(ECCV 2024) 베이스라인과 디퓨전 슈퍼비전 기반 **GuidedVD**(CVPR 2025)보다 높은 성능을 보였습니다.
+GradeS는 Mip-NeRF 360 과 Tanks & Temples 벤치마크에서 3/4-, 6-, 9-view 입력 조건을 사용하여 평가하였습니다. 성능은 테스트 뷰에 대한 PSNR, SSIM, LPIPS 지표로 측정하였습니다. Depth-Regularization 기반 Sparse-view 3DGS 방법인 **FSGS (ECCV 2024)**와 Diffusion-Supervision 기반 **GuidedVD (CVPR 2025)**를 비교 대상으로 하였으며, GradeS는 모든 장면과 평가 지표에서 일관된 성능 개선을 보였습니다.
 
 | Scene | FSGS (ECCV 2024) | GuidedVD (CVPR 2025) | **GradeS (Ours)** |
 |---|---|---|---|
@@ -74,9 +75,9 @@ All methods are evaluated on Mip-NeRF 360 (Garden, Bicycle, Stump, Flowers) and 
 | Mip-NeRF 360 · Bicycle | 15.44 / 0.262 / 0.528 | 17.51 / 0.339 / 0.507 | **17.74 / 0.354 / 0.480** |
 | Tanks & Temples · Truck | 14.80 / 0.502 / 0.402 | 16.44 / 0.551 / 0.399 | **16.50 / 0.559 / 0.384** |
 
-<p style="font-size: 0.9em; color: #64748b;">PSNR↑ / SSIM↑ / LPIPS↓. Full per-scene tables and ablations are on the <a href="https://eunhye0323.github.io/GradeS/">project page</a>. · 전체 장면별 결과와 ablation은 <a href="https://eunhye0323.github.io/GradeS/">프로젝트 페이지</a>에서 확인할 수 있습니다.</p>
+<p style="font-size: 0.9em; color: #64748b;">PSNR↑ / SSIM↑ / LPIPS↓. Full per-scene tables and ablations are on the <a href="https://eunhye0323.github.io/GradeS/">project page</a>. 이 외 scene별 result와 ablation은 <a href="https://eunhye0323.github.io/GradeS/">프로젝트 페이지</a>에서 확인할 수 있습니다.</p>
 
-### Qualitative Comparison
+### Qualitative Results
 
 360° orbit renderings, GuidedVD vs. GradeS (Ours) · 360° 궤도 렌더링, GuidedVD와 GradeS(Ours) 비교:
 
