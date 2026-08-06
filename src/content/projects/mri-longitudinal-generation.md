@@ -13,11 +13,11 @@ This project develops a diffusion-based model that predicts future T1 brain MRI 
 badge: "Research"
 accent: "research"
 date: 2026-03-01
-periodEn: "Oct 2025 – Apr 2026 (7 months)"
+periodEn: "2025.10 – 2026.04 (7 months)"
 periodKo: "2025.10 – 2026.04 (7개월)"
 ---
 
-**Project Period:** October 2025 – April 2026 (7 months)<br>**참여 기간:** 2025.10 – 2026.04 (7개월)
+**Project Period:** 2025.10 – 2026.04 (7 months)<br>**참여 기간:** 2025.10 – 2026.04 (7개월)
 
 ---
 

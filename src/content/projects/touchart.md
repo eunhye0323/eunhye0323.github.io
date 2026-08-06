@@ -5,11 +5,11 @@ thumbnail: /images/TouchArt1.jpg
 summary: "Vibrotactile feedback system enabling color perception through touch in virtual painting. Presented at IEEE World Haptics 2025."
 badge: "Research"
 date: 2025-06-01
-periodEn: "Jun 2025 – Jul 2025 (2 months)"
+periodEn: "2025.06 – 2025.07 (2 months)"
 periodKo: "2025.06 – 2025.07 (2개월)"
 ---
 
-**Project Period:** June 2025 – July 2025 (2 months)<br>**참여 기간:** 2025.06 – 2025.07 (2개월)
+**Project Period:** 2025.06 – 2025.07 (2 months)<br>**참여 기간:** 2025.06 – 2025.07 (2개월)
 
 ---
 

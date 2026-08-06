@@ -10,7 +10,7 @@ accent: "research"
 date: 2025-12-01
 ---
 
-**Project Period:** September 2025 – December 2025 (4 months)<br>**참여 기간:** 2025.09 – 2025.12 (4개월)
+**Project Period:** 2025.09 – 2025.12 (4 months)<br>**참여 기간:** 2025.09 – 2025.12 (4개월)
 
 ---
 

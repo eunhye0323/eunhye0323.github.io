@@ -6,11 +6,11 @@ summary: '<span style="display:block; text-align:justify; word-break:keep-all; l
 badge: "Research"
 accent: "research"
 date: 2025-10-01
-periodEn: "Jul 2025 – Oct 2025 (4 months)"
+periodEn: "2025.07 – 2025.10 (4 months)"
 periodKo: "2025.07 – 2025.10 (4개월)"
 ---
 
-**Project Period:** July 2025 – October 2025 (4 months)<br>**참여 기간:** 2025.07 – 2025.10 (4개월)
+**Project Period:** 2025.07 – 2025.10 (4 months)<br>**참여 기간:** 2025.07 – 2025.10 (4개월)
 
 ---
 

@@ -8,7 +8,7 @@ thumbnail: assets/images/chi2025.jpg
 date: 2025-02-01
 ---
 
-**Project Period:** September 2024 – February 2025 (6 months)<br>**참여 기간:** 2024.09 – 2025.02 (6개월)
+**Project Period:** 2024.09 – 2025.02 (6 months)<br>**참여 기간:** 2024.09 – 2025.02 (6개월)
 
 ---
 

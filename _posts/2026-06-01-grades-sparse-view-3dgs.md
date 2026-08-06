@@ -17,7 +17,7 @@ accent: "research"
 date: 2026-06-01
 ---
 
-**Project Period:** March 2026 – August 2026 (6 months)<br>**참여 기간:** 2026.03 – 2026.08 (6개월)
+**Project Period:** 2026.03 – 2026.08 (6 months)<br>**참여 기간:** 2026.03 – 2026.08 (6개월)
 
 ---
 

@@ -6,11 +6,11 @@ summary: "An AR meditation content project designed to support children’s emot
 badge: "Award"
 accent: "award"
 date: 2023-12-01
-periodEn: "Oct 2023 – Dec 2023 (3 months)"
+periodEn: "2023.10 – 2023.12 (3 months)"
 periodKo: "2023.10 – 2023.12 (3개월)"
 ---
 
-**Project Period:** October 2023 – December 2023 (3 months)<br>**참여 기간:** 2023.10 – 2023.12 (3개월)
+**Project Period:** 2023.10 – 2023.12 (3 months)<br>**참여 기간:** 2023.10 – 2023.12 (3개월)
 
 ---
 

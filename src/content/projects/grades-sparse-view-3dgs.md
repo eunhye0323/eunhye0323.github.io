@@ -13,11 +13,11 @@ GradeS는 소수의 입력 이미지만으로 안정적인 3D 장면을 복원�
 badge: "Research"
 accent: "research"
 date: 2026-06-01
-periodEn: "Mar 2026 – Aug 2026 (6 months)"
+periodEn: "2026.03 – 2026.08 (6 months)"
 periodKo: "2026.03 – 2026.08 (6개월)"
 ---
 
-**Project Period:** March 2026 – August 2026 (6 months)<br>**참여 기간:** 2026.03 – 2026.08 (6개월)
+**Project Period:** 2026.03 – 2026.08 (6 months)<br>**참여 기간:** 2026.03 – 2026.08 (6개월)
 
 ---
 

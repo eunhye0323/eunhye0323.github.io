@@ -9,7 +9,7 @@ date: 2024-08-01
 
 ---
 
-**Project Period:** January 2024 – August 2024 (8 months)<br>**참여 기간:** 2024.01 – 2024.08 (8개월)
+**Project Period:** 2024.01 – 2024.08 (8 months)<br>**참여 기간:** 2024.01 – 2024.08 (8개월)
 
 ---
 
