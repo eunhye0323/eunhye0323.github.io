@@ -5,6 +5,12 @@ thumbnail: /images/dead_or_calm.png
 summary: "A Unity-based BCI neurofeedback game that enables attention and relaxation training through gamified gameplay mechanics."
 date: 2024-08-01
 
+periodEn: "Jan 2024 – Aug 2024 (8 months)"
+periodKo: "2024.01 – 2024.08 (8개월)"
+---
+
+**Project Period:** January 2024 – August 2024 (8 months)<br>**참여 기간:** 2024.01 – 2024.08 (8개월)
+
 ---
 
 ### Project Overview

@@ -8,6 +8,10 @@ thumbnail: assets/images/chi2025.jpg
 date: 2025-02-01
 ---
 
+**Project Period:** September 2024 – February 2025 (6 months)<br>**참여 기간:** 2024.09 – 2025.02 (6개월)
+
+---
+
 ## Project Overview
 
 GAIA (Game AI Assistant) is a conversational chatbot that answers gameplay questions in natural language while the player is still in the game. It targets novice players and players with accessibility needs, the people most likely to get stuck on controls, mechanics, or strategy, and asks whether an LLM-based assistant can serve as a personalized accessibility support tool. This work was presented at **CHI 2025** and **HCIK 2025**.

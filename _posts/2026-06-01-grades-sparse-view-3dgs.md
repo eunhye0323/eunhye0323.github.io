@@ -17,6 +17,10 @@ accent: "research"
 date: 2026-06-01
 ---
 
+**Project Period:** March 2026 – August 2026 (6 months)<br>**참여 기간:** 2026.03 – 2026.08 (6개월)
+
+---
+
 **🔗 [Project Page](https://eunhye0323.github.io/GradeS/) · [Poster (PDF)](https://eunhye0323.github.io/GradeS/static/pdfs/final-term-poster_GradeS.pdf)**
 
 ---
@@ -77,17 +81,17 @@ All methods are evaluated on Mip-NeRF 360 (Garden, Bicycle, Stump, Flowers) and 
 | Mip-NeRF 360 · Bicycle | 15.44 / 0.262 / 0.528 | 17.51 / 0.339 / 0.507 | **17.74 / 0.354 / 0.480** |
 | Tanks & Temples · Truck | 14.80 / 0.502 / 0.402 | 16.44 / 0.551 / 0.399 | **16.50 / 0.559 / 0.384** |
 
-<p style="font-size: 0.9em; color: #64748b;">PSNR↑ / SSIM↑ / LPIPS↓. Full per-scene tables and ablations are on the <a href="https://eunhye0323.github.io/GradeS/">project page</a>. · 전체 장면별 결과와 ablation은 <a href="https://eunhye0323.github.io/GradeS/">프로젝트 페이지</a>에서 확인할 수 있습니다.</p>
+<p style="font-size: 0.9em; color: #64748b;">PSNR↑ / SSIM↑ / LPIPS↓. Full per-scene results and ablations are available on the <a href="https://eunhye0323.github.io/GradeS/">project page</a>.<br>전체 장면별 결과와 ablation은 <a href="https://eunhye0323.github.io/GradeS/">프로젝트 페이지</a>에서 확인할 수 있습니다.</p>
 
 ### Qualitative Comparison
 
-360° orbit renderings, GuidedVD vs. GradeS (Ours) · 360° 궤도 렌더링, GuidedVD와 GradeS(Ours) 비교:
+360° orbit renderings, GuidedVD vs. GradeS (Ours):<br>360° 궤도 렌더링, GuidedVD와 GradeS(Ours) 비교:
 
 <video controls muted loop playsinline style="width:100%; border-radius:12px;" src="https://eunhye0323.github.io/GradeS/static/videos/bicycle_gvd_vs_ours_s9.mp4"></video>
 
 <video controls muted loop playsinline style="width:100%; border-radius:12px;" src="https://eunhye0323.github.io/GradeS/static/videos/train_gvd_vs_ours_s9.mp4"></video>
 
-Interactive slider comparisons, including baseline comparisons and a Kitchen-scene ablation, are available on the [project page](https://eunhye0323.github.io/GradeS/). · 베이스라인 비교와 Kitchen 장면 ablation을 포함한 인터랙티브 슬라이더 비교는 [프로젝트 페이지](https://eunhye0323.github.io/GradeS/)에서 볼 수 있습니다.
+Interactive slider comparisons, including baseline comparisons and a Kitchen-scene ablation, are available on the [project page](https://eunhye0323.github.io/GradeS/).<br>베이스라인 비교와 Kitchen 장면 ablation을 포함한 인터랙티브 슬라이더 비교는 [프로젝트 페이지](https://eunhye0323.github.io/GradeS/)에서 볼 수 있습니다.
 
 <!--
 ---

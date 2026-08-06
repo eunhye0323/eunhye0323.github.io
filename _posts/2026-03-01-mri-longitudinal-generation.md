@@ -17,6 +17,10 @@ accent: "research"
 date: 2026-03-01
 ---
 
+**Project Period:** October 2025 – April 2026 (7 months)<br>**참여 기간:** 2025.10 – 2026.04 (7개월)
+
+---
+
 ## Project Overview
 
 Can we tell what a brain will look like at t₂ from its structure at t₁? This ongoing work takes on that question with structural priors derived from cortical surfaces, using longitudinal scans from the ADNI (Alzheimer’s Disease Neuroimaging Initiative) dataset. The t₂ T1 MRI is generated from structural information extracted at t₁, so inference never needs a full image input.

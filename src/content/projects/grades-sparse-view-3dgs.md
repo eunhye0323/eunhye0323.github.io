@@ -3,16 +3,22 @@ title: "[Ongoing] GradeS: Geometry-Aware Reliability-Guided Diffusion Supervisio
 categories: [Generative AI, 3D Gaussian Splatting, Novel View Synthesis]
 thumbnail: /images/grades_pipeline.png
 summary: '<span style="display:block; text-align:justify; word-break:keep-all;">
-<strong>M.S. Thesis Research (KAIST CGV Lab), Reliability-guided video diffusion supervision for sparse-view 3D Gaussian Splatting.</strong><br>
+<strong>M.S. Thesis Research, Reliability-guided video diffusion supervision for sparse-view 3D Gaussian Splatting.</strong><br>
 GradeS reconstructs stable 3D scenes from only a few input views by combining depth-consistency regularization with reliability-guided pseudo-view supervision. Instead of trusting diffusion-generated views uniformly, the method weights them by hallucination detection, frame-level reliability, and pixel-level uncertainty, improving over FSGS and GuidedVD (CVPR 2025) on Mip-NeRF 360 and Tanks & Temples.
 </span><br>
 <span style="display:block; text-align:justify; word-break:keep-all;">
-<strong>석사논문 연구 (KAIST CGV Lab), Sparse-View 3D Gaussian Splatting을 위한 신뢰도 기반 비디오 디퓨전 슈퍼비전 연구.</strong><br>
+<strong>석사학위 연구, Sparse-View 3D Gaussian Splatting을 위한 신뢰도 기반 비디오 디퓨전 슈퍼비전 연구.</strong><br>
 GradeS는 소수의 입력 이미지만으로 안정적인 3D 장면을 복원하기 위해, 깊이 일관성 정규화와 신뢰도 기반 pseudo-view 슈퍼비전을 결합한 방법을 제안합니다. 비디오 디퓨전 모델이 생성한 뷰를 그대로 사용하는 대신 hallucination 검출, 프레임 단위 신뢰도, 픽셀 단위 불확실성으로 가중치를 부여하여, Mip-NeRF 360과 Tanks & Temples 벤치마크에서 FSGS 및 GuidedVD(CVPR 2025) 대비 향상된 성능을 달성했습니다.
 </span>'
 badge: "Research"
 accent: "research"
 date: 2026-06-01
+periodEn: "Mar 2026 – Aug 2026 (6 months)"
+periodKo: "2026.03 – 2026.08 (6개월)"
+---
+
+**Project Period:** March 2026 – August 2026 (6 months)<br>**참여 기간:** 2026.03 – 2026.08 (6개월)
+
 ---
 
 **🔗 [Project Page](https://eunhye0323.github.io/GradeS/) · [Poster (PDF)](https://eunhye0323.github.io/GradeS/static/pdfs/final-term-poster_GradeS.pdf)**
@@ -75,17 +81,17 @@ GradeS는 Mip-NeRF 360 과 Tanks & Temples 벤치마크에서 3/4-, 6-, 9-view �
 | Mip-NeRF 360 · Bicycle | 15.44 / 0.262 / 0.528 | 17.51 / 0.339 / 0.507 | **17.74 / 0.354 / 0.480** |
 | Tanks & Temples · Truck | 14.80 / 0.502 / 0.402 | 16.44 / 0.551 / 0.399 | **16.50 / 0.559 / 0.384** |
 
-<p style="font-size: 0.9em; color: #64748b;">PSNR↑ / SSIM↑ / LPIPS↓. Full per-scene tables and ablations are on the <a href="https://eunhye0323.github.io/GradeS/">project page</a>. 이 외 scene별 result와 ablation은 <a href="https://eunhye0323.github.io/GradeS/">프로젝트 페이지</a>에서 확인할 수 있습니다.</p>
+<p style="font-size: 0.9em; color: #64748b;">PSNR↑ / SSIM↑ / LPIPS↓. Additional per-scene results and ablations beyond these are available on the <a href="https://eunhye0323.github.io/GradeS/">project page</a>.<br>이 외 scene별 result와 ablation은 <a href="https://eunhye0323.github.io/GradeS/">프로젝트 페이지</a>에서 확인할 수 있습니다.</p>
 
 ### Qualitative Results
 
-360° orbit renderings, GuidedVD vs. GradeS (Ours) · 360° 궤도 렌더링, GuidedVD와 GradeS(Ours) 비교:
+360° orbit renderings, GuidedVD vs. GradeS (Ours):<br>360° 궤도 렌더링, GuidedVD와 GradeS(Ours) 비교:
 
 <video controls muted loop playsinline style="width:100%; border-radius:12px;" src="https://eunhye0323.github.io/GradeS/static/videos/bicycle_gvd_vs_ours_s9.mp4"></video>
 
 <video controls muted loop playsinline style="width:100%; border-radius:12px;" src="https://eunhye0323.github.io/GradeS/static/videos/train_gvd_vs_ours_s9.mp4"></video>
 
-Interactive slider comparisons, including baseline comparisons and a Kitchen-scene ablation, are available on the [project page](https://eunhye0323.github.io/GradeS/). · 베이스라인 비교와 Kitchen 장면 ablation을 포함한 인터랙티브 슬라이더 비교는 [프로젝트 페이지](https://eunhye0323.github.io/GradeS/)에서 볼 수 있습니다.
+Interactive slider comparisons, including baseline comparisons and a Kitchen-scene ablation, are available on the [project page](https://eunhye0323.github.io/GradeS/).<br>베이스라인 비교와 Kitchen 장면 ablation을 포함한 인터랙티브 슬라이더 비교는 [프로젝트 페이지](https://eunhye0323.github.io/GradeS/)에서 볼 수 있습니다.
 
 <!--
 ---

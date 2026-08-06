@@ -9,6 +9,8 @@ const projects = defineCollection({
     thumbnail: z.string(),
     summary: z.string().optional(),
     badge: z.string().default('Project'),
+    periodEn: z.string().optional(),
+    periodKo: z.string().optional(),
   }),
 });
 

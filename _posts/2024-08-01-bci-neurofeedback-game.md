@@ -9,6 +9,10 @@ date: 2024-08-01
 
 ---
 
+**Project Period:** January 2024 – August 2024 (8 months)<br>**참여 기간:** 2024.01 – 2024.08 (8개월)
+
+---
+
 ### Project Overview
 
 A Unity game that turns attention and relaxation training into play. I started by analyzing eight prior BCI neurofeedback studies, then built the neurofeedback system around the kind of engaging mechanics found in commercial games. During play, EEG signals measure the player's attention and relaxation levels and feed directly into the gameplay, the training happens while playing, not as a separate exercise.

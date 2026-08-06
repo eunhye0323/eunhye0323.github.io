@@ -10,6 +10,10 @@ accent: "research"
 date: 2025-10-01
 ---
 
+**Project Period:** July 2025 – October 2025 (4 months)<br>**참여 기간:** 2025.07 – 2025.10 (4개월)
+
+---
+
 ## Project Overview
 
 This project turned 2D paintings into immersive 3D spaces that visitors can walk through. Painted scenes were reconstructed with 3D Gaussian Splatting and rendered in real time in a Unity-based XR environment, while generative AI populated them with characters and narrative. Instead of viewing a painting from outside the frame, visitors stepped into the scene, interacted with the characters, and followed the story embedded in the artwork.

@@ -4,6 +4,12 @@ categories: [HCI, Accessibility]
 summary: "A conversational AI service that supports gamers with disabilities and novice players by providing accessibility-aware gameplay guidance using a RAG-based LLM chatbot."
 thumbnail: /images/chi2025.jpg
 date: 2025-02-01
+periodEn: "Sep 2024 – Feb 2025 (6 months)"
+periodKo: "2024.09 – 2025.02 (6개월)"
+---
+
+**Project Period:** September 2024 – February 2025 (6 months)<br>**참여 기간:** 2024.09 – 2025.02 (6개월)
+
 ---
 
 ## Project Overview

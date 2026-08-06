@@ -10,6 +10,10 @@ accent: "research"
 date: 2025-12-01
 ---
 
+**Project Period:** September 2025 – December 2025 (4 months)<br>**참여 기간:** 2025.09 – 2025.12 (4개월)
+
+---
+
 ## Project Overview
 
 Baekja (Korean white porcelain) and Chaekgado (paintings of books and scholarly objects on shelves) meet generative AI in this collaborative XR exhibition system. Instead of viewing artifacts passively, visitors speak about a personal memory; the system turns that narrative into an AI-generated texture and paints it onto a virtual porcelain vessel. Each finished piece is shelved in a shared Chaekgado-inspired bookcase, so the multi-user exhibition gradually accumulates into a collective “library of memories.”
