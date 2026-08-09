@@ -491,6 +491,10 @@ comments: false
             <span class="lang-ko">목적 맞춤형 합성데이터 생성 및 평가기술 개발 (2025.06 – 현재)</span>
           </li>
           <li>
+            <span class="lang-en">Government R&D project operations, prior-art patent search, quantitative performance reporting, and survey design/analysis (June 2025 – Present)</span>
+            <span class="lang-ko">IITP 정부과제 운영 지원, 선행 특허 조사, 정량 성과 관리, 수요 조사 설문 설계·분석 (2025.06 – 현재)</span>
+          </li>
+          <li>
             <span class="lang-en">Haptic rendering for 3D interaction with fur surfaces (March 2025 – July 2025)</span>
             <span class="lang-ko">Fur 표면 물체와의 3차원 상호작용을 위한 햅틱 렌더링 기법 연구 (2025.03 – 2025.07)</span>
           </li>

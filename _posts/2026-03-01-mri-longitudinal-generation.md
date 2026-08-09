@@ -99,6 +99,18 @@ The work opens a direction for structure-conditioned medical image generation:
 
 Together they suggest a framework for modeling disease progression in longitudinal neuroimaging studies.
 
+---
+
+## Program Management & IP Contribution
+
+Beyond the generative modeling work, I contributed to the operational and IP side of this IITP-funded project. I conducted prior-art patent searches for three technical concepts under review for filing, single-timepoint longitudinal brain deformation prediction, a brain-shape intermediate representation for the image latent space, and ODE/PDE/SDE-based continuous-time latent-path modeling, searching Korea, Japan, China, the US, and Europe on the WIPS ON patent database and refining Boolean queries to identify the closest prior art (6, 5, and 6 candidates respectively). I also compiled the team's quantitative outcome metrics (patent filings, software registrations, technology summaries, and other KPIs) into the project's official performance report, and helped design and run a survey of medical, health, and bio-industry professionals (26 respondents) on awareness of and demand for synthetic data technology.
+
+---
+
+## 과제 운영 및 지식재산권 기여
+
+생성 모델 연구 외에도 이 IITP 과제의 운영·지식재산권 업무에 참여했습니다. 특허 출원을 검토 중인 세 가지 기술 아이디어(단일 시점 기반 뇌 변형 종단 예측, 이미지 latent space의 뇌 형상 중간 표현, ODE/PDE/SDE 기반 연속시간 latent path 모델링)에 대해 한국·일본·중국·미국·유럽을 대상으로 WIPS ON에서 선행 특허를 조사했고, 검색식을 반복 정교화하여 가장 근접한 선행 특허 후보를 각각 6건, 5건, 6건으로 정리했습니다. 또한 특허 출원·소프트웨어 등록·기술요약 등 팀 전체의 정량적 연구성과를 취합해 정부과제 성과 보고서에 반영했고, 의료·보건·바이오 분야 종사자 26명을 대상으로 합성 데이터 기술 인식·활용 수요를 조사하는 설문을 설계·진행했습니다.
+
 <!--
 ---
 
