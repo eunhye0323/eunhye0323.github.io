@@ -29,7 +29,8 @@ periodKo: "2026.03 – 2026.08 (6개월)"
 
 **Novel View Synthesis (NVS)** aims to synthesize images from unseen viewpoints given a set of input images, with broad applications in virtual and augmented reality, digital twins, robotics, and autonomous driving simulation. Recently, **3D Gaussian Splatting (3DGS)** has emerged as an effective scene representation for NVS, offering high-quality rendering with real-time performance. However, under sparse-view conditions, 3DGS struggles to recover stable scene geometry. This problem becomes particularly severe in unbounded outdoor scenes, where limited view overlap and large unobserved regions lead to unreliable geometry estimation, resulting in geometric distortions and artifacts such as floaters.
 
-**GradeS** combines geometry stabilization with reliability-guided diffusion supervision to complement missing observations with pseudo-views while controlling the influence of unreliable generated information during 3DGS optimization. First, **Depth-Consistency Regularization is applied to the baseline 3DGS model used as the scene renderer to stabilize the geometry of observed regions.** The rendered sequence from the stabilized 3DGS is then used for **Scene-Grounding Guidance, encouraging diffusion generation to remain consistent with the geometry and appearance of the existing scene.** During generation, stage-wise latent blending preserves reliable observed regions while complementing unseen or weakly observed regions. Finally, **GradeS estimates the reliability of diffusion-generated pseudo-views and selectively weights reliable regions during 3DGS optimization.** By maintaining stable geometry while effectively complementing unobserved regions, GradeS improves Novel View Synthesis performance under sparse-view conditions.
+**GradeS** combines geometry stabilization with reliability-guided diffusion supervision to complement missing observations with pseudo-views while reducing the influence of unreliable generated information during 3DGS optimization. First, **Depth-Consistency Regularization is applied to the baseline 3DGS used as the scene renderer, stabilizing the geometry of observed regions.** The stabilized 3DGS is then used to render novel-view sequences, which provide **Scene-Grounding Guidance** that encourages the diffusion model to generate new views while remaining consistent with the geometry and appearance of the existing scene. During generation, **stage-wise latent blending** preserves regions that are sufficiently observed in the input views while allowing unseen or weakly observed regions to be complemented with newly generated content. Finally, **GradeS estimates the reliability of the generated pseudo-views and assigns higher weights to reliable regions during 3DGS optimization.** By preserving reliably reconstructed scene geometry while effectively complementing insufficiently observed regions, GradeS improves Novel View Synthesis performance under sparse-view conditions.
+
 
 
 
@@ -39,65 +40,26 @@ periodKo: "2026.03 – 2026.08 (6개월)"
 
 제한된 수의 입력 이미지로부터 새로운 시점의 영상을 생성하는 **Novel View Synthesis (NVS)** 는 VR/AR, 디지털 트윈, 로보틱스, 자율주행 시뮬레이션 등 다양한 분야에 활용되는 핵심 과제입니다. 최근 **3D Gaussian Splatting (3DGS)** 은 높은 렌더링 품질과 실시간 렌더링 성능을 바탕으로 NVS를 위한 효과적인 장면 표현 방식으로 주목받고 있습니다. 그러나 입력 뷰가 제한적인 sparse-view 환경에서는 안정적인 scene geometry를 복원하기 어렵습니다. 특히 unbounded outdoor scene에서는 제한적인 view overlap과 넓은 unobserved regions으로 인해 기하 추정이 불안정해지고, geometric distortion이나 floaters와 같은 artifacts가 발생할 수 있습니다.
 
-**GradeS**는 geometry stabilization과 reliability-guided diffusion supervision을 결합하여, 기존 관측에서 부족한 정보를 pseudo-view로 보완하면서도 신뢰도가 낮은 생성 정보가 3DGS 최적화에 미치는 영향을 제어합니다. 먼저, **scene renderer로 사용되는 Baseline 3DGS 모델에 Depth-Consistency Regularization을 적용하여 관측 영역의 geometry를 안정화합니다.** 이후 안정화된 3DGS의 rendered sequence를 기반으로 **Scene-Grounding Guidance를 적용하여 diffusion generation이 기존 장면의 geometry와 appearance를 유지하도록 유도하고**, 생성 과정에서 stage-wise latent blending을 통해 신뢰할 수 있는 관측 영역은 보존하면서 미관측되거나 관측이 부족한 영역을 보완합니다. 마지막으로 **diffusion model이 생성한 pseudo-view의 reliability를 추정하고, 신뢰할 수 있는 영역을 선택적으로 가중하여 3DGS 학습에 활용합니다.** 이를 통해 안정적인 geometry를 유지하면서도 미관측 영역을 효과적으로 보완하여 sparse-view 환경에서의 Novel View Synthesis 성능을 향상시킵니다.
+**GradeS**는 장면의 기하 구조를 안정화하는 과정과 생성 결과의 신뢰도를 고려한 diffusion supervision을 결합하여, 부족한 관측 정보를 pseudo-view로 보완하면서도 부정확한 생성 정보가 3DGS 학습에 미치는 영향을 줄이는 것을 목표로 합니다. 먼저, **장면을 렌더링하는 Baseline 3DGS에 Depth-Consistency Regularization을 적용하여 관측된 영역의 기하 구조를 안정화합니다.** 이렇게 안정화된 3DGS에서 새로운 시점의 영상을 렌더링하고, 이를 **Scene-Grounding Guidance**로 활용하여 diffusion model이 기존 장면의 구조와 외형을 유지한 상태에서 새로운 시점을 생성하도록 유도합니다. 생성 과정에서는 **stage-wise latent blending**을 적용해 입력 영상에서 충분히 관측된 영역은 최대한 보존하고, 관측되지 않았거나 정보가 부족한 영역을 중심으로 새로운 내용을 보완합니다. 마지막으로 **생성된 pseudo-view의 신뢰도를 추정하고, 신뢰도가 높은 영역에 더 큰 가중치를 부여하여 3DGS 학습에 반영합니다.** 이를 통해 기존에 안정적으로 복원된 장면 구조는 유지하면서도 부족한 관측 영역을 효과적으로 보완하여 sparse-view 환경에서의 Novel View Synthesis 성능을 향상시킵니다.
+
 
 
 ---
 
 ## Problem & Motivation
-Existing sparse-view 3DGS approaches mainly address insufficient observations through two directions: **depth regularization** and **diffusion-based pseudo-view supervision**.
 
-### 1. Depth-Regularized 3DGS
+Existing sparse-view 3DGS approaches mainly address insufficient observations through two directions: **depth regularization** and **diffusion-based pseudo-view supervision**. Depth-Regularized 3DGS methods use depth priors to reduce geometric inconsistencies caused by sparse observations, helping stabilize scene geometry and improve structural consistency in observed regions. This can suppress geometric distortions and texture degradation. However, these approaches primarily regularize geometry inferred from existing observations and therefore have limited ability to recover missing appearance and geometry cues in largely unobserved regions.
 
-Depth priors help stabilize scene geometry by reducing geometric inconsistencies caused by sparse observations. They improve structural consistency in observed regions and suppress geometric distortions and texture degradation.
+In contrast, Diffusion-Based Pseudo-View Supervision generates additional views to provide visual cues for regions that are not sufficiently covered by the input views. However, sparse observations provide weak constraints for the generation process, which can lead to hallucinated appearance or geometry inconsistent with the input views, as well as multi-view inconsistencies among generated pseudo-views. Moreover, uniformly using unreliable generated regions as supervision can introduce erroneous information into 3DGS optimization and cause errors to accumulate. Therefore, reliable pseudo-view supervision under sparse-view conditions requires determining **where additional generation is needed** and **how strongly generated information should influence 3DGS optimization**.
 
-**Limitation:**
-These approaches primarily regularize geometry inferred from existing observations and therefore cannot directly recover missing appearance and geometry cues in largely unobserved regions.
-
-### 2. Diffusion-Based Pseudo-View Supervision
-
-Diffusion models can generate additional views and provide visual cues for regions that are not sufficiently covered by the input views.
-
-**Limitations:**
-
-* Hallucinated appearance or geometry inconsistent with the input views
-* Multi-view inconsistencies among generated pseudo-views
-* Error accumulation when unreliable generated regions are uniformly used as supervision
-
-### Key Motivation
-
-Therefore, reliable pseudo-view supervision requires determining:
-
-* **Where** additional generation is needed
-* **How strongly** generated information should influence 3DGS optimization
+---
 
 ## 문제 정의 및 연구 동기
 
-기존 sparse-view 3DGS 연구에서는 부족한 관측 정보를 보완하기 위해 크게 **Depth Regularization**과 **Diffusion 기반 Pseudo-view Supervision**의 두 가지 접근이 활용되어 왔습니다.
+기존 sparse-view 3DGS 연구에서는 부족한 관측 정보를 보완하기 위해 크게 **Depth Regularization**과 **Diffusion 기반 Pseudo-view Supervision**의 두 가지 접근이 활용되어 왔습니다. Depth-Regularized 3DGS는 depth prior를 활용하여 제한된 입력으로 인해 발생하는 기하적 불일치를 완화하고 scene geometry를 안정화하며, 관측 영역의 구조적 일관성을 높여 geometric distortion과 texture degradation을 억제하는 데 효과적입니다. 그러나 이러한 접근은 주로 기존 관측으로부터 추정된 geometry를 안정화하는 데 초점을 두기 때문에, 충분히 관측되지 않은 영역에서 부족한 appearance 및 geometry 정보를 직접 보완하는 데에는 한계가 있습니다.
 
-### 1. Depth-Regularized 3DGS
+반면, Diffusion-Based Pseudo-View Supervision은 새로운 시점의 영상을 생성하여 기존 입력 뷰에서 충분히 관측되지 않은 영역에 추가적인 시각 정보를 제공할 수 있습니다. 그러나 sparse observation만으로는 생성 과정을 충분히 제약하기 어려워 입력 영상의 appearance 또는 geometry와 일치하지 않는 hallucination이 발생하거나, 생성된 pseudo-view 간에 multi-view inconsistency가 나타날 수 있습니다. 또한 신뢰도가 낮은 생성 영역까지 동일한 supervision으로 활용할 경우 부정확한 정보가 3DGS 최적화에 반영되어 오류가 누적될 수 있습니다. 따라서 sparse-view 환경에서 pseudo-view를 안정적인 학습 신호로 활용하기 위해서는 **추가적인 생성이 어디에 필요한지 판단하고, 생성된 정보를 3DGS 최적화에 어느 정도 반영할지를 제어하는 과정**이 필요합니다.
 
-Depth prior는 제한된 입력으로 인해 발생하는 기하적 불일치를 완화하여 scene geometry를 안정화하고, 관측 영역의 구조적 일관성을 높여 geometric distortion과 texture degradation을 억제하는 데 효과적입니다.
-
-**한계:**
-이러한 접근은 주로 기존 관측으로부터 추정된 geometry를 안정화하는 데 초점을 두기 때문에, 충분히 관측되지 않은 영역에서 부족한 appearance 및 geometry 정보를 직접 보완하는 데에는 한계가 있습니다.
-
-### 2. Diffusion-Based Pseudo-View Supervision
-
-Diffusion model은 새로운 시점의 영상을 생성하여 기존 입력 뷰에서 충분히 관측되지 않은 영역에 추가적인 시각 정보를 제공할 수 있습니다.
-
-**한계:**
-
-* 입력 영상의 appearance 또는 geometry와 일치하지 않는 **hallucination**
-* 생성된 pseudo-view 간의 **multi-view inconsistency**
-* 신뢰도가 낮은 생성 영역까지 동일한 supervision으로 활용할 경우 발생하는 **error accumulation**
-
-### 핵심 연구 동기
-
-따라서 sparse-view 환경에서 pseudo-view를 안정적인 학습 신호로 활용하기 위해서는 다음 두 가지를 고려해야 합니다.
-
-* **Where:** 추가적인 생성이 **어디에 필요한지** 판단
-* **How:** 생성된 정보를 3DGS 최적화에 **얼마나 반영할지** 결정
 
 
 ---
