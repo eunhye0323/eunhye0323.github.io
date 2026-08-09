@@ -27,7 +27,7 @@ periodKo: "2026.03 – 2026.08 (6개월)"
 
 ## Project Overview
 
-**Novel View Synthesis (NVS)** aims to synthesize images from unseen viewpoints given input images, with broad applications in virtual and augmented reality, digital twins, robotics, and autonomous driving simulation. However, under sparse-view conditions, **3D Gaussian Splatting (3DGS)** struggles to recover stable scene geometry. This challenge becomes even more severe in unbounded outdoor scenes, where limited view overlap and large unobserved regions lead to unreliable geometry estimation, resulting in geometric distortions and artifacts such as floaters.
+**Novel View Synthesis (NVS)** aims to synthesize images from unseen viewpoints given input images, with broad applications in virtual and augmented reality, digital twins, robotics, and autonomous driving simulation. Recently, 3D Gaussian Splatting (3DGS) has emerged as an effective scene representation for NVS, offering high-quality rendering with real-time performance. However, under sparse-view conditions, **3D Gaussian Splatting (3DGS)** struggles to recover stable scene geometry. This challenge becomes even more severe in unbounded outdoor scenes, where limited view overlap and large unobserved regions lead to unreliable geometry estimation, resulting in geometric distortions and artifacts such as floaters.
 
 Recent approaches have attempted to alleviate these problems either by using depth regularization to stabilize scene geometry or by using diffusion model to generate pseudo-views as additional supervision for insufficient observations. Depth priors can reduce geometric inconsistencies caused by sparse inputs and improve structural consistency in observed regions, suppressing geometric distortions and texture degradation. However, these approaches primarily stabilize geometry inferred from existing observations and therefore have limitations to recover missing appearance and geometry cues in unobserved regions where visual information is insufficient.
 
@@ -39,7 +39,7 @@ In contrast, diffusion-based pseudo-views can provide additional cues for region
 
 ## 프로젝트 개요
 
-제한된 수의 입력 이미지로부터 새로운 시점의 영상을 생성하는 **Novel View Synthesis (NVS)** 는 VR/AR, 디지털 트윈, 로보틱스, 자율주행 시뮬레이션 등 다양한 분야에 활용되는 핵심 과제입니다. 그러나 입력 뷰가 제한적인 sparse-view 환경에서는 **3D Gaussian Splatting (3DGS)** 이 안정적인 장면 기하(scene geometry)를 복원하기 어렵습니다. 특히 unbounded outdoor scene에서는 뷰 간 중첩(View Overlap)이 부족하고 미관측 영역(unobserved Region)이 넓어 기하 추정이 불안정해지며, 그 결과 geometry distortion과 floaters와 같은 artifacts가 발생합니다.
+제한된 수의 입력 이미지로부터 새로운 시점의 영상을 생성하는 Novel View Synthesis (NVS) 는 VR/AR, 디지털 트윈, 로보틱스, 자율주행 시뮬레이션 등 다양한 분야에 활용되는 핵심 과제입니다. 최근 3D Gaussian Splatting (3DGS) 은 높은 렌더링 품질과 실시간 렌더링 성능을 바탕으로 NVS를 위한 효과적인 장면 표현 방식으로 주목받고 있습니다. 그러나 입력 뷰가 제한적인 sparse-view 환경에서는 3DGS가 안정적인 장면 기하(scene geometry)를 복원하기 어렵습니다. 특히 unbounded outdoor scene에서는 뷰 간 중첩(view overlap)이 부족하고 미관측 영역(unobserved regions)이 넓어 기하 추정이 불안정해지며, 그 결과 geometric distortion과 floaters와 같은 artifacts가 발생합니다.
 
 최근에는 이러한 문제를 완화하기 위해, 깊이 정규화(depth regularization)를 통해 sparse-view 환경에서 불안정한 장면 기하를 안정화하거나, diffusion model이 생성한 pseudo-view를 추가적인 학습 신호로 활용하여 부족한 관측 정보를 보완하는 방법들이 제안되었습니다. Depth prior는 제한된 입력으로 인해 발생하는 기하적 불일치를 완화하고 관측 영역의 구조적 일관성을 높여 기하 왜곡과 텍스처 품질 저하를 억제하는 데 효과적입니다. 그러나 이러한 방식은 기존 관측으로부터 추정된 기하를 안정화하는 데 초점을 두기 때문에, 충분한 시각적 단서를 얻기 어려운 미관측 영역의 외형과 기하 정보를 직접 보완하는 데에는 한계가 있습니다.
 
