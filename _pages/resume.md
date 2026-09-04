@@ -328,14 +328,19 @@ comments: false
         <span class="lang-ko">2D 이미지로부터 3D 공간과 콘텐츠를 생성하는 기술(Diffusion Models, Gaussian Splatting)을 연구하는 KAIST 전산학부 석사과정 최은혜입니다.</span>
       </p>
 
-      <!-- EN bio -->
+      <!--
       <p class="lang-en" style="text-align: justify; word-break: keep-all;">
         I am an M.S. student at the School of Computing in KAIST, conducting research on 2D/3D generative AI at the Computer Graphics and Visualization Lab. My work focuses on generating 3D scenes and content from a limited number of 2D images captured in real environments, using diffusion models and Gaussian Splatting, and I am also interested in developing VR/AR applications that build on these techniques.
       </p>
-
-      <!-- KO bio -->
       <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
         저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 2D/3D 생성형 AI를 연구하고 있습니다. 특히 실제 환경에서 촬영된 제한된 수의 2D 이미지로부터 Diffusion Model과 Gaussian Splatting을 활용해 3D 공간과 콘텐츠를 생성하는 연구를 수행하고 있으며, 이를 접목한 VR/AR 애플리케이션 개발에도 관심을 두고 있습니다.
+      </p>
+      -->
+      <p class="lang-en" style="text-align: justify; word-break: keep-all;">
+        I am an M.S. student at the School of Computing in KAIST, conducting research on 2D/3D generative AI at the Computer Graphics and Visualization Lab. My work focuses on generating 3D scenes and content from a limited number of 2D images captured in real environments, using Diffusion models and Gaussian Splatting.
+      </p>
+      <p class="lang-ko" style="text-align: justify; word-break: keep-all;">
+        저는 KAIST 전산학부 석사과정에 재학 중이며, Computer Graphics and Visualization 연구실에서 2D/3D 생성형 AI를 연구하고 있습니다. 특히 실제 환경에서 촬영된 제한된 수의 2D 이미지로부터 Diffusion Model과 Gaussian Splatting을 활용해 3D 공간과 콘텐츠를 생성하는 연구를 수행하고 있습니다.
       </p>
       </div>
     </header>
@@ -344,8 +349,8 @@ comments: false
     <section class="cv-section cv-two-col">
       <div class="cv-card">
         <h2>
-          <span class="lang-en">Interests</span>
-          <span class="lang-ko">관심 분야</span>
+          <span class="lang-en">Expertise</span>
+          <span class="lang-ko">전문 분야</span>
         </h2>
         <ul class="cv-compact-list">
           <li>
@@ -357,9 +362,15 @@ comments: false
             <span class="lang-ko">뉴럴 렌더링 & 3D 재구성 (3D Gaussian Splatting)</span>
           </li>
           <li>
+            <span class="lang-en">Government R&D Program Management</span>
+            <span class="lang-ko">정부 R&D 과제 운영</span>
+          </li>
+          <!--
+          <li>
             <span class="lang-en">VR/AR Content with Generative AI</span>
             <span class="lang-ko">생성형 AI 기반 VR/AR 콘텐츠</span>
           </li>
+          -->
         </ul>
       </div>
 
@@ -487,7 +498,7 @@ comments: false
 
         <ul class="cv-sublist">
           <li>
-            <span class="lang-en">A Kidney Cancer Follow-up System and its Validation: a Novel Volume-Shape-Landmark Modeling Approach for Kidney Deformation Prediction and Automated High-Resolution Kidney Function Metric Extraction (June 2025 – Present)</span>
+            <span class="lang-en">A Kidney Cancer Follow-up System and its Validation: a Novel Volume-Shape-Landmark Modeling Approach for Kidney Deformation Prediction and Automated High-Resolution Kidney Function Metric Extraction (September 2026 – Present)</span>
             <span class="lang-ko">신장암 추적관리 시스템 제안 및 실증: 새로운 볼륨-형상-랜드마크 모델링 기법 기반 신장 변형 예측 및 고해상력 신기능 지표 자동 산출 방법론 (2026.09 – 현재)</span>
           </li>
           <li>
