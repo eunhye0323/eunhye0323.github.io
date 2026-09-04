@@ -487,7 +487,11 @@ comments: false
 
         <ul class="cv-sublist">
           <li>
-            <span class="lang-en">Task-oriented synthetic data generation and evaluation (June 2025 – Present)</span>
+            <span class="lang-en">A Kidney Cancer Follow-up System and its Validation: a Novel Volume-Shape-Landmark Modeling Approach for Kidney Deformation Prediction and Automated High-Resolution Kidney Function Metric Extraction (June 2025 – Present)</span>
+            <span class="lang-ko">신장암 추적관리 시스템 제안 및 실증: 새로운 볼륨-형상-랜드마크 모델링 기법 기반 신장 변형 예측 및 고해상력 신기능 지표 자동 산출 방법론 (2026.09 – 현재)</span>
+          </li>
+          <li>
+            <span class="lang-en">Development of object-oriented synthetic data generation and evaluation methods (June 2025 – Present)</span>
             <span class="lang-ko">목적 맞춤형 합성데이터 생성 및 평가기술 개발 (2025.06 – 현재)</span>
           </li>
           <li>
@@ -743,8 +747,8 @@ comments: false
     </section>
 
     <div class="cv-updated">
-      <span class="lang-en">Updated: 2026.08.03</span>
-      <span class="lang-ko">업데이트: 2026.08.03</span>
+      <span class="lang-en">Updated: 2026.09.04</span>
+      <span class="lang-ko">업데이트: 2026.09.04</span>
     </div>
   </div>
 </div>
