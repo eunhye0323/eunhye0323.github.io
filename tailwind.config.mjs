@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['InterVariable', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ...defaultTheme.fontFamily.sans],
-        heading: ['InterVariable', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', ...defaultTheme.fontFamily.sans],
+        sans: ['InterVariable', 'Inter', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', ...defaultTheme.fontFamily.sans],
+        heading: ['InterVariable', 'Inter', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: '#2563eb',

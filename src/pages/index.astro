@@ -391,6 +391,11 @@ const recentProjects = entries
         </div>
       </div>
 
+      <p class="text-xs text-slate-400 -mt-3 mb-6">
+        <span class="lang-en">* indicates equal contribution.</span>
+        <span class="lang-ko">* 는 동일한 기여(공동 저자)를 의미합니다.</span>
+      </p>
+
       <p class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-3">
         <span class="lang-en">Book Chapter</span>
         <span class="lang-ko">단행본</span>
@@ -541,6 +546,7 @@ const recentProjects = entries
       </div>
     </section>
 
+    {false && (
     <!-- ── RECENT PROJECTS ──────────────────────────────── -->
     <section class="mt-12">
       <div class="flex items-baseline justify-between mb-5 pb-2 border-b border-gray-200">
@@ -569,6 +575,7 @@ const recentProjects = entries
         ))}
       </div>
     </section>
+    )}
 
     <p class="text-right text-xs text-slate-400 mt-10">
       <span class="lang-en">Updated: 2026.10.12</span>
