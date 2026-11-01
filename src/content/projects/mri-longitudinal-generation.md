@@ -10,6 +10,7 @@ This project develops a diffusion-based model that predicts future T1 brain MRI 
 <strong>정보통신기획평가원(IITP) - 피질 표면 구조 정보를 활용한 종단적 T1 뇌 MRI 생성 연구</strong><br>
 본 프로젝트는 ADNI 종단 데이터를 활용하여 pial 및 white matter 표면에서 얻은 구조 정보를 기반으로 미래 시점의 T1 MRI를 생성하는 연구입니다. Volumetric Conditioning Module(VCM)을 통해 구조 정보를 조건으로 결합하여 종단적 뇌 영상 예측을 수행합니다. 이를 통해 현재 뇌 영상과 구조 정보만으로 미래 뇌 영상을 생성할 수 있는 새로운 종단 의료 영상 생성 프레임워크를 제안합니다.
 </span>'
+featured: true
 badge: "Research"
 accent: "research"
 date: 2026-03-01

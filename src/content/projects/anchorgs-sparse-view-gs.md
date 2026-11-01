@@ -10,11 +10,12 @@ AnchorGS is a real-view-guided depth refinement method that keeps real-view char
 <strong>생성 모델 prior를 활용한 Sparse-View Gaussian Splatting의 실제 뷰 기반 깊이 보정 연구.</strong><br>
 AnchorGS는 실제 뷰의 chart depth를 재구성 라운드 전반에 걸친 기하학적 기준으로 유지하는 깊이 보정 방법입니다. 생성된 뷰의 깊이 타깃은 실제 뷰의 3D 점만으로 피팅한 평면에서 얻으며, ScanNet++와 Replica(입력 5장)에서 G4Splat 대비 향상된 표면 재구성 성능을 달성했습니다.
 </span>'
-badge: "M.S. Thesis"
+featured: true
+badge: "RESARCH"
 accent: "research"
-date: 2026-07-01
-periodEn: "2026"
-periodKo: "2026"
+date: 2026-09-01
+periodEn: "2026.09 – 2026.11 (3 months)"
+periodKo: "2026.09 – 2026.11 (3개월)"
 externalUrl: "https://eunhye0323.github.io/AnchorGS/"
 ---
 

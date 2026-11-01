@@ -12,6 +12,7 @@ const projects = defineCollection({
     periodEn: z.string().optional(),
     periodKo: z.string().optional(),
     externalUrl: z.string().optional(),
+    featured: z.boolean().default(false),
   }),
 });
 
