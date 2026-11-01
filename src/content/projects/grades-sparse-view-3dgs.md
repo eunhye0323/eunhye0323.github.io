@@ -15,6 +15,7 @@ accent: "research"
 date: 2026-06-01
 periodEn: "2026.03 – 2026.08 (6 months)"
 periodKo: "2026.03 – 2026.08 (6개월)"
+externalUrl: "https://eunhye0323.github.io/GradeS/"
 ---
 
 **Project Period:** 2026.03 – 2026.08 (6 months)<br>**참여 기간:** 2026.03 – 2026.08 (6개월)

@@ -11,6 +11,7 @@ const projects = defineCollection({
     badge: z.string().default('Project'),
     periodEn: z.string().optional(),
     periodKo: z.string().optional(),
+    externalUrl: z.string().optional(),
   }),
 });
 
