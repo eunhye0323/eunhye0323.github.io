@@ -1,16 +1,15 @@
 ---
 title: "Longitudinal T1 Brain MRI Generation with Cortical Surface Priors"
+titleKo: "의료영상 합성 연구 및 연구성과 플랫폼 개발"
 categories: [Generative AI, Medical Imaging]
 thumbnail: /images/iitp_synth.png
 summary: |
   <span style="display:block; text-align:justify; word-break:keep-all;">
-  <strong>Longitudinal T1 MRI Generation and Research Outcome Platform Development</strong><br>
-  Developed and evaluated a conditional diffusion pipeline for generating future 3D T1 brain MRI from current MRI and cortical surface information. Also planned, developed, and operated SSTDV, a platform integrating research outputs from participating institutions, and analyzed medical synthetic data needs through a survey of 60 participants.
+  This IITP-funded project uses conditional diffusion to generate future 3D brain MRI scans from current scans and cortical surface meshes. Work included data preprocessing, model conditioning, training, and evaluation. Responsibilities also included designing, building, and maintaining SSTDV, a website for sharing software, datasets, and demonstration cases from participating institutions, using Astro, TypeScript, and Tailwind CSS. Findings from 60 survey responses on medical synthetic data were compiled into a technical report covering user needs and recommendations for further development.
   </span>
   <br>
   <span style="display:block; text-align:justify; word-break:keep-all;">
-  <strong>종단 T1 뇌 MRI 생성 및 연구성과 통합 플랫폼 개발</strong><br>
-  현재 MRI와 피질 표면 구조 정보를 조건으로 미래 시점의 3차원 T1 뇌 MRI를 생성하는 Conditional Diffusion 파이프라인을 구현하고 평가했습니다. 기관별 연구성과를 통합한 SSTDV 플랫폼의 기획, 개발, 운영을 담당하고, 참여자 60명의 설문 응답을 분석해 의료 합성 데이터 활용 수요에 관한 기술문서를 작성했습니다.
+  IITP '목적 맞춤형 합성데이터 생성 및 평가기술 개발' 연구과제에서 현재 뇌 MRI와 Cortical Surface Mesh를 조건으로 미래 시점의 3D MRI를 생성하는 Conditional Diffusion 연구를 수행했습니다. 데이터 전처리부터 Conditioning 구성, 모델 학습과 평가까지 담당했습니다. 또한 기관별 공개 SW, 데이터셋, 실증 사례를 모은 SSTDV 플랫폼을 Astro, TypeScript, Tailwind CSS로 기획, 개발, 운영했습니다. 의료 합성 데이터 활용에 관한 설문 응답 60건을 분석하고, 활용 수요와 후속 개발 방향을 정리한 Technical Report를 작성했습니다.
   </span>
 featured: true
 badge: "Research"

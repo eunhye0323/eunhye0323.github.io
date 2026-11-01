@@ -6,12 +6,16 @@
 //   genai↔spatial, genai↔applied, genai↔vision3d, spatial↔vision3d  → PASS
 //   hci↔simulation   (BCI Neurofeedback Game card)                  → CVD FAIL (protan ΔE 3.2)
 //   spatial↔applied  (Hi! Medi, Baekja/Chaekgado cards)              → normal-vision ΔE 13.2 (floor 15)
+//   genai+vision3d+reconstruction (AnchorGS), genai+vision3d+nvs (GradeS) → PASS
+//     (worst CVD ΔE 13.0 and 10.6; amber/aqua sit just under 3:1 contrast)
 // Both shortfalls sit in the skill's documented 6–8 "warn" band, legal
 // only with secondary encoding — satisfied here because every tag always
 // renders its category name as text, never color alone.
 const GROUP_COLORS: Record<string, string> = {
   genai: 'bg-[#4a3aa7]/10 text-[#4a3aa7]', // violet — generative AI / foundation models
   vision3d: 'bg-[#1baf7a]/10 text-[#1baf7a]', // aqua — 3D vision / neural rendering
+  reconstruction: 'bg-[#2a78d6]/10 text-[#2a78d6]', // blue — 3D/surface reconstruction
+  nvs: 'bg-[#c98500]/10 text-[#c98500]', // amber — novel view synthesis
   spatial: 'bg-[#e87ba4]/10 text-[#e87ba4]', // magenta — XR / spatial computing
   simulation: 'bg-[#008300]/10 text-[#008300]', // green — simulation / interactive systems
   hci: 'bg-[#eb6834]/10 text-[#eb6834]', // orange — human-computer interaction
@@ -31,9 +35,9 @@ const CATEGORY_GROUP: Record<string, keyof typeof GROUP_COLORS> = {
   // 2. 3D Vision & Neural Rendering
   '3D Gaussian Splatting': 'vision3d',
   'Gaussian Splatting': 'vision3d', // alias: bare spelling used pre-normalization
-  'Novel View Synthesis': 'vision3d',
+  'Novel View Synthesis': 'nvs',
   'Neural Rendering': 'vision3d',
-  '3D Reconstruction': 'vision3d',
+  '3D Reconstruction': 'reconstruction',
   'Structure from Motion': 'vision3d',
   COLMAP: 'vision3d',
   'Depth Estimation': 'vision3d',
@@ -56,6 +60,7 @@ const CATEGORY_GROUP: Record<string, keyof typeof GROUP_COLORS> = {
 
   // 5. Applied AI
   'Medical Image': 'applied',
+  'Medical Imaging': 'applied',
   'Healthcare AI': 'applied',
   Education: 'applied',
   'Education AI': 'applied', // alias

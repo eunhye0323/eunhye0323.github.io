@@ -1,15 +1,15 @@
 ---
 title: "GradeS: Geometry-Aware Reliability-Guided Diffusion Supervision for Sparse-View 3D Gaussian Splatting"
-categories: [Generative AI, 3D Gaussian Splatting, Novel View Synthesis]
+categories: [Generative AI, Gaussian Splatting, Novel View Synthesis]
 thumbnail: /images/grades_pipeline.png
-summary: '<span style="display:block; text-align:justify; word-break:keep-all;">
-<strong>GradeS: Geometry-Aware Reliability-Guided Diffusion Supervision for Sparse-View 3D Gaussian Splatting</strong><br>
-GradeS reconstructs stable 3D scenes from only a few input views by combining depth-consistency regularization with reliability-guided pseudo-view supervision. Instead of trusting diffusion-generated views uniformly, the method weights them by hallucination detection, frame-level reliability, and pixel-level uncertainty, improving over FSGS and GuidedVD (CVPR 2025) on Mip-NeRF 360 and Tanks & Temples.
-</span><br>
-<span style="display:block; text-align:justify; word-break:keep-all;">
-<strong>Sparse-View 3D Gaussian Splatting을 위한 신뢰도 기반 비디오 디퓨전 슈퍼비전 연구.</strong><br>
-GradeS는 소수의 입력 이미지만으로 안정적인 3D 장면을 복원하기 위해, 깊이 일관성 정규화와 신뢰도 기반 pseudo-view 슈퍼비전을 결합한 방법을 제안합니다. 비디오 디퓨전 모델이 생성한 뷰를 그대로 사용하는 대신 hallucination 검출, 프레임 단위 신뢰도, 픽셀 단위 불확실성으로 가중치를 부여하여, Mip-NeRF 360과 Tanks & Temples 벤치마크에서 FSGS 및 GuidedVD(CVPR 2025) 대비 향상된 성능을 달성했습니다.
-</span>'
+summary: |
+  <span style="display:block; text-align:justify; word-break:keep-all;">
+  GradeS was developed as an individual project for the “Resource-Efficient AI Research” course in the School of Computing. It uses diffusion-generated views to train 3D Gaussian Splatting models. RGB and depth information guide view generation to reduce hallucinations and inconsistencies with the input scene, while the generated views are weighted by their reliability during training. Experiments on Mip-NeRF 360 and Tanks & Temples with 3–4, 6, and 9 input images showed better novel view synthesis quality than GuidedVD.
+  </span>
+  <br>
+  <span style="display:block; text-align:justify; word-break:keep-all;">
+  전산학부 '리소스 효율적 AI 연구' 교과목의 개인 프로젝트로 Diffusion Model이 생성한 Pseudo-view를 3DGS 학습에 활용하는 GradeS를 개발했습니다. 생성 이미지의 Hallucination과 실제 장면과의 불일치를 줄이기 위해 RGB와 Depth 정보를 생성 과정에 반영하고, Pseudo-view의 신뢰도에 따라 학습 가중치를 조절했습니다. Mip-NeRF 360과 Tanks & Temples에서 입력 이미지 3~4장, 6장, 9장 조건으로 GuidedVD와 비교해 Novel View Synthesis의 Rendering 품질을 개선했습니다.
+  </span>
 featured: true
 badge: "Research"
 accent: "research"

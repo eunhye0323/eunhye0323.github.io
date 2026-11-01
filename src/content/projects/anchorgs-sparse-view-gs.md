@@ -1,17 +1,17 @@
 ---
-title: "AnchorGS: Real-View-Guided Depth Refinement for Sparse-View Gaussian Splatting with a Generative Prior"
+title: "[M.S. Thesis, Ongoing] AnchorGS: Real-View-Guided Depth Refinement for Sparse-View Gaussian Splatting with a Generative Prior"
 categories: [Generative AI, Gaussian Splatting, 3D Reconstruction]
 thumbnail: /images/anchorgs_teaser.jpg
-summary: '<span style="display:block; text-align:justify; word-break:keep-all;">
-<strong>AnchorGS: Real-View-Guided Depth Refinement for Sparse-View Gaussian Splatting with a Generative Prior</strong><br>
-AnchorGS is a real-view-guided depth refinement method that keeps real-view chart depths as a geometric reference across reconstruction rounds. Depth targets for generated views come from planes fitted only to real-view 3D points, improving surface reconstruction over G4Splat on ScanNet++ and Replica (5 input views).
-</span><br>
-<span style="display:block; text-align:justify; word-break:keep-all;">
-<strong>생성 모델 prior를 활용한 Sparse-View Gaussian Splatting의 실제 뷰 기반 깊이 보정 연구.</strong><br>
-AnchorGS는 실제 뷰의 chart depth를 재구성 라운드 전반에 걸친 기하학적 기준으로 유지하는 깊이 보정 방법입니다. 생성된 뷰의 깊이 타깃은 실제 뷰의 3D 점만으로 피팅한 평면에서 얻으며, ScanNet++와 Replica(입력 5장)에서 G4Splat 대비 향상된 표면 재구성 성능을 달성했습니다.
-</span>'
+summary: |
+  <span style="display:block; text-align:justify; word-break:keep-all;">
+  AnchorGS is an ongoing master’s thesis project on improving surface reconstruction from sparse input views using a generative prior. Based on G4Splat, it uses different depth supervision strategies for real and generated views. Depths for generated views are refined using planes fitted to 3D points from real observations. Experiments on ScanNet++ and Replica with five input images showed better reconstruction quality with rendering quality comparable to G4Splat.
+  </span>
+  <br>
+  <span style="display:block; text-align:justify; word-break:keep-all;">
+  석사 학위 연구로 Generative Prior를 활용한 Sparse-view 3D Reconstruction에서 깊이 정보의 오류를 줄이고 Surface Reconstruction 품질을 높이는 연구를 수행하고 있습니다. G4Splat을 기반으로 실제 입력 뷰와 생성 뷰의 Depth Supervision을 구분하고, 실제 관측의 3D Point로 추정한 평면을 이용해 생성 뷰의 깊이를 보정했습니다. ScanNet++와 Replica에서 입력 이미지 5장으로 평가한 결과, G4Splat과 유사한 Rendering 품질을 유지하면서 Reconstruction 품질을 개선했습니다.
+  </span>
 featured: true
-badge: "RESARCH"
+badge: "Research"
 accent: "research"
 date: 2026-09-01
 periodEn: "2026.09 – 2026.11 (3 months)"

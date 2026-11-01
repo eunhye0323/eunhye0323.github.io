@@ -2,6 +2,7 @@
 import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
 import Layout from '~/layouts/Layout.astro';
+import LangToggle from '~/components/LangToggle.astro';
 import { categoryColor } from '~/utils/categoryColors';
 
 export const getStaticPaths = (async () => {
@@ -14,7 +15,7 @@ export const getStaticPaths = (async () => {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, date, categories, thumbnail, badge, periodEn, periodKo } = entry.data;
+const { title, titleKo, date, categories, thumbnail, badge, periodEn, periodKo } = entry.data;
 
 const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
 ---
@@ -22,9 +23,12 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeri
 <Layout title={title}>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 py-10">
 
-    <a href="/projects/" class="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-blue-600 transition-colors mb-6">
-      ← Back to Projects
-    </a>
+    <div class="flex items-center justify-between gap-4 mb-6">
+      <a href="/projects/" class="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-blue-600 transition-colors">
+        ← <span class="lang-en">Back to Projects</span><span class="lang-ko">프로젝트 목록으로</span>
+      </a>
+      <LangToggle />
+    </div>
 
     <header class="mb-8">
       <div class="flex items-center gap-2 mb-3">
@@ -40,7 +44,14 @@ const formattedDate = new Date(date).toLocaleDateString('en-US', { year: 'numeri
           )}
         </span>
       </div>
-      <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight mb-3">{title}</h1>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight mb-3">
+        {titleKo ? (
+          <>
+            <span class="lang-en">{title}</span>
+            <span class="lang-ko">{titleKo}</span>
+          </>
+        ) : title}
+      </h1>
       <div class="flex flex-wrap gap-1.5">
         {categories.map((c) => (
           <span class={`text-xs px-2.5 py-1 rounded-full font-medium ${categoryColor(c)}`}>{c}</span>
