@@ -42,9 +42,24 @@ function splitParagraph(p) {
   }));
 }
 
+function numberSection(h) {
+  const first = h.children[0];
+  const m = first?.type === 'text' && first.value.match(/^\s*(\d+)\)\s*/);
+  if (!m) return;
+  first.value = first.value.slice(m[0].length);
+  h.properties.className = [...(h.properties.className || []), 'numbered-section'];
+  h.children.unshift({
+    type: 'element',
+    tagName: 'span',
+    properties: { className: ['section-num'], ariaHidden: 'true' },
+    children: [{ type: 'text', value: m[1] }],
+  });
+}
+
 export default function rehypeBilingual() {
   return (tree) => {
     const kids = tree.children;
+    kids.filter((n) => isEl(n, 'h2')).forEach(numberSection);
     const headings = kids.filter((n) => isEl(n, 'h2', 'h3'));
 
     const langOf = new Map();

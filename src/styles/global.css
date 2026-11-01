@@ -23,3 +23,12 @@
   .lang-pending .lang-en,
   .lang-pending .lang-ko { display: none !important; }
 }
+
+@layer components {
+  .prose h2.numbered-section {
+    @apply flex items-center gap-3 border-t-2 border-slate-200 pt-10 mt-20;
+  }
+  .prose h2.numbered-section .section-num {
+    @apply inline-flex items-center justify-center shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white text-base font-bold;
+  }
+}
